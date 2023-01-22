@@ -1,0 +1,114 @@
+IMAPAccount marco-sgobino
+Host imap.gmail.com
+User marco.sgobino@gmail.com
+PassCmd "pass google-main-app-pass/mutt"
+SSLType IMAPS
+AuthMechs LOGIN
+
+IMAPStore marco-sgobino-remote
+Account marco-sgobino
+
+MaildirStore marco-sgobino-local
+Subfolders Verbatim
+Path ~/mail/marco-sgobino/
+Inbox ~/mail/marco-sgobino/INBOX
+
+Channel marco-sgobino
+Far :marco-sgobino-remote:
+Near :marco-sgobino-local:
+Patterns *
+Create Both
+Expunge Both
+SyncState *
+
+IMAPAccount units
+Host outlook.office365.com
+User s285322@ds.units.it
+AuthMechs XOAUTH2
+PassCmd "/home/sirduke/.config/aerc/mutt_oauth2.py /home/sirduke/.config/aerc/token"
+SSLType IMAPS
+
+IMAPStore units-remote
+Account units
+
+MaildirStore units-local
+Subfolders Verbatim
+Path ~/mail/units/
+Inbox ~/mail/units/INBOX
+
+Channel units
+Far :units-remote:
+Near :units-local:
+Patterns *
+Create Both
+Expunge Both
+SyncState *
+
+IMAPAccount sgob95
+Host imap.gmail.com
+User sgob95@gmail.com
+PassCmd "pass google-legacy-app-pass/mutt"
+SSLType IMAPS
+AuthMechs LOGIN
+
+IMAPStore sgob95-remote
+Account sgob95
+
+MaildirStore sgob95-local
+Subfolders Verbatim
+Path ~/mail/sgob95/
+Inbox ~/mail/sgob95/INBOX
+
+Channel sgob95
+Far :sgob95-remote:
+Near :sgob95-local:
+Patterns *
+Create Both
+Expunge Both
+SyncState *
+
+IMAPAccount uniud
+Host outlook.office365.com
+User 125636@spes.uniud.it
+PassCmd "pass uniud/uniud-spes/125636@spes.uniud.it"
+SSLType IMAPS
+AuthMechs LOGIN
+
+IMAPStore uniud-remote
+Account uniud
+
+MaildirStore uniud-local
+Subfolders Verbatim
+Path ~/mail/uniud/
+Inbox ~/mail/uniud/INBOX
+
+Channel uniud
+Far :uniud-remote:
+Near :uniud-local:
+Patterns *
+Create Both
+Expunge Both
+SyncState *
+
+IMAPAccount infomaniak
+Host mail.infomaniak.com
+User marco.sgobino@ikmail.com
+PassCmd "pass infomaniak/marco.sgobino@ikmail.com"
+SSLType IMAPS
+AuthMechs LOGIN
+
+IMAPStore infomaniak-remote
+Account infomaniak
+
+MaildirStore infomaniak-local
+Subfolders Verbatim
+Path ~/mail/infomaniak/
+Inbox ~/mail/infomaniak/INBOX
+
+Channel infomaniak
+Far :infomaniak-remote:
+Near :infomaniak-local:
+Patterns *
+Create Both
+Expunge Both
+SyncState *

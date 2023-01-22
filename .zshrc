@@ -124,6 +124,7 @@ alias gpg='LANG=en gpg'
 alias xopen='xdg-open'
 alias bkm='nvim ~/org/bookmarks'
 alias d='nvim ~/org/diary'
+alias birthdays='bat ~/org/birthdays'
 # -----------------------------------------------------------------------------
 #
 # -----------------------------------------------------------------------------

@@ -15,7 +15,7 @@ bindsym $mod+Shift+m exec sh ~/.local/bin/add-bookmark.sh
 bindsym $mod+g exec foot sh ~/.local/bin/manage-file.sh ~/org/todo.txt
 bindsym $mod+t exec sh ~/.local/bin/add-todo-txt.sh
 bindsym $mod+Shift+d exec foot sh ~/.local/bin/today.sh
-bindsym $mod+y exec grep -v '^#' ~/org/sysclip | grep . | bemenu -i -l 8 --nb $background --nf $text --hb $dmenu_accent --hf $background --fb $background --ff $text --tb $dmenu_accent --tf $background --fn "Iosevka SS16 Medium 11" --line-height 26 -p "Sysclip" | wl-copy
+bindsym $mod+y exec grep -v '^#' ~/org/sysclip | grep . | bemenu -i -l 8 --nb $background --nf $text --hb "#d3869bff" --hf $background --fb $background --ff $text --tb "#d3869bff" --tf $background --fn "Iosevka SS16 Medium 11" --line-height 26 -p "Sysclip" | wl-copy
 bindsym $mod+Shift+y exec sh ~/.local/bin/add-sysclip.sh
 bindsym $mod+Ctrl+y exec sh ~/.local/bin/rm-sysclip.sh
 

@@ -11,10 +11,13 @@ bindsym $mod+x exec PATH=$HOME/.local/bin:$PATH bemenu-run -i --nb $background -
 bindsym $mod+z exec j4-dmenu-desktop --dmenu='bemenu -i --nb $background --nf $text --hb $j4_accent --hf $background --fb $background --ff $text --tb $j4_accent --tf $background --fn "DejaVu Sans Mono Bold 10.5" -p "Application " --line-height 22 --bottom' | xargs swaymsg exec --
 bindsym $mod+d exec 'fuzzel --border-color=$fuzzel_accent --border-radius=5 --border-width=2 --background=$background --selection-color=$fuzzel_accent --selection-text-color=$background --match-color=$accent --text-color=$text --font "Iosevka SS15 Medium:size=8.5" --fields=filename,name,generic,exec --lines=15 --width=80'
 bindsym $mod+m exec grep -v '^#' ~/org/bookmarks | grep . | bemenu -i -l 8 --nb $background --nf $text --hb $dmenu_accent --hf $background --fb $background --ff $text --tb $dmenu_accent --tf $background --fn "Iosevka SS16 Medium 11" --line-height 26 -p "Bookmarks" | cut -d ' ' -f1 | wl-copy
+bindsym $mod+Shift+m exec sh ~/.local/bin/add-bookmark.sh
 bindsym $mod+g exec foot sh ~/.local/bin/manage-file.sh ~/org/todo.txt
 bindsym $mod+t exec sh ~/.local/bin/add-todo-txt.sh
-bindsym $mod+Shift+b exec sh ~/.local/bin/add-bookmark.sh
 bindsym $mod+Shift+d exec foot sh ~/.local/bin/today.sh
+bindsym $mod+y exec grep -v '^#' ~/org/sysclip | grep . | bemenu -i -l 8 --nb $background --nf $text --hb $dmenu_accent --hf $background --fb $background --ff $text --tb $dmenu_accent --tf $background --fn "Iosevka SS16 Medium 11" --line-height 26 -p "Sysclip" | wl-copy
+bindsym $mod+Shift+y exec sh ~/.local/bin/add-sysclip.sh
+bindsym $mod+Ctrl+y exec sh ~/.local/bin/rm-sysclip.sh
 
 
 #bindsym XF86AudioRaiseVolume exec pactl set-sink-volume @DEFAULT_SINK@ +5%

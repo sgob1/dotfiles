@@ -1,0 +1,108 @@
+# Key bindings
+bindsym Ctrl+Mod1+T exec $term
+bindsym $mod+Return exec $term
+floating_modifier $mod normal
+bindsym $mod+Shift+q kill
+bindsym $mod+Shift+c reload
+bindsym $mod+Shift+p exec setrandom --mode scale $wallpaper_dir
+bindsym $mod+Shift+e exec swaynag -t warning -m 'You pressed the exit shortcut. Do you really want to exit sway? This will end your Wayland session.' -b 'Yes, exit sway' 'swaymsg exit'
+
+bindsym $mod+x exec PATH=$HOME/.local/bin:$PATH bemenu-run -i --nb $background --nf $text --hb $dmenu_accent --hf $background --fb $background --ff $text --tb $dmenu_accent --tf $background --fn "DejaVu Sans Mono Bold 10.5" -p "Shell " --line-height 22 --bottom | xargs swaymsg exec --
+bindsym $mod+z exec j4-dmenu-desktop --dmenu='bemenu -i --nb $background --nf $text --hb $j4_accent --hf $background --fb $background --ff $text --tb $j4_accent --tf $background --fn "DejaVu Sans Mono Bold 10.5" -p "Application " --line-height 22 --bottom' | xargs swaymsg exec --
+bindsym $mod+d exec 'fuzzel --border-color=$fuzzel_accent --border-radius=5 --border-width=2 --background=$background --selection-color=$fuzzel_accent --selection-text-color=$background --match-color=$accent --text-color=$text --font "Iosevka SS15 Medium:size=8.5" --fields=filename,name,generic,exec --lines=15 --width=80'
+bindsym $mod+m exec grep -v '^#' ~/org/bookmarks | grep . | bemenu -i -l 8 --nb $background --nf $text --hb $dmenu_accent --hf $background --fb $background --ff $text --tb $dmenu_accent --tf $background --fn "Iosevka SS16 Medium 11" --line-height 26 -p "Bookmarks" | cut -d ' ' -f1 | wl-copy
+bindsym $mod+g exec foot sh ~/.local/bin/manage-file.sh ~/org/todo.txt
+bindsym $mod+t exec sh ~/.local/bin/add-todo-txt.sh
+bindsym $mod+Shift+b exec sh ~/.local/bin/add-bookmark.sh
+bindsym $mod+Shift+d exec foot sh ~/.local/bin/today.sh
+
+
+#bindsym XF86AudioRaiseVolume exec pactl set-sink-volume @DEFAULT_SINK@ +5%
+#bindsym XF86AudioLowerVolume exec pactl set-sink-volume @DEFAULT_SINK@ -5%
+#bindsym XF86AudioMute exec amixer set Master toggle
+bindsym --locked XF86AudioPlay exec playerctl play-pause
+bindsym --locked XF86AudioNext exec playerctl next
+bindsym --locked XF86AudioPrev exec playerctl previous
+#bindsym XF86MonBrightnessUp exec brightnessctl --exponent=2 set +6%
+#bindsym XF86MonBrightnessDown exec brightnessctl --exponent=2 set 6%-
+
+bindsym Print exec grim -t png  $(xdg-user-dir PICTURES)/$(date +%Y-%m-%d_%H-%m-%s).png
+bindsym Mod4+Print exec /usr/bin/grim -t png -o $(swaymsg -t get_outputs | jq -r '.[] | select(.focused) | .name') $(xdg-user-dir PICTURES)/$(date +'%Y-%m-%d-%H%M%S_grim.png')
+bindsym Mod4+Shift+Print exec /usr/bin/grim -t png -g "$(slurp)" $(xdg-user-dir PICTURES)/$(date +'%Y-%m-%d-%H%M%S_grim.png')
+
+bindsym $mod+$left focus left
+bindsym $mod+$down focus down
+bindsym $mod+$up focus up
+bindsym $mod+$right focus right
+bindsym $mod+Shift+$left move left
+bindsym $mod+Shift+$down move down
+bindsym $mod+Shift+$up move up
+bindsym $mod+Shift+$right move right
+
+bindsym $mod+b splith
+bindsym $mod+v splitv
+bindsym $mod+s layout stacking
+bindsym $mod+w layout tabbed
+bindsym $mod+e layout toggle split
+bindsym $mod+f fullscreen
+bindsym $mod+Shift+space floating toggle
+bindsym $mod+space focus mode_toggle
+bindsym $mod+a focus parent
+bindsym $mod+Shift+minus move scratchpad
+bindsym $mod+minus scratchpad show
+
+# Workspaces up to 20
+bindsym $mod+1 workspace number 1
+bindsym $mod+2 workspace number 2
+bindsym $mod+3 workspace number 3
+bindsym $mod+4 workspace number 4
+bindsym $mod+5 workspace number 5
+bindsym $mod+6 workspace number 6
+bindsym $mod+7 workspace number 7
+bindsym $mod+8 workspace number 8
+bindsym $mod+9 workspace number 9
+bindsym $mod+0 workspace number 10
+bindsym $mod+Ctrl+1 workspace number 11
+bindsym $mod+Ctrl+2 workspace number 12
+bindsym $mod+Ctrl+3 workspace number 13
+bindsym $mod+Ctrl+4 workspace number 14
+bindsym $mod+Ctrl+5 workspace number 15
+bindsym $mod+Ctrl+6 workspace number 16
+bindsym $mod+Ctrl+7 workspace number 17
+bindsym $mod+Ctrl+8 workspace number 18
+bindsym $mod+Ctrl+9 workspace number 19
+bindsym $mod+Ctrl+0 workspace number 20
+
+bindsym $mod+Shift+1 move container to workspace number 1
+bindsym $mod+Shift+2 move container to workspace number 2
+bindsym $mod+Shift+3 move container to workspace number 3
+bindsym $mod+Shift+4 move container to workspace number 4
+bindsym $mod+Shift+5 move container to workspace number 5
+bindsym $mod+Shift+6 move container to workspace number 6
+bindsym $mod+Shift+7 move container to workspace number 7
+bindsym $mod+Shift+8 move container to workspace number 8
+bindsym $mod+Shift+9 move container to workspace number 9
+bindsym $mod+Shift+0 move container to workspace number 10
+bindsym $mod+Shift+Ctrl+1 move container to workspace number 11
+bindsym $mod+Shift+Ctrl+2 move container to workspace number 12
+bindsym $mod+Shift+Ctrl+3 move container to workspace number 13
+bindsym $mod+Shift+Ctrl+4 move container to workspace number 14
+bindsym $mod+Shift+Ctrl+5 move container to workspace number 15
+bindsym $mod+Shift+Ctrl+6 move container to workspace number 16
+bindsym $mod+Shift+Ctrl+7 move container to workspace number 17
+bindsym $mod+Shift+Ctrl+8 move container to workspace number 18
+bindsym $mod+Shift+Ctrl+9 move container to workspace number 19
+bindsym $mod+Shift+Ctrl+0 move container to workspace number 20
+
+bindsym $mod+r mode "resize"
+mode "resize" {
+	bindsym $left resize shrink width 20px
+	bindsym $down resize grow height 20px
+	bindsym $up resize shrink height 20px
+	bindsym $right resize grow width 20px
+
+	bindsym Return mode "default"
+	bindsym Escape mode "default"
+}
+
+bindsym $mod+F5 border toggle

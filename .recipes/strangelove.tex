@@ -1,0 +1,81 @@
+\documentclass[11pt]{book}
+\usepackage{graphicx}
+\usepackage{grffile}
+\usepackage{longtable}
+\usepackage{wrapfig}
+\usepackage{rotating}
+\usepackage[normalem]{ulem}
+\usepackage{amsmath}
+\usepackage{textcomp}
+\usepackage{amssymb}
+\usepackage{capt-of}
+\usepackage{hyperref}
+\usepackage{minted}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{setspace}
+\usepackage{subcaption}
+\usepackage{mathtools}
+\usepackage{xfrac}
+\usepackage[left=1.7in, right=1.7in, bottom=1in]{geometry}
+\usepackage{marginnote}
+\usepackage[utf8]{inputenc}
+\usepackage{color}
+\usepackage{epsf}
+\usepackage{tikz}
+\usepackage{graphicx}
+\usepackage{pslatex}
+\usepackage{hyperref}
+\usepackage[p]{scholax}
+\usepackage[scaled=1.075,ncf,vvarbb]{newtxmath}
+% this fixes wack monospace fonts and issues
+\usepackage[nomath,variablett]{lmodern}
+\usepackage{textgreek}
+\renewcommand*{\textgreekfontmap}{%
+        {phv/*/*}{LGR/neohellenic/*/*}%
+                {*/b/n}{LGR/artemisia/b/n}%
+                {*/bx/n}{LGR/artemisia/bx/n}%
+                {*/*/n}{LGR/artemisia/m/n}%
+                {*/b/it}{LGR/artemisia/b/it}%
+                {*/bx/it}{LGR/artemisia/bx/it}%
+                {*/*/it}{LGR/artemisia/m/it}%
+                {*/b/sl}{LGR/artemisia/b/sl}%
+                {*/bx/sl}{LGR/artemisia/bx/sl}%
+                {*/*/sl}{LGR/artemisia/m/sl}%
+                {*/*/sc}{LGR/artemisia/m/sc}%
+                {*/*/sco}{LGR/artemisia/m/sco}%
+}
+\makeatletter
+\newcommand*{\rom}[1]{\expandafter\@slowromancap\romannumeral #1@}
+\makeatother
+\DeclarePairedDelimiterX{\infdivx}[2]{(}{)}{%
+        #1\;\delimsize\|\;#2%
+}
+\newcommand{\infdiv}{D\infdivx}
+\DeclarePairedDelimiter{\norm}{\left\lVert}{\right\rVert}
+\DeclarePairedDelimiter{\ceil}{\left\lceil}{\right\rceil}
+\DeclarePairedDelimiter{\floor}{\left\lfloor}{\right\rfloor}
+\def\Z{\mathbb Z}
+\def\R{\mathbb R}
+\def\C{\mathbb C}
+\def\N{\mathbb N}
+\def\Q{\mathbb Q}
+\def\noi{\noindent}
+\onehalfspace
+\usemintedstyle{bw}
+
+\begin{document}
+%\setmonofont[Scale=.85]{Fira Code Retina}
+
+
+\include{cn-titlepage}
+%\setstretch{1.35}
+%\setlength{\headsep}{30pt}
+%\setlength{\footskip}{40pt}
+%\setlength{\marginparsep}{20pt}
+%\setlength{\marginparwidth}{60pt}
+%\title{Computer Networks 2 and Introduction to Cybersecurity}
+%\author{Marco Sgobino}
+%\maketitle
+\tableofcontents
+

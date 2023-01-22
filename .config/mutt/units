@@ -1,0 +1,24 @@
+set my_user=125636
+set imap_user=$my_user@spes.uniud.it
+#set imap_pass="`pass uniud/uniud-spes/125636@spes.uniud.it`"
+set folder=~/mail/units/
+#set folder="imaps://$imap_user@outlook.office365.com:993/"
+set spoolfile=+INBOX
+set postponed=+Bozze
+#set record=+Sent
+unset record
+mailboxes imaps://outlook.office365.com:993/
+
+#set smtp_pass="`pass uniud/uniud-spes/125636@spes.uniud.it`"
+#set smtp_url="smtps://$my_user@smtp.outlook365.com"
+set realname="Marco Sgobino"
+set from=$my_user@spes.uniud.it
+set hostname="outlook365.com"
+set signature="Marco Sgobino"
+#set ssl_force_tls=yes
+#unset ssl_starttls
+
+#account-hook $folder "set imap_user=$my_user@gmail.com imap_pass=`pass uniud/uniud-spes/125636@spes.uniud.it`"
+set header_cache = ~/.cache/mutt/units/cache/headers
+set message_cachedir = ~/.cache/mutt/units/cache/bodies
+set certificate_file = ~/.cache/mutt/units/certificates

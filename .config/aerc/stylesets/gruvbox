@@ -1,0 +1,60 @@
+# 
+# aerc default styleset
+# 
+# This styleset uses the terminal defaults as its base.
+# More information on how to configure the styleset can be found in
+# the aerc-stylesets(7) manpage. Please read the manual before
+# modifying or creating a styleset.
+
+*.default=true
+*.selected.reverse=toggle
+
+title.reverse=true
+title.fg=#282828
+title.bg=#7daea3
+
+header.bold=true
+header.fg=#282828
+header.bg=#7daea3
+
+msglist_unread.bg=#282828
+msglist_unread.fg=#7daea3
+dirlist_default.fg=#7daea3
+dirlist_default.bg=#282828
+msglist_marked.fg=#e78a4e
+msglist_marked.bg=#282828
+tab.fg=#282828
+tab.bg=#7daea3
+stack.fg=#282828
+stack.bg=#7daea3
+selector_default.bg=#282828
+selector_default.fg=#ea6962
+selector_chooser.fg=#89b482
+selector_chooser.bg=#282828
+border.bg=#282828
+
+*error.bold=true
+error.fg=#ea6962
+warning.fg=#d8a657
+success.fg=#a9b665
+
+statusline_default.fg=#7daea3
+statusline_default.bg=#282828
+statusline_success.fg=#7daea3
+statusline_success.bg=#282828
+statusline_default.reverse=true
+statusline_error.bg=#282828
+statusline_error.reverse=true
+
+msglist_unread.bold=true
+msglist_deleted.fg=gray
+
+completion_pill.reverse=true
+completion_default.selected.bg=#7daea3
+completion_default.selected.fg=white
+
+#tab.reverse=true
+#border.reverse = true
+
+selector_focused.reverse=true
+selector_chooser.bold=true

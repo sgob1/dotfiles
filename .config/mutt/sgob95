@@ -1,0 +1,25 @@
+set my_user=sgob95
+set imap_user=$my_user@gmail.com
+set imap_pass="`pass google-legacy-app-pass/mutt`"
+set folder=~/mail/sgob95/
+#set folder="imaps://$imap_user@imap.gmail.com:993/
+set spoolfile=+INBOX
+set postponed=+[Gmail]/Bozze
+#set record=+Sent
+unset record
+mailboxes imaps://imap.gmail.com:993/
+
+set smtp_pass="`pass google-legacy-app-pass/mutt`"
+set smtp_url="smtps://$my_user@smtp.gmail.com"
+set realname="Marco Sgobino"
+set from=$my_user@gmail.com
+set hostname="gmail.com"
+set signature="Marco Sgobino"
+set ssl_force_tls=yes
+unset ssl_starttls
+
+set header_cache = ~/.cache/mutt/sgob95/cache/headers
+set message_cachedir = ~/.cache/mutt/sgob95/cache/bodies
+set certificate_file = ~/.cache/mutt/sgob95/certificates
+account-hook $folder "set imap_user=$my_user@gmail.com imap_pass=`pass google-legacy-app-pass/mutt`"
+

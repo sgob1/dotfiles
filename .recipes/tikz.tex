@@ -1,0 +1,25 @@
+\usepackage{tikz}
+\usepackage{pgfplots}
+\usetikzlibrary{circuits}
+\usetikzlibrary{positioning}
+\usetikzlibrary{shapes.geometric}
+\usetikzlibrary{shapes.misc}
+\usetikzlibrary{decorations.markings}
+\usetikzlibrary{arrows.meta}
+\usetikzlibrary{patterns}
+\usetikzlibrary{decorations.pathreplacing}
+\usetikzlibrary{angles}
+\usetikzlibrary{quotes}
+\usetikzlibrary{calligraphy}
+\usetikzlibrary{calc}
+\tikzset{squarednode/.style={rectangle, draw=black!90, fill=black!10, very thick, minimum size=5mm}}
+\tikzset{boxfilter/.style={rectangle, draw=black!90, thick, minimum width=.7 cm, minimum height=.5cm}}
+\tikzset{dot/.style={inner sep=1pt, fill=black!100, circle}}
+\tikzset{polez/.style={cross out, draw=black, minimum size=2*(#1-\pgflinewidth), inner sep=0pt, outer sep=0pt},
+polez/.default={2.5pt}}
+\tikzset{zeroz/.style={circle, draw=black, minimum size=2*(#1-\pgflinewidth), inner sep=0pt, outer sep=0pt},
+zeroz/.default={2.5pt}}
+\tikzset{crossp/.style={path picture={ \draw[black] (path picture bounding box.south east) -- (path picture bounding box.north west) (path picture bounding box.south west) -- (path picture bounding box.north east);}}}
+\tikzset{plus/.style={path picture={ \draw[black] (path picture bounding box.south) -- (path picture bounding box.north) (path picture bounding box.east) -- (path picture bounding box.west);}}}
+\tikzset{multiplierdownwards/.style={isosceles triangle, isosceles triangle apex angle=100, rotate=270, thick, minimum size=.35cm}}
+\tikzset{-dot-/.style={decoration={ markings, mark=at position #1 with {\fill circle (1pt);}},postaction={decorate}}} %%% in this line added a ;

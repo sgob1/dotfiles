@@ -1,0 +1,109 @@
+# Default except 'rlang'
+format = """
+$username\
+$hostname\
+$localip\
+$shlvl\
+$singularity\
+$kubernetes\
+$directory\
+$vcsh\
+$git_branch\
+$git_commit\
+$git_state\
+$git_metrics\
+$git_status\
+$hg_branch\
+$docker_context\
+$package\
+$c\
+$cmake\
+$cobol\
+$daml\
+$dart\
+$deno\
+$dotnet\
+$elixir\
+$elm\
+$erlang\
+$golang\
+$haskell\
+$helm\
+$java\
+$julia\
+$kotlin\
+$lua\
+$nim\
+$nodejs\
+$ocaml\
+$perl\
+$php\
+$pulumi\
+$purescript\
+$python\
+$raku\
+$red\
+$ruby\
+$rust\
+$scala\
+$swift\
+$terraform\
+$vlang\
+$vagrant\
+$zig\
+$buf\
+$nix_shell\
+$conda\
+$meson\
+$spack\
+$memory_usage\
+$aws\
+$gcloud\
+$openstack\
+$azure\
+$env_var\
+$crystal\
+$custom\
+$sudo\
+$cmd_duration\
+$line_break\
+$jobs\
+$battery\
+$time\
+$status\
+$container\
+$shell\
+$character"""
+
+# Currently deprecated but left for future
+# right_format = """$pipestatus $status"""
+
+# Disable the blank line at the start of the prompt
+add_newline = false
+
+[status]
+symbol = "✖ "
+not_executable_symbol = "🚫"
+not_found_symbol = "🔍"
+signal_symbol = "⚡"
+style = "bold red"
+recognize_signal_code = true
+disabled = false
+pipestatus = true
+format = "[$symbol$status]($style) "
+
+# You can also replace your username with a neat symbol like  to save some space
+[username]
+show_always = true
+format = '[$user]($style)'
+
+[hostname]
+ssh_only = true
+style = "bold red"
+
+[directory]
+#style = "bg:#98971a"
+format = "[ $path ]($style)"
+truncation_length = 3
+truncation_symbol = ""
+

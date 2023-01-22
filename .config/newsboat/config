@@ -1,0 +1,47 @@
+# This is the configuration file for newsboat
+# Other infos at https://newsboat.org/releases/2.10/docs/newsboat.html
+auto-reload yes
+reload-time 120
+reload-threads 100
+
+download-retries 4
+download-timeout 60
+
+bind-key j down
+bind-key k up
+bind-key j next articlelist
+bind-key k prev articlelist
+bind-key J next-feed articlelist
+bind-key K prev-feed articlelist
+bind-key G end
+bind-key g home
+bind-key d pagedown
+bind-key u pageup
+bind-key l open
+bind-key h quit
+bind-key a toggle-article-read
+bind-key n next-unread
+bind-key N prev-unread
+# bind-key D pb-download
+bind-key U show-urls
+bind-key x pb-delete
+
+browser "firefox %u"
+
+macro y set browser "mpv %u" ; open-in-browser ; set browser "firefox %u"
+macro , set browser "xdg-open %u"; open-in-browser
+macro q set browser "qutebrowser %u"; open-in-browser
+macro f set browser "firefox %u"; open-in-browser
+
+color listnormal          color8        default
+color listnormal_unread   green         default bold
+color listfocus           black         color8
+color listfocus_unread    white         color8 bold
+color info                green         color235 bold standout
+color article             default       default
+highlight article "^(Feed|Link):.*$" green default bold
+highlight article "^(Title|Date|Author):.*$" green default bold
+highlight article "https?://[^ ]+" green default underline
+highlight article "\\[[0-9]+\\]" green default bold
+highlight article "\\[image\\ [0-9]+\\]" green default bold
+highlight feedlist "^─.*$" green color235 bold

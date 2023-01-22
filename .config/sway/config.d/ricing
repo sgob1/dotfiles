@@ -1,0 +1,47 @@
+set $gaps_size              "0"
+set $border_pixel           "1"
+set $swaybar_cmd            "swaybar"
+set $statusbar_font         "Iosevka Nerd Font Bold 9.5"
+set $statusbar_cmd          "while bash  ~/.config/sway/status.sh; do sleep 1; done"
+set $sway_default_font      "Cascadia Code Semibold 10"
+
+
+
+# Ricing
+client.focused $accent $accent $background $accent $accent
+client.focused_inactive $title_border $inside_title_unfocus $accent $background $background
+client.unfocused $title_border $inside_title_unfocus $text_dim $title_border $background
+client.urgent $alert $alert $background $title_border $title_border
+font pango: $sway_default_font
+titlebar_border_thickness 1
+titlebar_padding 2 2
+default_border pixel $border_pixel
+default_floating_border pixel 4
+smart_borders on
+smart_gaps off
+gaps inner $gaps_size
+gaps horizontal $gaps_size
+gaps vertical $gaps_size
+gaps top $gaps_size
+gaps bottom $gaps_size
+gaps left $gaps_size
+gaps right $gaps_size
+bar {
+	swaybar_command $swaybar_cmd
+	position top
+	workspace_buttons yes
+	status_command $statusbar_cmd
+	font pango: $statusbar_font
+	mode dock
+	colors {
+		statusline $text
+		background $background
+		focused_workspace  $accent $accent $background
+		inactive_workspace $background $background $text
+		separator $text
+	}
+}
+output * bg $wallpaper $wallpaper_mode
+#exec_always setwallpaper --mode scale $wallpaper
+#exec_always setrandom --mode scale $wallpaper_dir
+

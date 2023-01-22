@@ -1,0 +1,15 @@
+set selection-clipboard clipboard
+set recolor-reverse-video true
+set recolor-keephue
+set adjust-open width
+set recolor-lightcolor \#2d2a2e
+set recolor-darkcolor \#e3e1e4
+set default-bg \#2d2a2e
+set inputbar-bg \#2d2a2e
+set inputbar-fg \#848089
+set notification-bg \#2d2a2e
+set notification-fg \#e5c463
+set statusbar-bg \#2d2a2e
+set statusbar-fg \#848089
+set highlight-active-color \#e5c463
+set highlight-color \#7accd7

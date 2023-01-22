@@ -1,0 +1,199 @@
+# Folder with emails
+#set folder = "~/mail/marco-sgobino/"
+# Type of mailbox
+set mbox_type = Maildir
+# Directory to poll for new mail
+#set spoolfile = +Inbox
+# Directory to save sent messages into
+#set record = +Sent
+# Sets the drafts folder
+#set postponed = +Drafts
+# File that headers will be cached
+set header_cache = ~/.cache/mutt
+# Text editor for emails
+set editor=nvim
+
+set imap_check_subscribed
+set imap_keepalive = 300
+unset imap_passive
+set mail_check = 60
+
+# marco.sgobino@gmail.com
+source "~/.config/mutt/marco-sgobino"
+folder-hook 'marco.sgobino@gmail.com' "source ~/.config/mutt/marco-sgobino"
+
+# sgob95@gmail.com
+#source "~/.config/mutt/sgob95"
+#folder-hook $folder "source ~/.config/mutt/sgob95"
+folder-hook 'sgob95@gmail.com' 'source ~/.config/mutt/sgob95'
+#folder-hook $folder 'set realname="Marco Sgobino"'
+
+macro index,pager <f1> '<sync-mailbox><enter-command>source ~/.config/mutt/marco-sgobino<enter><change-folder>!<enter>'
+macro index,pager <f2> '<sync-mailbox><enter-command>source ~/.config/mutt/sgob95<enter><change-folder>!<enter>'
+macro index,pager <f3> '<sync-mailbox><enter-command>source ~/.config/mutt/uniud<enter><change-folder>!<enter>'
+macro index,pager <f4> '<sync-mailbox><enter-command>source ~/.config/mutt/units<enter><change-folder>!<enter>'
+macro index,pager <f5> '<sync-mailbox><enter-command>source ~/.config/mutt/infomaniak<enter><change-folder>!<enter>'
+
+
+# Sort by threads
+set sort = threads
+# Sort threads by last date recieved - newest first
+set sort_aux = reverse-last-date-received
+# Show date in year/month/day hour:minute format
+set date_format="%y/%m/%d %I:%M%p"
+
+# Vim like keybindings
+#bind index G last-entry
+bind index G imap-fetch-mail
+bind index g noop
+bind index gg first-entry
+# Reply bindings
+bind index r reply
+bind index R group-reply
+# Collapsing / Uncollapsing threads
+bind index c collapse-thread
+bind index C collapse-all
+# Search back
+bind index N search-opposite
+
+bind index,pager B sidebar-toggle-visible
+# Easily copy / move messages
+macro index C "<copy-message>?<toggle-mailboxes>" "copy a message to a mailbox"
+macro index M "<save-message>?<toggle-mailboxes>" "move a message to a mailbox"
+
+macro index o "<shell-escape>check-emails inbox<enter>" "Check Emails"
+macro index O "<shell-escape>check-emails<enter>" "Check Emails"
+
+######################
+#  Viewing settings  #
+######################
+
+# Don't show + on wrapped lines
+set markers=no # https://neomutt.org/guide/reference#markers
+# Wrap lines at 78 chars
+set wrap=78 # https://neomutt.org/guide/reference#wrap
+# When at the end, don't go to next email when trying to scroll
+set pager_stop=yes # https://neomutt.org/guide/reference#pager_stop
+# Mailcap file is used to tell mutt how to open different types of file
+set mailcap_path = "~/.config/mutt/mailcap" # https://neomutt.org/guide/mimesupport#3-%C2%A0mime-viewer-configuration-with-mailcap
+# Tells Mutt to automatically view files with these mime types
+auto_view text/html # https://neomutt.org/guide/reference#auto_view
+auto_view application/pgp-encrypted # https://neomutt.org/guide/reference#auto_view
+auto_view text/calendar # https://neomutt.org/guide/reference#auto_view
+# Order to try and show multipart emails
+alternative_order text/plain text/calendar text/enriched text/html
+# Macro to toggle alternates (plain <-> html), based on:
+# https://groups.google.com/d/msg/comp.mail.mutt/9I702oMwQQE/JqdLnp3j9WAJ
+macro pager ,@aoh= "<enter-command>unalternative_order *; alternative_order text/calendar text/html text/plain text/enriched; macro pager A ,@aot= 'toggle alternative order'<enter><exit><display-message>"
+macro pager ,@aot= "<enter-command>unalternative_order *; alternative_order text/plain text/calendar text/enriched text/html; macro pager A ,@aoh= 'toggle alternative order'<enter><exit><display-message>"
+macro pager A ,@aoh= "toggle alternative order"
+# Use urlscan to handle links in messages
+macro pager U "<enter-command>set pipe_decode = yes<enter><pipe-message>urlscan  -dc -r 'linkhandler {}'<enter><enter-command>set pipe_decode = no<enter>" "view URLs"
+bind pager r reply
+bind pager R group-reply
+# Vim like keybindings
+bind pager g noop
+bind pager G bottom
+bind pager gg top
+bind pager j next-line
+bind pager k previous-line
+
+######################
+#  Compose settings  #
+######################
+
+
+macro compose Y "<first-entry>\
+<pipe-entry>convert-multipart<enter>\
+<enter-command>source /tmp/neomutt-commands<enter>
+
+macro index 'a' '<change-folder>?<change-dir><home>^K=<enter>'
+
+##############
+#  Contacts  #
+##############
+
+#set query_command= "abook --mutt-query '%s'"
+#macro index,pager  a "<pipe-message>abook --add-email-quiet<return>" "Add this sender to Abook"
+
+###################
+#  Misc Settings  #
+###################
+
+# Don't ask to push enter after external command is run
+set wait_key = no # https://neomutt.org/guide/reference#wait_key
+# Send a notification when a new email arrives
+# set new_mail_command = "notify-send 'New Email'" # https://neomutt.org/guide/reference#new_mail_command
+# Makes escape key cancel inputs. Normally it's ctrl+G (weird)
+set abort_key = "<Esc>" # https://neomutt.org/guide/reference#abort_key
+
+#############
+#  Colours  #
+#############
+
+# Default index colors:
+color index yellow default '.*'
+color index_author red default '.*'
+color index_number blue default
+color index_subject cyan default '.*'
+
+# New mail is boldened:
+color index brightyellow black "~N"
+color index_author brightred black "~N"
+color index_subject brightcyan black "~N"
+
+# Other colors and aesthetic settings:
+mono bold bold
+mono underline underline
+mono indicator reverse
+mono error bold
+color normal default default
+color indicator brightblack white
+color sidebar_highlight red default
+color sidebar_divider brightblack black
+color sidebar_flagged red black
+color sidebar_new green black
+color normal brightyellow default
+color error red default
+color tilde black default
+color message cyan default
+color markers red white
+color attachment white default
+color search brightmagenta default
+color status brightyellow black
+color hdrdefault brightgreen default
+color quoted green default
+color quoted1 blue default
+color quoted2 cyan default
+color quoted3 yellow default
+color quoted4 red default
+color quoted5 brightred default
+color signature brightgreen default
+color bold black default
+color underline black default
+color normal default default
+
+# Regex highlighting:
+color header blue default ".*"
+color header brightmagenta default "^(From)"
+color header brightcyan default "^(Subject)"
+color header brightwhite default "^(CC|BCC)"
+color body brightred default "[\-\.+_a-zA-Z0-9]+@[\-\.a-zA-Z0-9]+" # Email addresses
+color body brightblue default "(https?|ftp)://[\-\.,/%~_:?&=\#a-zA-Z0-9]+" # URL
+color body green default "\`[^\`]*\`" # Green text between ` and `
+color body brightblue default "^# \.*" # Headings as bold blue
+color body brightcyan default "^## \.*" # Subheadings as bold cyan
+color body brightgreen default "^### \.*" # Subsubheadings as bold green
+color body yellow default "^(\t| )*(-|\\*) \.*" # List items as yellow
+color body brightcyan default "[;:][-o][)/(|]" # emoticons
+color body brightcyan default "[;:][)(|]" # emoticons
+color body brightcyan default "[ ][*][^*]*[*][ ]?" # more emoticon?
+color body brightcyan default "[ ]?[*][^*]*[*][ ]" # more emoticon?
+color body red default "(BAD signature)"
+color body cyan default "(Good signature)"
+color body brightblack default "^gpg: Good signature .*"
+color body brightyellow default "^gpg: "
+color body brightyellow red "^gpg: BAD signature from.*"
+mono body bold "^gpg: Good signature"
+mono body bold "^gpg: BAD signature from.*"
+color body red default "([a-z][a-z0-9+-]*://(((([a-z0-9_.!~*'();:&=+$,-]|%[0-9a-f][0-9a-f])*@)?((([a-z0-9]([a-z0-9-]*[a-z0-9])?)\\.)*([a-z]([a-z0-9-]*[a-z0-9])?)\\.?|[0-9]+\\.[0-9]+\\.[0-9]+\\.[0-9]+)(:[0-9]+)?)|([a-z0-9_.!~*'()$,;:@&=+-]|%[0-9a-f][0-9a-f])+)(/([a-z0-9_.!~*'():@&=+$,-]|%[0-9a-f][0-9a-f])*(;([a-z0-9_.!~*'():@&=+$,-]|%[0-9a-f][0-9a-f])*)*(/([a-z0-9_.!~*'():@&=+$,-]|%[0-9a-f][0-9a-f])*(;([a-z0-9_.!~*'():@&=+$,-]|%[0-9a-f][0-9a-f])*)*)*)?(\\?([a-z0-9_.!~*'();/?:@&=+$,-]|%[0-9a-f][0-9a-f])*)?(#([a-z0-9_.!~*'();/?:@&=+$,-]|%[0-9a-f][0-9a-f])*)?|(www|ftp)\\.(([a-z0-9]([a-z0-9-]*[a-z0-9])?)\\.)*([a-z]([a-z0-9-]*[a-z0-9])?)\\.?(:[0-9]+)?(/([-a-z0-9_.!~*'():@&=+$,]|%[0-9a-f][0-9a-f])*(;([-a-z0-9_.!~*'():@&=+$,]|%[0-9a-f][0-9a-f])*)*(/([-a-z0-9_.!~*'():@&=+$,]|%[0-9a-f][0-9a-f])*(;([-a-z0-9_.!~*'():@&=+$,]|%[0-9a-f][0-9a-f])*)*)*)?(\\?([-a-z0-9_.!~*'();/?:@&=+$,]|%[0-9a-f][0-9a-f])*)?(#([-a-z0-9_.!~*'();/?:@&=+$,]|%[0-9a-f][0-9a-f])*)?)[^].,:;!)? \t\r\n<>\"]"

@@ -1,0 +1,54 @@
+\usepackage{amsmath,amssymb,amsfonts,bm}
+\usepackage{amsthm}
+\def\Z{\mathbb Z}
+\def\R{\mathbb R}
+\def\C{\mathbb C}
+\def\N{\mathbb N}
+\def\Q{\mathbb Q}
+
+\DeclareMathOperator{\sinc}{sinc}
+\DeclareMathOperator{\rect}{rect}
+
+
+% Theorems
+\newtheoremstyle{newlinethm}{2em}{2em}{\slshape}{2pt}{\bfseries}{\newline}{2em}{}
+\theoremstyle{newlinethm}
+\newtheorem{thm}{Teorema}[section]
+\setlength{\tabcolsep}{0.5em} % for the horizontal padding
+{\renewcommand{\arraystretch}{1.35}% for the vertical padding
+
+\theoremstyle{theorem}
+\newtheorem{lemma}{Lemma}[section]
+\setlength{\tabcolsep}{0.5em} % for the horizontal padding
+{\renewcommand{\arraystretch}{1.35}% for the vertical padding
+
+\newtheorem{tesi}{Tesi}[section]
+\setlength{\tabcolsep}{0.5em} % for the horizontal padding
+{\renewcommand{\arraystretch}{1.35}% for the vertical padding
+
+\theoremstyle{definition}
+\newtheorem{definizione}{Definizione}[section]
+\setlength{\tabcolsep}{0.5em} % for the horizontal padding
+{\renewcommand{\arraystretch}{1.35}% for the vertical padding
+
+\theoremstyle{definition}
+\newtheorem{regola}{Regola}[section]
+\setlength{\tabcolsep}{0.5em} % for the horizontal padding
+{\renewcommand{\arraystretch}{1.35}% for the vertical padding
+
+\theoremstyle{definition}
+\newtheorem{identita}{Identità}[section]
+\setlength{\tabcolsep}{0.5em} % for the horizontal padding
+{\renewcommand{\arraystretch}{1.35}% for the vertical padding
+
+\theoremstyle{definition}
+\newtheorem{predicato}{Predicato}[section]
+\setlength{\tabcolsep}{0.5em} % for the horizontal padding
+{\renewcommand{\arraystretch}{1.35}% for the vertical padding
+
+\renewcommand\proofname{\textup{\emph{Proof.}}} % default is 'Proof.' 
+\renewcommand\qedsymbol{$\blacksquare$}
+
+\newcommand\encircle[1]{%
+    \hspace*{2pt}\tikz[baseline=(X.base)] 
+    \node (X) [draw, shape=circle, inner sep=-2.5pt, minimum size=0pt] {\strut \footnotesize #1};\hspace*{2pt}}

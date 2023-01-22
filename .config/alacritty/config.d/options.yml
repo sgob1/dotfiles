@@ -1,0 +1,21 @@
+env:
+        TERM: alacritty
+
+window:
+        dimensions:
+                columns: 120
+                lines: 32
+        padding:
+                x: 2
+                y: 2
+        decorations: full
+        title: Alacritty
+        decorations_theme_variant: dark
+        dynamic_title: true
+        class:
+                instance: Alacritty
+                general: Alacritty
+
+key_bindings:
+        - { key: F11,     action: ToggleFullscreen }
+        - { key: N,   mods: Control|Shift, action: SpawnNewInstance }

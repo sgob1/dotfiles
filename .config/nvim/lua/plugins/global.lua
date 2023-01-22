@@ -1,0 +1,12 @@
+vim.g.vimtex_view_method = 'zathura'
+vim.g.gruvbox_material_foreground = 'material'
+vim.g.gruvbox_material_background = 'medium'
+vim.g.gruvbox_material_diagnostic_text_highlight = true
+vim.g.gruvbox_material_diagnostic_line_highlight = true
+vim.g.gruvbox_material_enable_italic = true
+vim.g.sonokai_style = 'shusia'
+vim.g.sonokai_enable_italic = true
+vim.g.everforest_background = 'hard'
+vim.g.material_style = 'darker'
+vim.g.shfmt_opt= '-ci'
+vim.g.adwaita_darker = true

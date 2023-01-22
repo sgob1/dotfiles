@@ -1,0 +1,6 @@
+vim.api.nvim_create_user_command('MakeTags', '!ctags -R .', {})
+vim.api.nvim_create_user_command('Spelling', ':set spell spelllang=en,it', {})
+vim.api.nvim_create_user_command('SpellingItalian', ':set spell spelllang=it', {})
+vim.api.nvim_create_user_command('SpellingEnglish', ':set spell spelllang=en', {})
+vim.api.nvim_create_user_command('NoSpelling', ':set nospell', {})
+vim.api.nvim_create_user_command('W', ':w', {})

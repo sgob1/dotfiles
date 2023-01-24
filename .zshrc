@@ -154,6 +154,10 @@ organize() {
 gitPullAll() {
     ls | xargs -P10 -I{} git -C {} pull
 }
+# Unzips all files in pwd
+unzipAll() {
+    find . -name '*.zip' -exec sh -c 'unzip -d "${1%.*}" "$1"' _ {} \;
+}
 
 syncMail () {
     mbsync marco-sgobino &

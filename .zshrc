@@ -123,7 +123,7 @@ alias rg='rg --no-ignore'
 alias gpg='LANG=en gpg'
 alias xopen='xdg-open'
 alias bkm='nvim ~/org/bookmarks'
-alias d='nvim ~/org/diary'
+alias d='~/.local/bin/today.sh'
 alias birthdays='bat ~/org/birthdays'
 # -----------------------------------------------------------------------------
 #

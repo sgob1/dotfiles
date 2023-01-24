@@ -200,7 +200,9 @@ autoload -Uz add-zsh-hook
 add-zsh-hook -Uz chpwd osc7_cwd
 #
 # -----------------------------------------------------------------------------
-# Launch the starship!
+# Sets redhat theme
 # -----------------------------------------------------------------------------
-eval "$(starship init zsh)"
+autoload -Uz promptinit
+promptinit
+prompt redhat
 # -----------------------------------------------------------------------------

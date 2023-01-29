@@ -37,7 +37,7 @@ if not first_install then
     require('plugins.toggleterm')
     require('plugins.rose-pine')
 
-    local dark_theme = 'gruvbox-material'
+    local dark_theme = 'rose-pine'
     local light_theme = 'rose-pine'
     require('plugins.colorscheme.switcher').apply(dark_theme, light_theme)
 end

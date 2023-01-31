@@ -41,7 +41,7 @@ if not first_install then
     local dark_theme = nil
     local light_theme = nil
 
-    if desktop_session == "GNOME" then
+    if desktop_session == "gnome" then
         dark_theme = 'sonokai'
         light_theme = 'rose-pine'
     elseif desktop_session == "sway" then

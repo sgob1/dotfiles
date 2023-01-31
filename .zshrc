@@ -15,8 +15,6 @@
 # -----------------------------------------------------------------------------
 # Variables setup and exporting
 # -----------------------------------------------------------------------------
-#ZSH_THEME="agnoster"
-#export ZSH="$HOME/.oh-my-zsh"
 HYPHEN_INSENSITIVE="true"
 OSNAME=$(cat /etc/os-release | grep ^NAME= | cut -d "\"" -f 2)
 ZSH_THEME="agnoster"
@@ -32,7 +30,6 @@ HISTFILE=~/.zsh_history
 HISTSIZE=50000
 SAVEHIST=5000
 plugins=(git)
-#source $ZSH/oh-my-zsh.sh
 bindkey -v
 # -----------------------------------------------------------------------------
 #
@@ -158,14 +155,6 @@ gitPullAll() {
 unzipAll() {
     find . -name '*.zip' -exec sh -c 'unzip -d "${1%.*}" "$1"' _ {} \;
 }
-
-syncMail () {
-    mbsync marco-sgobino &
-    mbsync units &
-    mbsync sgob95 &
-    mbsync uniud &
-    mbsync infomaniak &
-}
 # -----------------------------------------------------------------------------
 #
 # -----------------------------------------------------------------------------
@@ -204,26 +193,23 @@ autoload -Uz add-zsh-hook
 add-zsh-hook -Uz chpwd osc7_cwd
 #
 # -----------------------------------------------------------------------------
-# Sets zsh theme
+# Sets zsh prompt
 # -----------------------------------------------------------------------------
-#autoload -Uz promptinit
-#promptinit
-#prompt redhat
-PROMPT_COMMAND=__prompt_command    # Function to generate PS1 after CMDs
+PROMPT_COMMAND=__prompt_command
 
 __prompt_command() {
-    local EXIT="$?"                # This needs to be first
+    local EXIT="$?"
     if [ $EXIT != 0 ]; then
         PROMPT="%F{red}%B%n%b%f%F{yellow}(%B%~%b)%f %F{red}%B—>%b%f % "
-        RPROMPT="[%F{red}%B$EXIT%b%f]"        # Add red if exit code non 0
+        RPROMPT="[%F{red}%B$EXIT%b%f]"
     else
         PROMPT="%F{red}%B%n%b%f%F{yellow}(%B%~%b)%f %F{green}%B—>%b%f % "
-        RPROMPT=""        # Add red if exit code non 0
+        RPROMPT=""
     fi
 }
 
 precmd() { eval "$PROMPT_COMMAND" }
 
 PROMPT='%F{blue}%B%n%b%f%F{cyan}(%B%~%b)%f %F{green}%B—>%b%f % '
-RPROMPT=""        # Add red if exit code non 0
+RPROMPT=""
 # -----------------------------------------------------------------------------

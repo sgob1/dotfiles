@@ -206,7 +206,10 @@ add-zsh-hook -Uz chpwd osc7_cwd
 # -----------------------------------------------------------------------------
 # Sets redhat theme
 # -----------------------------------------------------------------------------
-autoload -Uz promptinit
-promptinit
-prompt redhat
+#autoload -Uz promptinit
+#promptinit
+#prompt redhat
+#PROMPT='%F{blue}%B%n%b%f%B@%b%F{green}%B%m%b%f %F{cyan}(%B%~%b)%f %F{yellow}%B—>%b%f % '
+PROMPT='%F{blue}%B%n%b%f%F{cyan}(%B%~%b)%f %F{yellow}%B—>%b%f % '
+RPROMPT='[%F{red}%?%f]'
 # -----------------------------------------------------------------------------

@@ -204,12 +204,26 @@ autoload -Uz add-zsh-hook
 add-zsh-hook -Uz chpwd osc7_cwd
 #
 # -----------------------------------------------------------------------------
-# Sets redhat theme
+# Sets zsh theme
 # -----------------------------------------------------------------------------
 #autoload -Uz promptinit
 #promptinit
 #prompt redhat
-#PROMPT='%F{blue}%B%n%b%f%B@%b%F{green}%B%m%b%f %F{cyan}(%B%~%b)%f %F{yellow}%B—>%b%f % '
-PROMPT='%F{blue}%B%n%b%f%F{cyan}(%B%~%b)%f %F{yellow}%B—>%b%f % '
-RPROMPT='[%F{red}%?%f]'
+PROMPT_COMMAND=__prompt_command    # Function to generate PS1 after CMDs
+
+__prompt_command() {
+    local EXIT="$?"                # This needs to be first
+    if [ $EXIT != 0 ]; then
+        PROMPT="%F{red}%B%n%b%f%F{yellow}(%B%~%b)%f %F{red}%B—>%b%f % "
+        RPROMPT="[%F{red}%B$EXIT%b%f]"        # Add red if exit code non 0
+    else
+        PROMPT="%F{red}%B%n%b%f%F{yellow}(%B%~%b)%f %F{green}%B—>%b%f % "
+        RPROMPT=""        # Add red if exit code non 0
+    fi
+}
+
+precmd() { eval "$PROMPT_COMMAND" }
+
+PROMPT='%F{blue}%B%n%b%f%F{cyan}(%B%~%b)%f %F{green}%B—>%b%f % '
+RPROMPT=""        # Add red if exit code non 0
 # -----------------------------------------------------------------------------

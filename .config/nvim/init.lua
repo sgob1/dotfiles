@@ -37,7 +37,20 @@ if not first_install then
     require('plugins.toggleterm')
     require('plugins.rose-pine')
 
-    local dark_theme = 'sonokai'
-    local light_theme = 'rose-pine'
+    local desktop_session = vim.env.DESKTOP_SESSION
+    local dark_theme = nil
+    local light_theme = nil
+
+    if desktop_session == "GNOME" then
+        dark_theme = 'sonokai'
+        light_theme = 'rose-pine'
+    elseif desktop_session == "sway" then
+        dark_theme = 'gruvbox-material'
+        light_theme = 'gruvbox-material'
+    else
+        dark_theme = 'github_dark'
+        light_theme = 'github_light'
+    end
+
     require('plugins.colorscheme.switcher').apply(dark_theme, light_theme)
 end

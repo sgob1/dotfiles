@@ -6,11 +6,12 @@
 -- |_|_| |_|_|\__(_)_|\__,_|\__,_|
 -- -------------------------------
 
-local packer_manager = require('packer.packer-manager')
-local first_install = packer_manager.install()
-packer_manager.load_plugins()
+-- local plugin_manager = require('packer.packer-manager')
+local plugin_manager = require('lazy.lazy-manager')
+local first_install = plugin_manager.install()
+plugin_manager.load_plugins()
 if first_install then
-    packer_manager.first_sync()
+    plugin_manager.first_sync()
 end
 
 require('user.config')

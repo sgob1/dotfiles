@@ -8,5 +8,16 @@ require("mason").setup({
     }
 })
 require("mason-lspconfig").setup({
-    ensure_installed = { "sumneko_lua", "rust_analyzer", "bashls", "jdtls", "tsserver", "marksman" }
+    ensure_installed = {
+        "sumneko_lua",
+        "rust_analyzer",
+        "bashls",
+        "jdtls",
+        "tsserver",
+        "marksman",
+        "gopls",
+        "texlab",
+        "pyright",
+        "ruby_ls",
+    }
 })

@@ -1,18 +1,80 @@
-vim.keymap.set('n', '<leader>s', '<cmd>NvimTreeToggle<cr>')
-vim.keymap.set('n', '<leader>ff', ':lua require(\'telescope.builtin\').find_files({no_ignore = true})<cr>', {}) -- find files
-vim.keymap.set('n', '<leader>fpf', ':lua require(\'telescope.builtin\').find_files()<cr>', {}) -- find project files
-vim.keymap.set('n', '<leader>fg', ':lua require(\'telescope.builtin\').live_grep()<cr>', {})
-vim.keymap.set('n', '<leader>fb', ':lua require(\'telescope.builtin\').buffers()<cr>', {})
-vim.keymap.set('n', '<leader>fh', ':lua require(\'telescope.builtin\').help_tags()<cr>', {})
-vim.keymap.set('n', '<leader>ft', ':lua require(\'telescope.builtin\').tags()<cr>', {})
-vim.keymap.set('n', '<leader>bc', '<cmd>Bdelete<CR>')
-vim.keymap.set('n', '<C-M-l>', '<cmd>Neoformat<CR>')
-vim.api.nvim_set_keymap("v", "<leader>re", [[ <Esc><Cmd>lua require('refactoring').refactor('Extract Function')<CR>]], {noremap = true, silent = true, expr = false})
-vim.api.nvim_set_keymap("v", "<leader>rf", [[ <Esc><Cmd>lua require('refactoring').refactor('Extract Function To File')<CR>]], {noremap = true, silent = true, expr = false})
-vim.api.nvim_set_keymap("v", "<leader>rv", [[ <Esc><Cmd>lua require('refactoring').refactor('Extract Variable')<CR>]], {noremap = true, silent = true, expr = false})
-vim.api.nvim_set_keymap("v", "<leader>ri", [[ <Esc><Cmd>lua require('refactoring').refactor('Inline Variable')<CR>]], {noremap = true, silent = true, expr = false})
-vim.api.nvim_set_keymap("n", "<leader>rb", [[ <Cmd>lua require('refactoring').refactor('Extract Block')<CR>]], {noremap = true, silent = true, expr = false})
-vim.api.nvim_set_keymap("n", "<leader>rbf", [[ <Cmd>lua require('refactoring').refactor('Extract Block To File')<CR>]], {noremap = true, silent = true, expr = false})
-vim.api.nvim_set_keymap("n", "<leader>ri", [[ <Cmd>lua require('refactoring').refactor('Inline Variable')<CR>]], {noremap = true, silent = true, expr = false})
-vim.api.nvim_set_keymap( "v", "<leader>rr", ":lua require('refactoring').select_refactor()<CR>", { noremap = true, silent = true, expr = false })
-vim.api.nvim_set_keymap( "v", "<leader>rr", "<Esc><cmd>lua require('telescope').extensions.refactoring.refactors()<CR>", { noremap = true })
+local keymap = vim.keymap.set
+local nvim_keymap = vim.api.nvim_set_keymap
+
+keymap('n', '<leader>s', '<cmd>NvimTreeToggle<cr>')
+keymap('n', '<leader>ff', ':lua require(\'telescope.builtin\').find_files({no_ignore = true})<cr>', {}) -- find files
+keymap('n', '<leader>fpf', ':lua require(\'telescope.builtin\').find_files()<cr>', {}) -- find project files
+keymap('n', '<leader>fg', ':lua require(\'telescope.builtin\').live_grep()<cr>', {})
+keymap('n', '<leader>fb', ':lua require(\'telescope.builtin\').buffers()<cr>', {})
+keymap('n', '<leader>fh', ':lua require(\'telescope.builtin\').help_tags()<cr>', {})
+keymap('n', '<leader>ft', ':lua require(\'telescope.builtin\').tags()<cr>', {})
+keymap('n', '<leader>bc', '<cmd>Bdelete<CR>')
+keymap('n', '<C-M-l>', '<cmd>Neoformat<CR>')
+nvim_keymap("v", "<leader>re", [[ <Esc><Cmd>lua require('refactoring').refactor('Extract Function')<CR>]], {noremap = true, silent = true, expr = false})
+nvim_keymap("v", "<leader>rf", [[ <Esc><Cmd>lua require('refactoring').refactor('Extract Function To File')<CR>]], {noremap = true, silent = true, expr = false})
+nvim_keymap("v", "<leader>rv", [[ <Esc><Cmd>lua require('refactoring').refactor('Extract Variable')<CR>]], {noremap = true, silent = true, expr = false})
+nvim_keymap("v", "<leader>ri", [[ <Esc><Cmd>lua require('refactoring').refactor('Inline Variable')<CR>]], {noremap = true, silent = true, expr = false})
+nvim_keymap("n", "<leader>rb", [[ <Cmd>lua require('refactoring').refactor('Extract Block')<CR>]], {noremap = true, silent = true, expr = false})
+nvim_keymap("n", "<leader>rbf", [[ <Cmd>lua require('refactoring').refactor('Extract Block To File')<CR>]], {noremap = true, silent = true, expr = false})
+nvim_keymap("n", "<leader>ri", [[ <Cmd>lua require('refactoring').refactor('Inline Variable')<CR>]], {noremap = true, silent = true, expr = false})
+nvim_keymap( "v", "<leader>rr", ":lua require('refactoring').select_refactor()<CR>", { noremap = true, silent = true, expr = false })
+nvim_keymap( "v", "<leader>rr", "<Esc><cmd>lua require('telescope').extensions.refactoring.refactors()<CR>", { noremap = true })
+-- LSP finder - Find the symbol's definition
+-- If there is no definition, it will instead be hidden
+-- When you use an action in finder like "open vsplit",
+-- you can use <C-t> to jump back
+keymap("n", "gh", "<cmd>Lspsaga lsp_finder<CR>")
+-- Code action
+keymap({"n","v"}, "<leader>ca", "<cmd>Lspsaga code_action<CR>")
+-- Rename all occurrences of the hovered word for the entire file
+keymap("n", "gr", "<cmd>Lspsaga rename<CR>")
+-- Rename all occurrences of the hovered word for the selected files
+keymap("n", "gr", "<cmd>Lspsaga rename ++project<CR>")
+-- Peek definition
+-- You can edit the file containing the definition in the floating window
+-- It also supports open/vsplit/etc operations, do refer to "definition_action_keys"
+-- It also supports tagstack
+-- Use <C-t> to jump back
+keymap("n", "gd", "<cmd>Lspsaga peek_definition<CR>")
+-- Go to definition
+keymap("n","gd", "<cmd>Lspsaga goto_definition<CR>")
+-- Show line diagnostics
+-- You can pass argument ++unfocus to
+-- unfocus the show_line_diagnostics floating window
+keymap("n", "<leader>sl", "<cmd>Lspsaga show_line_diagnostics<CR>")
+-- Show cursor diagnostics
+-- Like show_line_diagnostics, it supports passing the ++unfocus argument
+keymap("n", "<leader>sc", "<cmd>Lspsaga show_cursor_diagnostics<CR>")
+-- Show buffer diagnostics
+keymap("n", "<leader>sb", "<cmd>Lspsaga show_buf_diagnostics<CR>")
+-- Diagnostic jump
+-- You can use <C-o> to jump back to your previous location
+keymap("n", "[e", "<cmd>Lspsaga diagnostic_jump_prev<CR>")
+keymap("n", "]e", "<cmd>Lspsaga diagnostic_jump_next<CR>")
+-- Diagnostic jump with filters such as only jumping to an error
+keymap("n", "[E", function()
+  require("lspsaga.diagnostic"):goto_prev({ severity = vim.diagnostic.severity.ERROR })
+end)
+keymap("n", "]E", function()
+  require("lspsaga.diagnostic"):goto_next({ severity = vim.diagnostic.severity.ERROR })
+end)
+-- Toggle outline
+keymap("n","<leader>o", "<cmd>Lspsaga outline<CR>")
+-- Hover Doc
+-- If there is no hover doc,
+-- there will be a notification stating that
+-- there is no information available.
+-- To disable it just use ":Lspsaga hover_doc ++quiet"
+-- Pressing the key twice will enter the hover window
+keymap("n", "K", "<cmd>Lspsaga hover_doc<CR>")
+-- If you want to keep the hover window in the top right hand corner,
+-- you can pass the ++keep argument
+-- Note that if you use hover with ++keep, pressing this key again will
+-- close the hover window. If you want to jump to the hover window
+-- you should use the wincmd command "<C-w>w"
+keymap("n", "K", "<cmd>Lspsaga hover_doc ++keep<CR>")
+-- Call hierarchy
+keymap("n", "<Leader>ci", "<cmd>Lspsaga incoming_calls<CR>")
+keymap("n", "<Leader>co", "<cmd>Lspsaga outgoing_calls<CR>")
+-- Floating terminal
+keymap({"n", "t"}, "<A-d>", "<cmd>Lspsaga term_toggle<CR>")

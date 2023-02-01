@@ -6,7 +6,6 @@
 -- |_|_| |_|_|\__(_)_|\__,_|\__,_|
 -- -------------------------------
 
--- local plugin_manager = require('packer.packer-manager')
 local plugin_manager = require('lazy.lazy-manager')
 local first_install = plugin_manager.install()
 plugin_manager.load_plugins()
@@ -34,14 +33,14 @@ if not first_install then
     require('plugins.telescope')
     require('plugins.comment')
     require('plugins.nvim-tree')
-    require('plugins.indent-blankline')
+    --require('plugins.indent-blankline')
     require('plugins.toggleterm')
     require('plugins.rose-pine')
 
     local desktop_session = vim.env.DESKTOP_SESSION
     local dark_theme = nil
     local light_theme = nil
-
+--
     if desktop_session == "gnome" then
         dark_theme = 'sonokai'
         light_theme = 'rose-pine'
@@ -52,6 +51,6 @@ if not first_install then
         dark_theme = 'github_dark'
         light_theme = 'github_light'
     end
-
+--
     require('plugins.colorscheme.switcher').apply(dark_theme, light_theme)
 end

@@ -20,6 +20,11 @@ local M = {
         local plugins_list = require("lazy.plugins-list").get()
         require("lazy").setup(plugins_list)
     end,
+
+    first_sync = function()
+        local plugins_list = require("lazy.plugins-list").get()
+        require("lazy").setup(plugins_list)
+    end,
 }
 
 return M

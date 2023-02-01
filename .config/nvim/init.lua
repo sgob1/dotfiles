@@ -1,11 +1,3 @@
--- init.lua ----------------------
---  _ ----  _ _ --- _ ------------
--- (_)_ __ (_) |_  | |_   _  __ _
--- | | '_ \| | __| | | | | |/ _` |
--- | | | | | | |_ _| | |_| | (_| |
--- |_|_| |_|_|\__(_)_|\__,_|\__,_|
--- -------------------------------
-
 local plugin_manager = require('plugin-manager')
 local first_install = plugin_manager.install()
 plugin_manager.load_plugins()

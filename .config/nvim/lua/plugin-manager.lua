@@ -30,9 +30,15 @@ end
 
 function M.get_list()
     return {
-        {
-            "folke/tokyonight.nvim",
-        },
+        { "folke/tokyonight.nvim" },
+
+        { "rebelot/kanagawa.nvim" },
+
+        { "RRethy/nvim-base16" },
+
+        { "glepnir/zephyr-nvim" },
+
+        { "frenzyexists/aquarium-vim" },
 
         { "Mofiqul/adwaita.nvim", },
 

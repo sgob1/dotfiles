@@ -34,9 +34,7 @@ function M.get_list()
 
         { "rebelot/kanagawa.nvim" },
 
-        { "RRethy/nvim-base16" },
-
-        { "glepnir/zephyr-nvim" },
+        { "tiagovla/tokyodark.nvim" },
 
         { "frenzyexists/aquarium-vim" },
 

@@ -44,6 +44,20 @@ function M.get_list()
             "nvim-neorg/neorg",
             ft = "norg",
             config = true, -- run require("neorg").setup()
+            build = ":Neorg sync-parsers",
+            opts = {
+                load = {
+                    ["core.defaults"] = {}, -- Loads default behaviour
+                    ["core.norg.concealer"] = {}, -- Adds pretty icons to your documents
+                    ["core.norg.dirman"] = { -- Manages Neorg workspaces
+                        config = {
+                            workspaces = {
+                                notes = "~/org/norg",
+                            },
+                        },
+                    },
+                },
+            },
         },
 
         { 'freitass/todo.txt-vim', ft="todo", },

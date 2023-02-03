@@ -9,6 +9,7 @@ if not first_install then
     require_all("user.commands")
     require_all("user.snippets")
     require_all("plugins")
+    local switcher = require('colorscheme-switcher')
     require('themes').with_switcher('colorscheme-switcher')
 else
     plugin_manager.first_sync()

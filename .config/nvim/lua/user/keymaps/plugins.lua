@@ -8,6 +8,7 @@ vim.keymap.set('n', '<leader>fg', ':lua require(\'telescope.builtin\').live_grep
 vim.keymap.set('n', '<leader>fb', ':lua require(\'telescope.builtin\').buffers()<cr>', {})
 vim.keymap.set('n', '<leader>fh', ':lua require(\'telescope.builtin\').help_tags()<cr>', {})
 vim.keymap.set('n', '<leader>ft', ':lua require(\'telescope.builtin\').tags()<cr>', {})
+vim.keymap.set('n', '<leader>fc', ':lua require(\'telescope.builtin\').commands()<cr>', {})
 vim.keymap.set('n', '<leader>bc', '<cmd>Bdelete<CR>')
 vim.keymap.set('n', '<C-M-l>', '<cmd>Neoformat<CR>')
 vim.api.nvim_set_keymap("v", "<leader>re", [[ <Esc><Cmd>lua require('refactoring').refactor('Extract Function')<CR>]], {noremap = true, silent = true, expr = false})

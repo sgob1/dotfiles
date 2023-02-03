@@ -36,13 +36,9 @@ function M.get_list()
 
         { "tiagovla/tokyodark.nvim" },
 
-        { "frenzyexists/aquarium-vim" },
+        { "catppuccin/nvim" },
 
-        { "Mofiqul/adwaita.nvim", },
-
-        { "catppuccin/nvim", },
-
-        { "editorconfig/editorconfig-vim", },
+        { "editorconfig/editorconfig-vim" },
 
         {
             "nvim-neorg/neorg",
@@ -91,16 +87,6 @@ function M.get_list()
             end,
         },
 
-
-        {
-            "glepnir/lspsaga.nvim",
-            event = "BufRead",
-            config = function()
-                require("lspsaga").setup({})
-            end,
-            dependencies = { "nvim-tree/nvim-web-devicons" }
-        },
-
         {
             "folke/todo-comments.nvim",
             dependencies = "nvim-lua/plenary.nvim",
@@ -145,18 +131,7 @@ function M.get_list()
 
         {
             "monaqa/dial.nvim",
-            -- lazy-load on keys
-            -- mode is `n` by default. For more advanced options, check the section on key mappings
             keys = { "<C-a>", { "<C-x>", mode = "n" } },
-            config = function()
-                local keymap = vim.keymap.set
-                keymap("n", "<C-a>", require("dial.map").inc_normal(), {noremap = true})
-                keymap("n", "<C-x>", require("dial.map").dec_normal(), {noremap = true})
-                keymap("v", "<C-a>", require("dial.map").inc_visual(), {noremap = true})
-                keymap("v", "<C-x>", require("dial.map").dec_visual(), {noremap = true})
-                keymap("v", "g<C-a>",require("dial.map").inc_gvisual(), {noremap = true})
-                keymap("v", "g<C-x>",require("dial.map").dec_gvisual(), {noremap = true})
-            end,
         },
 
         { 'kyazdani42/nvim-tree.lua' },

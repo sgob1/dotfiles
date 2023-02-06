@@ -2,7 +2,7 @@
 file=~/org/todo.txt
 date=$(date --iso-8601)
 
-task=$(bemenu -i -l 10 --nb "#282828ff" --nf "#ebdbb2ff" --hb "#a9b665ff" --hf "#282828ff" --fb "#282828ff" --ff "#ebdbb2ff" --tb "#a9b665ff" --tf "#282828ff" --fn 'Iosevka SS16 Medium 11' --line-height 23 -p "New todo.txt entry ($date):" < /dev/null)
+task=$(bemenu -i -l 10 --nb "#282828ff" --nf "#ebdbb2ff" --hb "#a9b665ff" --hf "#282828ff" --fb "#282828ff" --ff "#ebdbb2ff" --tb "#a9b665ff" --tf "#282828ff" --fn 'Iosevka SS16 Medium 11' --line-height 23 -p "New todo.txt entry:" < /dev/null)
 
 if [ "$task" = "" ]; then
     notify-send --expire-time=10000 "No task has been added"

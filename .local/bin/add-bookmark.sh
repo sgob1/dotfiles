@@ -7,7 +7,7 @@ if [ "$bookmark" = "" ]; then
 elif grep "^$bookmark" "$file" | grep -q -v "^#"; then
     notify-send --expire-time=10000 "Bookmark already present"
 else
-    tags=$(bemenu -i -l 10 --nb "#282828ff" --nf "#ebdbb2ff" --hb "#a9b665ff" --hf "#282828ff" --fb "#282828ff" --ff "#ebdbb2ff" --tb "#a9b665ff" --tf "#282828ff" --fn 'Iosevka SS16 Medium 11' --line-height 26 -p "Tags: #" --bottom < /dev/null)
+    tags=$(bemenu -i -l 10 --nb "#282828ff" --nf "#ebdbb2ff" --hb "#a9b665ff" --hf "#282828ff" --fb "#282828ff" --ff "#ebdbb2ff" --tb "#a9b665ff" --tf "#282828ff" --fn 'Iosevka Slab Bold 11' --line-height 23 -p "Tags: #" < /dev/null)
     if [ ! -z "$tags" -a "$tags" != " " ]; then
         echo $bookmark " #" $tags >> $file
     else

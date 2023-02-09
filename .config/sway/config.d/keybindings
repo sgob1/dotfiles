@@ -4,7 +4,7 @@ bindsym $mod+Return exec $term
 floating_modifier $mod normal
 bindsym $mod+Shift+q kill
 bindsym $mod+Shift+c reload
-bindsym $mod+Shift+p exec setrandom --mode scale $wallpaper_dir
+#bindsym $mod+Shift+p exec setrandom --mode scale $wallpaper_dir
 bindsym $mod+Shift+e exec swaynag -t warning -m 'You pressed the exit shortcut. Do you really want to exit sway? This will end your Wayland session.' -b 'Yes, exit sway' 'swaymsg exit'
 
 bindsym $mod+x exec PATH=$HOME/.local/bin:$PATH bemenu-run -i --nb $background --nf $text --hb $dmenu_accent --hf $background --fb $background --ff $text --tb $dmenu_accent --tf $background --fn "Iosevka Slab Heavy 11" -p "Shell " --line-height 23 | xargs swaymsg exec --
@@ -13,12 +13,14 @@ bindsym $mod+d exec j4-dmenu-desktop --dmenu='bemenu -i --nb $background --nf $t
 bindsym $mod+m exec grep -v '^#' ~/org/bookmarks | grep . | bemenu -i -l 8 --nb $background --nf $text --hb $dmenu_accent --hf $background --fb $background --ff $text --tb $dmenu_accent --tf $background --fn "Iosevka Slab Bold 11" --line-height 23 -p "Bookmarks" | cut -d ' ' -f1 | wl-copy
 bindsym $mod+Shift+m exec sh ~/.local/bin/add-bookmark.sh
 bindsym $mod+t exec sh ~/.local/bin/add-todo-txt.sh
-bindsym $mod+Shift+t exec $term sh ~/.local/bin/manage-file.sh ~/org/todo.txt
-bindsym $mod+Shift+d exec $term sh ~/.local/bin/today.sh
+bindsym $mod+Shift+t exec ~/.local/bin/manage-file.sh $term ~/org/todo.txt
+bindsym $mod+z exec ~/.local/bin/wsearch.sh "firefox --new-window" "https://start.duckduckgo.com/?q="
+bindsym $mod+Shift+d exec ~/.local/bin/today.sh $term
 bindsym $mod+y exec grep -v '^#' ~/org/sysclip | grep . | bemenu -i -l 8 --nb $background --nf $text --hb "#d3869bff" --hf $background --fb $background --ff $text --tb "#d3869bff" --tf $background --fn "Iosevka Slab Bold 11" --line-height 23 -p "Sysclip" | wl-copy
 bindsym $mod+Shift+y exec sh ~/.local/bin/add-sysclip.sh
 bindsym $mod+Ctrl+y exec sh ~/.local/bin/rm-sysclip.sh
 bindsym $mod+n exec $term -e ranger
+bindsym $mod+Shift+p exec wl-paste | xargs firefox --new-window --
 
 
 

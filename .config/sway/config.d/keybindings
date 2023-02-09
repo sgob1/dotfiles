@@ -21,6 +21,9 @@ bindsym $mod+y exec grep -v '^#' ~/org/sysclip | grep . | bemenu -i -l 8 --nb $b
 bindsym $mod+Shift+y exec sh ~/.local/bin/add-sysclip.sh
 bindsym $mod+Ctrl+y exec sh ~/.local/bin/rm-sysclip.sh
 bindsym $mod+n exec $term -e ranger
+bindsym $mod+p exec playerctl play-pause
+bindsym $mod+Shift+p exec playerctl next
+bindsym $mod+Ctrl+p exec playerctl previous
 
 
 

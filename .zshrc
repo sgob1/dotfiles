@@ -19,7 +19,7 @@ HYPHEN_INSENSITIVE="true"
 OSNAME=$(cat /etc/os-release | grep ^NAME= | cut -d "\"" -f 2)
 ZSH_THEME="agnoster"
 export PATH=$HOME/.local/bin:$PATH
-export PATH=$HOME/.local/bin-extra:$PATH
+export PATH=$HOME/.local/bin-bfs:$PATH
 export PATH=$HOME/.cargo/bin:$PATH
 export PATH=$HOME/.emacs.d/bin:$PATH
 export FZF_DEFAULT_OPTS="--ansi --preview-window 'right:60%' --preview \

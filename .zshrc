@@ -209,8 +209,9 @@ __prompt_command() {
     fi
 }
 
-precmd() { eval "$PROMPT_COMMAND" }
+precmd() { eval "$PROMPT_COMMAND"; print -Pn "\e]0;$TITLE\a"  }
 
 PROMPT='%F{blue}%B%n%b%f%F{cyan}(%B%~%b)%f %F{green}%B—>%b%f % '
 RPROMPT=""
+title() { export TITLE="$*" }
 # -----------------------------------------------------------------------------

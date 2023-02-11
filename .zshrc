@@ -103,7 +103,7 @@ compinit
 # Aliases
 # -----------------------------------------------------------------------------
 alias ls='ls --color=auto'
-alias ll='ls -lah --color=auto'
+alias ll='ls -lash --color=auto'
 alias pdflatex='pdflatex -synctex=15 -interaction=nonstopmode -file-line-error'
 alias mpv='mpv --no-audio-display'
 alias its_sunday_and_I_am_very_sure_I_want_to_read_the_news='/usr/bin/newsboat --config-file=$HOME/.config/newsboat/config \

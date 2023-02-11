@@ -20,7 +20,7 @@ bindsym $mod+Shift+z exec wl-paste | xargs firefox --new-window --
 bindsym $mod+y exec grep -v '^#' ~/org/sysclip | grep . | bemenu -i -l 8 --nb $background --nf $text --hb "#d3869bff" --hf $background --fb $background --ff $text --tb "#d3869bff" --tf $background --fn "Iosevka Slab Bold 11" --line-height 23 -p "Sysclip" | wl-copy
 bindsym $mod+Shift+y exec sh ~/.local/bin/add-sysclip.sh
 bindsym $mod+Ctrl+y exec sh ~/.local/bin/rm-sysclip.sh
-bindsym $mod+n exec $term --title="ranger" -e ranger
+bindsym $mod+n exec $term -e ranger
 bindsym $mod+p exec playerctl play-pause
 bindsym $mod+Shift+p exec playerctl next
 bindsym $mod+Ctrl+p exec playerctl previous

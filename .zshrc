@@ -209,10 +209,11 @@ __prompt_command() {
     fi
 }
 
-precmd() { eval "$PROMPT_COMMAND"; title; print -Pn "\e]0;$TITLE\a"  }
+#precmd() { eval "$PROMPT_COMMAND"; title; print -Pn "\e]0;$TITLE\a"  }
+precmd() { eval "$PROMPT_COMMAND" }
 
 PROMPT='%F{blue}%B%n%b%f%F{cyan}(%B%~%b)%f %F{green}%B—>%b%f % '
 RPROMPT=""
-title() { export TITLE=$(fc -ln -1) }
+#title() { export TITLE=$(fc -ln -1) }
 #trap title DEBUG
 # -----------------------------------------------------------------------------

@@ -29,7 +29,6 @@ export FZF_CTRL_T_COMMAND="fd --no-ignore"
 HISTFILE=~/.zsh_history
 HISTSIZE=50000
 SAVEHIST=5000
-plugins=(git)
 bindkey -v
 # -----------------------------------------------------------------------------
 #
@@ -103,7 +102,7 @@ compinit
 # Aliases
 # -----------------------------------------------------------------------------
 alias ls='ls --color=auto'
-alias ll='ls -lash --color=auto'
+alias ll='ls -lah --color=auto'
 alias pdflatex='pdflatex -synctex=15 -interaction=nonstopmode -file-line-error'
 alias mpv='mpv --no-audio-display'
 alias its_sunday_and_I_am_very_sure_I_want_to_read_the_news='/usr/bin/newsboat --config-file=$HOME/.config/newsboat/config \
@@ -120,7 +119,7 @@ alias grep='grep --color=auto'
 alias rg='rg --no-ignore'
 alias gpg='LANG=en gpg'
 alias xopen='xdg-open'
-alias bkm='nvim ~/org/bookmarks'
+alias bookm='nvim ~/org/bookmarks'
 alias d='~/.local/bin/today.sh'
 alias birthdays='bat ~/org/birthdays'
 # -----------------------------------------------------------------------------
@@ -128,6 +127,10 @@ alias birthdays='bat ~/org/birthdays'
 # -----------------------------------------------------------------------------
 # Custom functions
 # -----------------------------------------------------------------------------
+# Picks an entry from the bookmarks, invoking fzf
+bkm() {
+    grep -v '^#' ~/org/bookmarks | grep . | fzf --preview-window 'right:0%' | cut -d ' ' -f1 | wl-copy
+}
 # Usage: ytdl FORMAT TARGET
 ytdl() {
     youtube-dl -ix --audio-quality 0 --audio-format $1 "$2"

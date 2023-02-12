@@ -1,4 +1,4 @@
-#!/bin/env/bash
+#!/usr/bin/env bash
 file=~/org/todo.txt
 date=$(date --iso-8601)
 

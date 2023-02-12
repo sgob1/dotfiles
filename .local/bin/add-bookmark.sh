@@ -1,4 +1,4 @@
-#!/bin/env/bash
+#!/usr/bin/env bash
 bookmark=$(wl-paste)
 file=~/org/bookmarks
 searched=$(grep -q "^$bookmark$" "$file")

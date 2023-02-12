@@ -1,4 +1,4 @@
-#!/bin/env/bash
+#!/usr/bin/env bash
 entry=$(wl-paste)
 file=~/org/sysclip
 searched=$(grep -q "^$entry$" "$file")

@@ -5,12 +5,12 @@ require('lspconfig').util.default_config.capabilities = vim.tbl_deep_extend(
 )
 
 require('lspconfig').pyright.setup({})
-require('lspconfig').clangd.setup({})
+-- require('lspconfig').clangd.setup({})
 require('lspconfig').vala_ls.setup({})
 require('lspconfig').lua_ls.setup({})
 require('lspconfig').marksman.setup({})
-require('lspconfig').rust_analyzer.setup({})
+-- require('lspconfig').rust_analyzer.setup({})
 require('lspconfig').tsserver.setup({})
 require('lspconfig').jdtls.setup({})
-require('lspconfig').gopls.setup{}
+-- require('lspconfig').gopls.setup{}
 

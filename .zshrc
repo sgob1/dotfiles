@@ -213,17 +213,17 @@ PROMPT_COMMAND=__prompt_command
 __prompt_command() {
     local EXIT="$?"
     if [ $EXIT != 0 ]; then
-        PROMPT="%F{red}%B%n%b%f%F{yellow}(%B%~%b)%f %F{red}%B—>%b%f % "
+        PROMPT="%F{red}%B%n%b%f@%F{blue}%B%m%b%f%F{yellow}(%B%~%b)%f %F{red}%B—>%b%f % "
         RPROMPT="[%F{red}%B$EXIT%b%f]"
     else
-        PROMPT="%F{red}%B%n%b%f%F{yellow}(%B%~%b)%f %F{green}%B—>%b%f % "
+        PROMPT="%F{red}%B%n%b%f@%F{blue}%B%m%b%f%F{yellow}(%B%~%b)%f %F{green}%B—>%b%f % "
         RPROMPT=""
     fi
 }
 
 precmd() { eval "$PROMPT_COMMAND" }
 
-PROMPT='%F{blue}%B%n%b%f%F{cyan}(%B%~%b)%f %F{green}%B—>%b%f % '
+PROMPT='%F{red}%B%n%b%f@%F{blue}%B%m%b%f%F{yellow}(%B%~%b)%f %F{green}%B—>%b%f % '
 RPROMPT=""
 
 if [ $TILIX_ID ] || [ $VTE_VERSION ]; then

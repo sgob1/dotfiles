@@ -225,4 +225,8 @@ precmd() { eval "$PROMPT_COMMAND" }
 
 PROMPT='%F{blue}%B%n%b%f%F{cyan}(%B%~%b)%f %F{green}%B—>%b%f % '
 RPROMPT=""
+
+if [ $TILIX_ID ] || [ $VTE_VERSION ]; then
+        source /etc/profile.d/vte.sh
+fi
 # -----------------------------------------------------------------------------

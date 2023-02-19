@@ -143,7 +143,7 @@ todo() {
 }
 # Usage: ytdl FORMAT TARGET
 ytdl() {
-    youtube-dl -ix --audio-quality 0 --audio-format $1 "$2"
+    yt-dlp -ix --audio-quality 0 --audio-format $1 "$2"
 }
 # Creates a today-note in a predefined folder
 dailyPlan() {

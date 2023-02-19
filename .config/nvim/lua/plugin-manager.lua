@@ -121,7 +121,7 @@ function M.get_list()
 
         { 'rose-pine/neovim', lazy = false },
 
-        { 'savq/melange-nvim', lazy = false },
+        { 'savq/melange-nvim', lazy = true },
 
         { 'shaunsingh/nord.nvim' },
 

@@ -19,3 +19,5 @@ command('ColorschemeKanagawaDark', ':lua vim.opt.background = "dark"; vim.cmd[[c
 command('ColorschemeKanagawaLight', ':lua vim.opt.background = "light"; vim.cmd[[colorscheme kanagawa]]; require(\'lualine\').setup({options = {theme = "kanagawa"}})', {})
 command('ColorschemeGitHubDark', ':lua vim.opt.background = "dark"; vim.cmd[[colorscheme github_dark]]; require(\'lualine\').setup({options = {theme = "github_dark"}})', {})
 command('ColorschemeGitHubLight', ':lua vim.opt.background = "light"; vim.cmd[[colorscheme github_light]]; require(\'lualine\').setup({options = {theme = "github_light"}})', {})
+command('ColorschemeMelangeDark', ':lua vim.opt.background = "dark"; vim.cmd[[colorscheme melange]]; require(\'lualine\').setup({options = {theme = "auto"}})', {})
+command('ColorschemeMelangeLight', ':lua vim.opt.background = "light"; vim.cmd[[colorscheme melange]]; require(\'lualine\').setup({options = {theme = "auto"}})', {})

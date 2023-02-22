@@ -1,3 +1,3 @@
 #!/usr/bin/env bash
 
-chromium --enable-features=UseOzonePlatform --ozone-platform=wayland --enable-gpu
+chromium-freeworld --enable-features=UseOzonePlatform --ozone-platform=wayland --enable-gpu

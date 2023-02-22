@@ -6,8 +6,8 @@ function M.with_switcher(switcher)
     local light_theme = nil
 
     if desktop_session == "gnome" then
-        dark_theme = 'melange'
-        light_theme = 'melange'
+        dark_theme = 'tokyonight'
+        light_theme = 'tokyonight-day'
     elseif desktop_session == "sway" then
         dark_theme = 'gruvbox-material'
         light_theme = 'gruvbox-material'
@@ -17,7 +17,7 @@ function M.with_switcher(switcher)
     end
 
     require(switcher).apply(dark_theme, light_theme)
-    vim.cmd[[ColorschemeMelangeDark]]
+    vim.cmd[[ColorschemeTokyoNightNight]]
 end
 
 return M

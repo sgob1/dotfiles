@@ -21,3 +21,7 @@ command('ColorschemeGitHubDark', ':lua vim.opt.background = "dark"; vim.cmd[[col
 command('ColorschemeGitHubLight', ':lua vim.opt.background = "light"; vim.cmd[[colorscheme github_light]]; require(\'lualine\').setup({options = {theme = "github_light"}})', {})
 command('ColorschemeMelangeDark', ':lua vim.opt.background = "dark"; vim.cmd[[colorscheme melange]]; require(\'lualine\').setup({options = {theme = "auto"}})', {})
 command('ColorschemeMelangeLight', ':lua vim.opt.background = "light"; vim.cmd[[colorscheme melange]]; require(\'lualine\').setup({options = {theme = "auto"}})', {})
+command('ColorschemeTokyoNightNight', ':lua vim.opt.background = "dark"; vim.cmd[[colorscheme tokyonight]]; require(\'lualine\').setup({options = {theme = "tokyonight"}})', {})
+command('ColorschemeTokyoNightMoon', ':lua vim.opt.background = "dark"; vim.cmd[[colorscheme tokyonight-moon]]; require(\'lualine\').setup({options = {theme = "auto"}})', {})
+command('ColorschemeTokyoNightStorm', ':lua vim.opt.background = "dark"; vim.cmd[[colorscheme tokyonight-storm]]; require(\'lualine\').setup({options = {theme = "auto"}})', {})
+command('ColorschemeTokyoNightDay', ':lua vim.opt.background = "dark"; vim.cmd[[colorscheme tokyonight-day]]; require(\'lualine\').setup({options = {theme = "auto"}})', {})

@@ -1,35 +1,35 @@
-font=Hack 11
+font=Iosevka Etoile 12
 default-timeout=0
 max-visible=7
 layer=overlay
 anchor=top-right
 width=300
 height=110
-border-radius=4
-border-size=1
+border-radius=5
+border-size=2
 icons=1
 max-icon-size=64
 anchor=top-right
-default-timeout=30000
+default-timeout=25000
 
-background-color=#282828
-border-color=#e78a43
-text-color=#ddc7a1
+background-color=#000000
+border-color=#3584e4
+text-color=#f6f5f4
 
 [urgency=low]
-background-color=#282828
-border-color=#7daea3
-text-color=#ddc7a1
+background-color=#000000
+border-color=#33d17a
+text-color=#f6f5f4
 
 [urgency=normal]
-background-color=#282828
-border-color=#a9b665
-text-color=#ddc7a1
+background-color=#000000
+border-color=#3584e4
+text-color=#f6f5f4
 
 [urgency=high]
-background-color=#282828
-border-color=#ea6962
-text-color=#ddc7a1
+background-color=#000000
+border-color=#e01b24
+text-color=#f6f5f4
 
 [app-name="Spotify"]
 background-color=#282a36

@@ -9,7 +9,7 @@ function M.with_switcher(switcher)
         dark_theme = 'gruvbox-material'
         light_theme = 'gruvbox-material'
     elseif desktop_session == "sway" then
-        dark_theme = 'catppuccin'
+        dark_theme = 'catppuccin-macchiato'
         light_theme = 'catppuccin-latte'
     else
         dark_theme = 'github_dark'
@@ -17,7 +17,7 @@ function M.with_switcher(switcher)
     end
 
     require(switcher).apply(dark_theme, light_theme)
-    --vim.cmd[[ColorschemeTokyoNightNight]]
+    vim.cmd[[ColorschemeCatppuccinMacchiato]]
 end
 
 return M

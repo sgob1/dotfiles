@@ -17,7 +17,7 @@ bindsym $mod+t exec sh ~/.local/bin/add-todo-txt.sh
 bindsym $mod+Shift+t exec ~/.local/bin/manage-file.sh $term ~/org/todo.txt
 bindsym $mod+z exec ~/.local/bin/wsearch.sh "firefox --new-window" "https://start.duckduckgo.com/?q="
 bindsym $mod+Shift+z exec wl-paste | xargs firefox --new-window --
-bindsym $mod+y exec grep -v '^#' ~/org/sysclip | grep . | bemenu -i -l 8 --nb $background --nf $text --hb "#d3869bff" --hf $background --fb $background --ff $text --tb "#d3869bff" --tf $background --fn "Iosevka Slab Bold 11" --line-height 23 -p "Sysclip" | wl-copy
+bindsym $mod+y exec grep -v '^#' ~/org/sysclip | grep . | bemenu -i -l 8 --nb $background --nf $text --hb "#dc8addff" --hf $background --fb $background --ff $text --tb "#dc8addff" --tf $background --fn "Iosevka Slab Bold 11" --line-height 23 -p "Sysclip" | wl-copy
 bindsym $mod+Shift+y exec sh ~/.local/bin/add-sysclip.sh
 bindsym $mod+Ctrl+y exec sh ~/.local/bin/rm-sysclip.sh
 bindsym $mod+n exec $term -e ranger

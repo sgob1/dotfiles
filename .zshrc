@@ -171,7 +171,7 @@ unzip_all() {
     find . -name '*.zip' -exec sh -c 'unzip -d "${1%.*}" "$1"' _ {} \;
 }
 # Yanks file path
-yankfp() {
+yyfp() {
     if [ "$1" = "" ]; then
         file="."
     else

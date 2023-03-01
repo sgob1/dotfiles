@@ -147,15 +147,15 @@ ytdl() {
     yt-dlp -ix --audio-quality 0 --audio-format $1 "$2"
 }
 # Creates a today-note in a predefined folder
-dailyPlan() {
+daily_plan() {
     nvim ~/org/life/todo/$(date --iso-8601).md
 }
 # Sets zathura as default pdf viewer
-setZathura() {
+use_zathura() {
     xdg-mime default org.pwmt.zathura.desktop application/pdf
 }
 # Sets evince as default pdf viewer
-setEvince() {
+use_evince() {
     xdg-mime default org.gnome.Evince.desktop application/pdf
 }
 # Starts planner in a convenient way
@@ -163,11 +163,11 @@ organize() {
     nvim -S ~/org/org.vim
 }
 # Pulls all git repos located in the pwd, in parallel
-gitPullAll() {
+git_pull_all() {
     ls | xargs -P10 -I{} git -C {} pull
 }
 # Unzips all files in pwd
-unzipAll() {
+unzip_all() {
     find . -name '*.zip' -exec sh -c 'unzip -d "${1%.*}" "$1"' _ {} \;
 }
 # -----------------------------------------------------------------------------

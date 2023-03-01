@@ -120,7 +120,8 @@ alias rg='rg --no-ignore'
 alias fd='fd --no-ignore'
 alias gpg='LANG=en gpg'
 alias xopen='xdg-open'
-alias bookm='nvim ~/org/bookmarks'
+alias bkm='nvim ~/org/bookmarks'
+alias files='nvim ~/org/files'
 alias d='~/.local/bin/today.sh'
 alias birthdays='bat ~/org/birthdays'
 # -----------------------------------------------------------------------------
@@ -129,7 +130,7 @@ alias birthdays='bat ~/org/birthdays'
 # Custom functions
 # -----------------------------------------------------------------------------
 # Picks an entry from the bookmarks, invoking fzf
-bkm() {
+bookm() {
     grep -v '^#' ~/org/bookmarks | grep . | fzf --preview-window 'right:0%' | cut -d ' ' -f1 | wl-copy
 }
 # Picks an entry from todo.txt file, and edits from there

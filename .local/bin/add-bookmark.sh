@@ -13,5 +13,5 @@ else
     else
         echo $bookmark >> $file
     fi
-    notify-send --expire-time=10000 "Successfully added $bookmark to $file"
+    notify-send --expire-time=10000 "Added $bookmark to $file"
 fi

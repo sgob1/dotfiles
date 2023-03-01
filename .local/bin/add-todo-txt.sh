@@ -20,5 +20,5 @@ else
     fi
     echo $task >> $file
     sort --dictionary-order -o $file $file
-    notify-send --expire-time=10000 "Successfully added $task to $file"
+    notify-send --expire-time=10000 "Added $task to $file"
 fi

@@ -13,5 +13,5 @@ else
     else
         echo $input_file >> $file
     fi
-    notify-send --expire-time=10000 "Successfully added $input_file to $file"
+    notify-send --expire-time=10000 "Added $input_file to $file"
 fi

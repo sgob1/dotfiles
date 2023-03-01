@@ -8,5 +8,5 @@ elif grep "^$entry" "$file" | grep -q -v "^#"; then
     notify-send --expire-time=10000 "Already present entry"
 else
     echo $entry >> $file
-    notify-send --expire-time=10000 "Successfully added $entry to $file"
+    notify-send --expire-time=10000 "Added $entry to $file"
 fi

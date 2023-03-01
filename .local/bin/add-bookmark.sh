@@ -1,7 +1,6 @@
 #!/usr/bin/env bash
 bookmark=$(wl-paste)
 file=~/org/bookmarks
-searched=$(grep -q "^$bookmark$" "$file")
 if [ "$bookmark" = "" ]; then
     notify-send --expire-time=10000 "Nothing to add to bookmarks"
 elif grep "^$bookmark" "$file" | grep -q -v "^#"; then

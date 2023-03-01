@@ -1,7 +1,10 @@
 #!/usr/bin/env bash
-input_file=$(wl-paste)
+if [ "$1" = "" ]; then
+    input_file=$(wl-paste)
+else
+    input_file="$1"
+fi
 file=~/org/files
-searched=$(grep -q "^$input_file$" "$file")
 if [ "$input_file" = "" ]; then
     notify-send --expire-time=10000 "Nothing to add to input_files"
 elif grep "^$input_file" "$file" | grep -q -v "^#"; then

@@ -170,6 +170,27 @@ git_pull_all() {
 unzip_all() {
     find . -name '*.zip' -exec sh -c 'unzip -d "${1%.*}" "$1"' _ {} \;
 }
+# Yanks file path
+yankfp() {
+    if [ "$1" = "" ]; then
+        file="."
+    else
+        file="$1"
+    fi
+    echo "$(readlink --canonicalize $file)" | wl-copy
+    file=""
+}
+# Adds file to files list
+addfl() {
+    if [ "$1" = "" ]; then
+        file="."
+    else
+        file="$1"
+    fi
+    file="$(readlink --canonicalize $file)"
+    ~/.local/bin/add-file.sh "$file"
+    file=""
+}
 # -----------------------------------------------------------------------------
 #
 # -----------------------------------------------------------------------------

@@ -21,12 +21,13 @@ bindsym $mod+y exec grep -v '^#' ~/org/sysclip | grep . | bemenu -i -l 8 --nb $b
 bindsym $mod+Shift+y exec sh ~/.local/bin/add-sysclip.sh
 bindsym $mod+Ctrl+y exec sh ~/.local/bin/rm-sysclip.sh
 bindsym $mod+n exec $term -e ranger
-bindsym $mod+p exec playerctl play-pause
-bindsym $mod+Shift+p exec playerctl next
-bindsym $mod+Ctrl+p exec playerctl previous
+bindsym $mod+p exec ~/.local/bin/open-file.sh
+bindsym $mod+Shift+p exec ~/.local/bin/add-file.sh
+bindsym $mod+Ctrl+p exec ~/.local/bin/manage-file.sh $term ~/org/files
 bindsym $mod+Ctrl+less exec playerctl play-pause
 bindsym $mod+greater exec playerctl next
 bindsym $mod+less exec playerctl previous
+
 
 # Code for wob
 set $WOBSOCK $XDG_RUNTIME_DIR/wob.sock

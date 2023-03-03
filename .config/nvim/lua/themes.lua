@@ -17,7 +17,7 @@ function M.with_switcher(switcher)
     end
 
     require(switcher).apply(dark_theme, light_theme)
-    vim.cmd[[ColorschemeCatppuccinMacchiato]]
+    --vim.cmd[[ColorschemeCatppuccinMacchiato]]
 end
 
 return M

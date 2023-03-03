@@ -1,6 +1,7 @@
 #!/usr/bin/env bash
+source ~/.config/sway/colors/adwaita.sh
 
-file="$(grep -v '^#' ~/org/files | grep . | bemenu -i -l 8 --nb "#000000ff" --nf "#f6f5f4" --hb "#8ff0a4" --hf "#000000ff" --fb "#000000ff" --ff "#f6f5f4" --tb "#8ff0a4" --tf "#000000ff" --fn 'Iosevka Slab Bold 11' --line-height 23 -p 'Files' | cut -d '#' -f1 | xargs)"
+file="$(grep -v '^#' ~/org/files | grep . | bemenu -i -l 8 --nb $background --nf $white --hb $light_green --hf $background --fb $background --ff $white --tb $light_green --tf $background --fn "$font" --line-height 23 -p 'Files' | cut -d '#' -f1 | xargs)"
 if [ "$file" = "" ]; then
     true
 elif [ -d "${file}" ]; then

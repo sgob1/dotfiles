@@ -32,6 +32,8 @@ function M.get_list()
     return {
         { "editorconfig/editorconfig-vim" },
 
+        { "lervag/vimtex" },
+
         { 'freitass/todo.txt-vim', ft="todo", },
 
         {

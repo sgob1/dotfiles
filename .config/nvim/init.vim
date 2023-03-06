@@ -1,6 +1,8 @@
 call plug#begin()
+Plug 'arcticicestudio/nord-vim'
 Plug 'ayu-theme/ayu-vim'
 Plug 'catppuccin/nvim'
+Plug 'chriskempson/base16-vim'
 Plug 'ctrlpvim/ctrlp.vim'
 Plug 'edeneast/nightfox.nvim'
 Plug 'editorconfig/editorconfig-vim'
@@ -10,6 +12,7 @@ Plug 'morhetz/gruvbox'
 Plug 'nlknguyen/papercolor-theme'
 Plug 'nvim-treesitter/nvim-treesitter'
 Plug 'projekt0n/github-nvim-theme'
+Plug 'rafi/awesome-vim-colorschemes'
 Plug 'rebelot/kanagawa.nvim'
 Plug 'sainnhe/edge'
 Plug 'sainnhe/everforest'
@@ -138,4 +141,4 @@ inoremap <leader>bb \textbf{
 nnoremap <leader>cc i\textsc{
 inoremap <leader>cc \textsc{
 
-colorscheme gruvbox
+colorscheme catppuccin-macchiato

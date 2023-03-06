@@ -138,4 +138,4 @@ inoremap <leader>bb \textbf{
 nnoremap <leader>cc i\textsc{
 inoremap <leader>cc \textsc{
 
-colorscheme catppuccin-macchiato
+colorscheme gruvbox

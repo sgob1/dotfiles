@@ -6,8 +6,8 @@ function M.with_switcher(switcher)
     local light_theme = nil
 
     if desktop_session == "gnome" then
-        dark_theme = 'catppuccin-macchiato'
-        light_theme = 'catppuccin-latte'
+        dark_theme = 'gruvbox-material'
+        light_theme = 'gruvbox-material'
     elseif desktop_session == "sway" then
         dark_theme = 'catppuccin-macchiato'
         light_theme = 'catppuccin-latte'
@@ -17,7 +17,6 @@ function M.with_switcher(switcher)
     end
 
     require(switcher).apply(dark_theme, light_theme)
-    vim.cmd[[ColorschemeCatppuccinMacchiato]]
 end
 
 return M

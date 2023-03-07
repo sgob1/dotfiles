@@ -91,6 +91,70 @@ function M.get_list()
         { 'sbdchd/neoformat' },
 
         { 'wellle/targets.vim' },
+
+        {
+            "hrsh7th/nvim-cmp",
+            event = "InsertEnter",
+            dependencies = {
+                "hrsh7th/cmp-nvim-lsp",
+                "hrsh7th/cmp-buffer",
+                "hrsh7th/cmp-path",
+                "hrsh7th/cmp-cmdline",
+                "rafamadriz/friendly-snippets",
+                "L3MON4D3/LuaSnip",
+            }
+        },
+
+        {
+            "ray-x/lsp_signature.nvim",
+            config = function()
+                require "lsp_signature".setup({
+                    bind = true, -- This is mandatory, otherwise border config won't get registered.
+                    handler_opts = {
+                        border = "rounded"
+                    }
+                })
+            end,
+        },
+
+        { 'neovim/nvim-lspconfig' },
+
+        { 'williamboman/mason.nvim' },
+
+        {
+            "hrsh7th/nvim-cmp",
+            event = "InsertEnter",
+            dependencies = {
+                "williamboman/mason-lspconfig.nvim",
+                "hrsh7th/cmp-nvim-lsp",
+                "hrsh7th/cmp-buffer",
+                "hrsh7th/cmp-path",
+                "hrsh7th/cmp-cmdline",
+                "rafamadriz/friendly-snippets",
+                "L3MON4D3/LuaSnip",
+            }
+        },
+
+
+        {
+            "nvim-neorg/neorg",
+            ft = "norg",
+            config = true, -- run require("neorg").setup()
+            build = ":Neorg sync-parsers",
+            opts = {
+                load = {
+                    ["core.defaults"] = {}, -- Loads default behaviour
+                    ["core.norg.concealer"] = {}, -- Adds pretty icons to your documents
+                    ["core.norg.dirman"] = { -- Manages Neorg workspaces
+                        config = {
+                            workspaces = {
+                                notes = "~/org/norg",
+                            },
+                        },
+                    },
+                },
+            },
+        },
     }
 end
 

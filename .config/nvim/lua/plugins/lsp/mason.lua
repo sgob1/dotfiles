@@ -9,14 +9,16 @@ require("mason").setup({
 })
 require("mason-lspconfig").setup({
     ensure_installed = {
-        "rust_analyzer",
         "bashls",
-        "jdtls",
-        "tsserver",
-        "marksman",
+        "eslint",
         "gopls",
-        "texlab",
+        "jdtls",
+        "lua_ls",
+        "marksman",
         "pyright",
         "ruby_ls",
+        "rust_analyzer",
+        "texlab",
+        "tsserver",
     }
 })

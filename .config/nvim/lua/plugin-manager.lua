@@ -32,8 +32,6 @@ function M.get_list()
     return {
         { "editorconfig/editorconfig-vim" },
 
-        { "lervag/vimtex" },
-
         { 'freitass/todo.txt-vim', ft="todo", },
 
         {
@@ -51,6 +49,10 @@ function M.get_list()
         { 'nvim-lualine/lualine.nvim', lazy = false, },
 
         { 'nvim-treesitter/nvim-treesitter', lazy = false },
+
+        { 'nyoom-engineering/oxocarbon.nvim' },
+
+        { 'ellisonleao/gruvbox.nvim' },
 
         { 'sainnhe/edge' },
 

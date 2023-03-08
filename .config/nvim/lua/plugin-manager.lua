@@ -50,9 +50,20 @@ function M.get_list()
 
         { 'nvim-treesitter/nvim-treesitter', lazy = false },
 
+        { "folke/tokyonight.nvim" },
+
         { 'nyoom-engineering/oxocarbon.nvim' },
 
         { 'ellisonleao/gruvbox.nvim' },
+
+        { "rebelot/kanagawa.nvim" },
+
+        { 'rose-pine/neovim', lazy = false },
+
+        { 'savq/melange-nvim' },
+
+        { 'shaunsingh/nord.nvim' },
+
 
         { 'sainnhe/edge' },
 
@@ -155,6 +166,26 @@ function M.get_list()
                         },
                     },
                 },
+            },
+        },
+
+        {
+            "ThePrimeagen/refactoring.nvim",
+            dependencies = {
+                "nvim-lua/plenary.nvim",
+                "nvim-treesitter/nvim-treesitter"
+            },
+        },
+
+        { 'jamestthompson3/nvim-remote-containers' },
+
+        { "stevearc/dressing.nvim", event = "VeryLazy" },
+
+        {
+            "kevinhwang91/nvim-ufo",
+            dependencies = {
+                'kevinhwang91/promise-async',
+                'nvim-treesitter/nvim-treesitter'
             },
         },
     }

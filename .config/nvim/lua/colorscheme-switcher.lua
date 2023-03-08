@@ -9,7 +9,7 @@ function M.apply(dark_theme, light_theme)
 
     require('lualine').setup({
         options = {
-            theme = dark_theme,
+            theme = 'auto',
         }
     })
 

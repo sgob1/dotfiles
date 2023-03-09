@@ -50,6 +50,8 @@ function M.get_list()
 
         { 'nvim-treesitter/nvim-treesitter', lazy = false },
 
+        { 'EdenEast/nightfox.nvim' },
+
         { "folke/tokyonight.nvim" },
 
         { 'nyoom-engineering/oxocarbon.nvim' },

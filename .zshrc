@@ -374,5 +374,4 @@ fi
 #
 # To initialize zoxide, add this to your configuration (usually ~/.zshrc):
 #
-# eval "$(zoxide init zsh)"
-
+eval "$(zoxide init zsh)"

@@ -14,6 +14,7 @@ function M.apply(dark_theme, light_theme)
     keymap('n', '<F3>', ':set background=light<CR>:colorscheme ' .. light_theme .. '<CR>:lua require(\'lualine\').setup({options = { theme = "auto" }})<CR>:echo "Let the light be!"<CR>')
 
     local color_scheme = vim.fn.system("gsettings get org.gnome.desktop.interface color-scheme", true)
+    vim.opt.background = "dark";
     if string.match(color_scheme, 'default') then
         colorscheme(light_theme)
     else

@@ -10,7 +10,7 @@ function M.with_switcher(switcher)
         light_theme = 'gruvbox-material'
     elseif desktop_session == "sway" then
         dark_theme = 'catppuccin-macchiato'
-        light_theme = 'catppuccin-latte'
+        light_theme = 'catppuccin-frappe'
     else
         dark_theme = 'github_dark'
         light_theme = 'github_light'

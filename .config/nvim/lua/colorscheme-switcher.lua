@@ -1,7 +1,6 @@
 local M = {}
 
 function M.apply(dark_theme, light_theme)
-    local background = vim.opt.background
     local keymap = vim.keymap.set
     local colorscheme = vim.cmd.colorscheme
 
@@ -18,12 +17,11 @@ function M.apply(dark_theme, light_theme)
 
     local color_scheme = vim.fn.system("gsettings get org.gnome.desktop.interface color-scheme", true)
     if string.match(color_scheme, 'default') then
+        vim.opt.background = "light";
         colorscheme(light_theme)
-        background = "light";
     else
+        vim.opt.background = "dark";
         colorscheme(dark_theme)
-        background = "dark";
-
     end
 end
 

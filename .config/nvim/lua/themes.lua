@@ -6,8 +6,8 @@ function M.with_switcher(switcher)
     local light_theme = nil
 
     if desktop_session == "gnome" then
-        dark_theme = 'gruvbox-material'
-        light_theme = 'gruvbox-material'
+        dark_theme = 'nightfox'
+        light_theme = 'dawnfox'
     elseif desktop_session == "sway" then
         dark_theme = 'catppuccin-macchiato'
         light_theme = 'catppuccin-latte'

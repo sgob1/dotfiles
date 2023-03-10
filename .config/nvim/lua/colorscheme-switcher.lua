@@ -15,10 +15,8 @@ function M.apply(dark_theme, light_theme)
 
     local color_scheme = vim.fn.system("gsettings get org.gnome.desktop.interface color-scheme", true)
     if string.match(color_scheme, 'default') then
-        vim.opt.background = "light";
         colorscheme(light_theme)
     else
-        vim.opt.background = "dark";
         colorscheme(dark_theme)
     end
 end

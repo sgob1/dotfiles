@@ -5,8 +5,6 @@ function M.apply(dark_theme, light_theme)
     local keymap = vim.keymap.set
     local colorscheme = vim.cmd.colorscheme
 
-    background = "dark";
-
     require('lualine').setup({
         options = {
             theme = 'auto',
@@ -21,8 +19,11 @@ function M.apply(dark_theme, light_theme)
     local color_scheme = vim.fn.system("gsettings get org.gnome.desktop.interface color-scheme", true)
     if string.match(color_scheme, 'default') then
         colorscheme(light_theme)
+        background = "light";
     else
         colorscheme(dark_theme)
+        background = "dark";
+
     end
 end
 

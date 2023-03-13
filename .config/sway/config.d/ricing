@@ -41,7 +41,7 @@ bar {
 		separator $text
 	}
 }
-output * bg $wallpaper $wallpaper_mode
+output * bg $wallpaper_day $wallpaper_mode
 #exec_always setwallpaper --mode scale $wallpaper
 #exec_always setrandom --mode scale $wallpaper_dir
 

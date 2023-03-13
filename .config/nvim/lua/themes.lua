@@ -12,8 +12,8 @@ function M.load()
     opt.background = "dark";
 
     if desktop_session == "gnome" then
-        dark_theme = 'rose-pine'
-        light_theme = 'rose-pine'
+        dark_theme = 'nightfox'
+        light_theme = 'dawnfox'
     elseif desktop_session == "sway" then
         dark_theme = 'catppuccin-macchiato'
         light_theme = 'catppuccin-frappe'

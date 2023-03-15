@@ -66,7 +66,6 @@ function M.get_list()
 
         { 'shaunsingh/nord.nvim' },
 
-
         { 'sainnhe/edge' },
 
         { 'sainnhe/everforest' },
@@ -180,16 +179,6 @@ function M.get_list()
         },
 
         { 'jamestthompson3/nvim-remote-containers' },
-
-        { "stevearc/dressing.nvim", event = "VeryLazy" },
-
-        {
-            "kevinhwang91/nvim-ufo",
-            dependencies = {
-                'kevinhwang91/promise-async',
-                'nvim-treesitter/nvim-treesitter'
-            },
-        },
     }
 end
 

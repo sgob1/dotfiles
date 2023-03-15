@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-source ~/.config/sway/colors/adwaita.sh
+source ~/.config/sway/colors/source.sh
 entry="$(cat ~/org/sysclip | grep . | bemenu -i -l 10 --nb $background --nf $white --hb $pastel_purple --hf $background --fb $background --ff $white --tb $pastel_purple --tf $background --fn "$font" --line-height 23 -p "Sysclip dd")"
 file=~/org/sysclip
 if [ "$entry" = "" ]; then

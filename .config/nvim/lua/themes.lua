@@ -15,8 +15,8 @@ function M.load()
         dark_theme = 'gruvbox-material'
         light_theme = 'gruvbox-material'
     elseif desktop_session == "sway" then
-        dark_theme = 'nightfox'
-        light_theme = 'dawnfox'
+        dark_theme = 'gruvbox-material'
+        light_theme = 'gruvbox-material'
     else
         dark_theme = 'github_dark'
         light_theme = 'github_light'

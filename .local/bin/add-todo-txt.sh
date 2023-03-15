@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-source ~/.config/sway/colors/adwaita.sh
+source ~/.config/sway/colors/source.sh
 file=~/org/todo.txt
 date=$(date --iso-8601)
 

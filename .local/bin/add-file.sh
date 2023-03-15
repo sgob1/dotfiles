@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-source ~/.config/sway/colors/adwaita.sh
+source ~/.config/sway/colors/source.sh
 if [ "$1" = "" ]; then
     input_file=$(wl-paste)
 else

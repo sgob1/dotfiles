@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-source ~/.config/sway/colors/adwaita.sh
+source ~/.config/sway/colors/source.sh
 
 launch_browser=$1
 search_pattern=$2

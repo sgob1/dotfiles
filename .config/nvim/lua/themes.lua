@@ -12,8 +12,8 @@ function M.load()
     opt.background = "dark";
 
     if desktop_session == "gnome" then
-        dark_theme = 'terafox'
-        light_theme = 'dawnfox'
+        dark_theme = 'gruvbox-material'
+        light_theme = 'gruvbox-material'
     elseif desktop_session == "sway" then
         dark_theme = 'nightfox'
         light_theme = 'dawnfox'
@@ -23,8 +23,8 @@ function M.load()
     end
 
 
-    keymap('n', '<F2>', ':set background=dark<CR>:colorscheme ' .. dark_theme .. '<CR>:lua require(\'lualine\').setup({options = { theme = "auto" }})<CR>:echo "Here comes the darkness!"<CR>')
-    keymap('n', '<F3>', ':set background=light<CR>:colorscheme ' .. light_theme .. '<CR>:lua require(\'lualine\').setup({options = { theme = "auto" }})<CR>:echo "Let the light be!"<CR>')
+    keymap('n', '<F2>', ':set background=dark<CR>:colorscheme ' .. dark_theme .. '<CR>:echo "Here comes the darkness!"<CR>')
+    keymap('n', '<F3>', ':set background=light<CR>:colorscheme ' .. light_theme .. '<CR>:echo "Let the light be!"<CR>')
 
     colorscheme(dark_theme)
 end

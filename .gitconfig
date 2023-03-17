@@ -3,15 +3,15 @@
 	email = marco.sgobino@gmail.com
 
 [core]
-    pager = delta --line-numbers --syntax-theme base16
+    #pager = delta --line-numbers --syntax-theme base16
     excludesfile = ~/.gitignore_global
 
 [interactive]
     diffFilter = delta --color-only --features=interactive
 
-[delta]
-    navigate = true  # use n and N to move between diff sections
-    line-numbers = true
+#[delta]
+    #navigate = true  # use n and N to move between diff sections
+    #line-numbers = true
     #side-by-side = true
 
 [merge]

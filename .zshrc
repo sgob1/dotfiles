@@ -191,6 +191,10 @@ addfl() {
     ~/.local/bin/add-file.sh "$file"
     file=""
 }
+# Sets new wallpaper from Google Earth folder
+gearth() {
+    gsettings set org.gnome.desktop.background picture-uri ~/wallpapers-legacy/google-earth/$(ls ~/wallpapers-legacy/google-earth | shuf | head -n 1)
+}
 # -----------------------------------------------------------------------------
 #
 # -----------------------------------------------------------------------------

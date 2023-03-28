@@ -1,3 +1,3 @@
 #!/usr/bin/env bash
 
-chromium-freeworld --enable-features=UseOzonePlatform --ozone-platform=wayland --enable-gpu
+bwrap --dev-bind / / --tmpfs /home --bind /home/sirduke/.config/chromium /home/sirduke/.config/chromium --bind /home/sirduke/Downloads /home/sirduke/Downloads --unshare-all --share-net chromium-freeworld

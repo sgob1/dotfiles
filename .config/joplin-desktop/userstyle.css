@@ -4,31 +4,31 @@
   border: 3px solid red !important;
 }
 body {
-  font-family: 'Josefin Sans', 'Source Sans 3', 'IBM Plex Serif', 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial,
+  font-family: 'Source Sans 3', 'IBM Plex Serif', 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial,
     sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji' !important;
   margin-bottom: 1.75em !important;
   font-size:.90em;
-  margin-left: 1.75em;
-  margin-right: 1.75em;
+  /*margin-left: 1.75em;*/
+  /*margin-right: 1.75em;*/
 }
 p, tr, td {
-  font-family: 'Josefin Sans', 'Source Sans 3', 'IBM Plex Serif', 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial
+  font-family: 'Source Sans 3', 'IBM Plex Serif', 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial
     sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji' !important;
 }
 h1 {
-    font-family: 'Josefin Sans', 'Source Serif 4', 'IBM Plex Serif','Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial,
+    font-family: 'Source Serif 4', 'IBM Plex Serif','Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial,
       sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji' !important;
     margin-bottom: 1em !important;
 }
 
 h2, h3 {
-    font-family: 'Josefin Sans', 'Source Serif 4', 'IBM Plex Serif','Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, 
+    font-family: 'Source Serif 4', 'IBM Plex Serif','Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, 
     sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji' !important;
   margin-bottom: 1em !important;
 }
 
  h4, h5, h6 {
-    font-family: 'Josefin Sans', 'Source Serif 4', 'IBM Plex Serif','Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, 
+    font-family: 'Source Serif 4', 'IBM Plex Serif','Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, 
     sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji' !important;
   margin-bottom: 1em !important;
 }

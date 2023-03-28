@@ -2,7 +2,7 @@ set $gaps_size              "2"
 set $border_pixel           "2"
 set $swaybar_cmd            "swaybar"
 set $statusbar_font         "Iosevka Nerd Font Heavy 9.5"
-set $statusbar_cmd          "while bash  ~/.config/sway/status.sh; do sleep 1; done"
+set $statusbar_cmd          "while bash  ~/.config/sway/status.sh; do sleep 1.25; done"
 set $sway_default_font      "Cascadia Code Semibold 10"
 
 

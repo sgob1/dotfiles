@@ -1,4 +1,4 @@
-font=Iosevka Etoile 12
+font=Josefin Sans 12
 default-timeout=0
 max-visible=7
 layer=overlay
@@ -12,24 +12,24 @@ max-icon-size=64
 anchor=top-right
 default-timeout=25000
 
-background-color=#000000
-border-color=#3584e4
-text-color=#f6f5f4
+background-color=#f6f5f4
+border-color=#000000
+text-color=#000000
 
 [urgency=low]
-background-color=#000000
-border-color=#33d17a
-text-color=#f6f5f4
+background-color=#f6f5f4
+border-color=#9a9996
+text-color=#000000
 
 [urgency=normal]
-background-color=#000000
-border-color=#3584e4
-text-color=#f6f5f4
+background-color=#f6f5f4
+border-color=#77767b
+text-color=#000000
 
 [urgency=high]
-background-color=#000000
+background-color=#f6f5f4
 border-color=#e01b24
-text-color=#f6f5f4
+text-color=#000000
 
 [app-name="Spotify"]
 background-color=#282a36

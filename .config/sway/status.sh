@@ -38,6 +38,6 @@ hostname="Hst: $hostname"
 battery=$(acpi | grep -o -P '.{0,3}%' | head -1)
 battery="Bat: $battery"
 
-date=$(date +"%a %d %b %Y | %H:%M |")
+date=$(date +"%a %d %b %Y  |  %H:%M  |")
 
-echo -e -n "$player  |  $network  |  $volume  |  $light  |  $battery  |  $hostname  |  Date: $date"
+echo -e -n "$player  |  $network  |  $volume  |  $light  |  $battery  |  $hostname  |  $date"

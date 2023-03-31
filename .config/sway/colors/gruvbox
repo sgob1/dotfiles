@@ -13,7 +13,7 @@ set $j4_accent              "#7daea3ff"
 set $dmenu_font             "Iosevka Slab Bold 11"
 set $dmenu_font_pango       "Iosevka Slab Medium:size=8.5"
 set $dmenu_font_launcher    "Iosevka Slab Heavy 11"
-set $wallpaper_day          /home/sirduke/wallpapers-legacy/google-earth/D1i7Wtz.jpeg
-set $wallpaper_night        /home/sirduke/wallpapers-legacy/google-earth/lff3ht3enxma1.webp
+set $wallpaper_day          /home/sirduke/wallpapers-legacy/arcane/piltover-sunset.jpg
+set $wallpaper_night        /home/sirduke/swaywall/gruvbox/astrog.jpg
 set $wallpaper_dir          "$HOME/wallpapers-legacy/google-earth/"
 set $wallpaper_mode         "fill"

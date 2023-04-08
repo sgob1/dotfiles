@@ -56,6 +56,8 @@ function M.get_list()
 
         { 'nyoom-engineering/oxocarbon.nvim' },
 
+        {'kdheepak/monochrome.nvim'},
+
         { 'ellisonleao/gruvbox.nvim' },
 
         { "rebelot/kanagawa.nvim" },

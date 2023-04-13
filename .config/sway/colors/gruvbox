@@ -4,7 +4,7 @@ set $title_border           "#3c3836ff"
 set $text_bright            "#fbf1c7ff"
 set $text                   "#ebdbb2ff"
 set $text_dim               "#d5c4a1ff"
-set $accent                 "#458588ff"
+set $accent                 "#b8bb26ff"
 set $alert                  "#cc241dff"
 set $dmenu_accent           "#fb4934ff"
 set $fuzzel_accent          "#fabd2fff"
@@ -13,7 +13,7 @@ set $j4_accent              "#7daea3ff"
 set $dmenu_font             "Iosevka Slab Bold 11"
 set $dmenu_font_pango       "Iosevka Slab Medium:size=8.5"
 set $dmenu_font_launcher    "Iosevka Slab Heavy 11"
-set $wallpaper_day          /home/sirduke/wallpapers-legacy/arcane/piltover-sunset.jpg
+set $wallpaper_day          /home/sirduke/wallpapers-legacy/venice.jpg
 set $wallpaper_night        /home/sirduke/swaywall/gruvbox/astrog.jpg
 set $wallpaper_dir          "$HOME/wallpapers-legacy/google-earth/"
 set $wallpaper_mode         "fill"

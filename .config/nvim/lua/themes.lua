@@ -12,8 +12,8 @@ function M.load()
     opt.background = "dark";
 
     if desktop_session == "gnome" then
-        dark_theme = 'kanagawa'
-        light_theme = 'rose-pine-dawn'
+        dark_theme = 'gruvbox-material'
+        light_theme = 'gruvbox-material'
     elseif desktop_session == "sway" then
         dark_theme = 'gruvbox-material'
         light_theme = 'gruvbox-material'

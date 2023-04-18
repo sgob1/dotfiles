@@ -105,10 +105,9 @@ alias ls='ls --color=auto'
 alias ll='ls -lash --color=auto'
 alias pdflatex='pdflatex -synctex=15 -interaction=nonstopmode -file-line-error'
 alias mpv='mpv --no-audio-display'
-alias its_sunday_and_I_am_very_sure_I_want_to_read_the_news='/usr/bin/newsboat --config-file=$HOME/.config/newsboat/config \
+alias newsboat='/usr/bin/newsboat --config-file=$HOME/.config/newsboat/config \
 	--url-file=$HOME/.config/newsboat/urls \
 	--cache-file=$HOME/stuff/cache.db'
-alias newsboat='echo "Cannot read the news at the moment."'
 alias ranger='. ranger'
 alias zathura='zathura --fork'
 alias docker='podman'

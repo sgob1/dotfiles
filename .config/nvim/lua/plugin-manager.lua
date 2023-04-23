@@ -109,49 +109,6 @@ function M.get_list()
         { 'wellle/targets.vim' },
 
         {
-            "hrsh7th/nvim-cmp",
-            event = "InsertEnter",
-            dependencies = {
-                "hrsh7th/cmp-nvim-lsp",
-                "hrsh7th/cmp-buffer",
-                "hrsh7th/cmp-path",
-                "hrsh7th/cmp-cmdline",
-                "rafamadriz/friendly-snippets",
-                "L3MON4D3/LuaSnip",
-            }
-        },
-
-        {
-            "ray-x/lsp_signature.nvim",
-            config = function()
-                require "lsp_signature".setup({
-                    bind = true, -- This is mandatory, otherwise border config won't get registered.
-                    handler_opts = {
-                        border = "rounded"
-                    }
-                })
-            end,
-        },
-
-        { 'neovim/nvim-lspconfig' },
-
-        { 'williamboman/mason.nvim' },
-
-        {
-            "hrsh7th/nvim-cmp",
-            event = "InsertEnter",
-            dependencies = {
-                "williamboman/mason-lspconfig.nvim",
-                "hrsh7th/cmp-nvim-lsp",
-                "hrsh7th/cmp-buffer",
-                "hrsh7th/cmp-path",
-                "hrsh7th/cmp-cmdline",
-                "rafamadriz/friendly-snippets",
-                "L3MON4D3/LuaSnip",
-            }
-        },
-
-        {
             "ThePrimeagen/refactoring.nvim",
             dependencies = {
                 "nvim-lua/plenary.nvim",

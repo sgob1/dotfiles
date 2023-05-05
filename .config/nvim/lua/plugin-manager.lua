@@ -42,8 +42,6 @@ function M.get_list()
             end
         },
 
-        { 'lukas-reineke/indent-blankline.nvim' },
-
         { 'numToStr/Comment.nvim' },
 
         { 'nvim-lualine/lualine.nvim', lazy = false, },

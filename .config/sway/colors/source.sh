@@ -1,2 +1,2 @@
 #!/usr/bin/env bash
-source ~/.config/sway/colors/adwaita.sh
+source ~/.config/sway/colors/gruvbox.sh

@@ -15,7 +15,7 @@ function M.load()
         dark_theme = 'sonokai'
         light_theme = 'everforest'
     elseif desktop_session == "sway" then
-        dark_theme = 'sonokai'
+        dark_theme = 'gruvbox-material'
         light_theme = 'everforest'
     else
         dark_theme = 'github_dark'

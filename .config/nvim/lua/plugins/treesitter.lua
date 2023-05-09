@@ -34,6 +34,7 @@ require('nvim-treesitter.configs').setup({
         'latex',
         'lua',
         'markdown',
+        'norg',
         'ninja',
         'php',
         'python',

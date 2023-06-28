@@ -11,6 +11,7 @@ https://tails.boum.org/news/index.it.atom
 https://foundation.gnome.org/feed/
 http://neovim.io/news.xml
 https://sourcehut.org/blog/index.xml
+https://www.jeffgeerling.com/blog
 https://blog.kagi.com/rss.xml
 https://lwn.net/headlines/newrss
 https://www.opensourcefeed.org/feed
@@ -21,6 +22,7 @@ https://blogs.gnome.org/haeckerfelix/feed/
 https://thisweek.gnome.org/index.xml
 https://this-week-in-neovim.org/rss
 https://blogs.oracle.com/javamagazine/rss
+https://blog.ploeh.dk/atom.xml
 https://go.dev/blog/feed.atom
 https://drewdevault.com/blog/index.xml
 https://hacks.mozilla.org/feed/
@@ -50,6 +52,7 @@ https://www.mangiaviviviaggia.com/feed/
 https://www.windytan.com/feeds/posts/default?alt=rss
 https://www.newyorker.com/feed/articles
 https://www.robkhenderson.com/feed
+https://unchartedterritories.tomaspueyo.com/feed
 https://www.iltascabile.com/feed/
 https://www.radarmagazine.net/feed/
 https://www.singola.net/feed/

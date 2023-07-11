@@ -44,6 +44,8 @@ function M.get_list()
 
         { 'numToStr/Comment.nvim' },
 
+        { 'vimwiki/vimwiki' },
+
         { 'nvim-lualine/lualine.nvim', lazy = false, },
 
         { 'nvim-treesitter/nvim-treesitter', lazy = false },

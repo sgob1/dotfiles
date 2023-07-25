@@ -58,6 +58,8 @@ function M.get_list()
 
         {'kdheepak/monochrome.nvim'},
 
+        {'ramojus/mellifluous.nvim'},
+
         { 'ellisonleao/gruvbox.nvim' },
 
         { "rebelot/kanagawa.nvim" },

@@ -2,6 +2,7 @@
 bindsym Ctrl+Mod1+T exec $term
 bindsym $mod+Return exec $term
 floating_modifier $mod normal
+bindsym $mod+Space workspace back_and_forth
 bindsym $mod+Shift+q kill
 bindsym $mod+Shift+c reload
 #bindsym $mod+Shift+p exec setrandom --mode scale $wallpaper_dir

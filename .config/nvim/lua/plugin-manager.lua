@@ -17,48 +17,31 @@ function M.install()
     return false
 end
 
-function M.load_plugins()
-    local plugins = M.get_list()
-    require("lazy").setup(plugins)
+function M.setup()
+    require("lazy").setup("plugins", {
+        defaults = {
+            lazy = true
+        },
+        install = {
+            -- install missing plugins on startup. This doesn't increase startup time.
+            missing = true,
+        },
+        change_detection = {
+            -- automatically check for config file changes and reload the ui
+            enabled = true,
+            notify = true, -- get a notification when changes are found
+        },
+        debug = false,
+    })
 end
 
-function M.first_sync()
-    local plugins = M.get_list()
-    require("lazy").setup(plugins)
+function M.update()
     require("lazy").sync()
 end
 
-function M.get_list()
+--[[ function M.get_list()
     return {
-        { "editorconfig/editorconfig-vim" },
-
-        { 'freitass/todo.txt-vim', ft="todo", },
-
-        {
-            "folke/todo-comments.nvim",
-            dependencies = "nvim-lua/plenary.nvim",
-            config = function()
-                require("todo-comments").setup({})
-            end
-        },
-
-        { 'numToStr/Comment.nvim' },
-
-        { 'vimwiki/vimwiki' },
-
-        { 'nvim-lualine/lualine.nvim', lazy = false, },
-
         { 'nvim-treesitter/nvim-treesitter', lazy = false },
-
-        { 'EdenEast/nightfox.nvim' },
-
-        { "folke/tokyonight.nvim" },
-
-        { 'nyoom-engineering/oxocarbon.nvim' },
-
-        {'kdheepak/monochrome.nvim'},
-
-        {'ramojus/mellifluous.nvim'},
 
         { 'ellisonleao/gruvbox.nvim' },
 
@@ -171,5 +154,6 @@ function M.get_list()
         },
     }
 end
+]]--
 
 return M

@@ -41,6 +41,7 @@ set mouse=v
 set list
 set lcs=tab:»·
 set lcs+=trail:·
+set undodir=~/.vim/undodir
 set undofile
 set viminfo=!,'100,<50,s100,%,/50,:50
 set background=dark

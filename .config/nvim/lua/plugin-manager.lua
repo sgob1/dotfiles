@@ -120,6 +120,8 @@ function M.get_list()
 
         { 'jamestthompson3/nvim-remote-containers' },
 
+        { 'ray-x/go.nvim' },
+
         {
             "hrsh7th/nvim-cmp",
             event = "InsertEnter",

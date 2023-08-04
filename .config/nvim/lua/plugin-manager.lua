@@ -43,67 +43,7 @@ end
     return {
         { 'nvim-treesitter/nvim-treesitter', lazy = false },
 
-        { 'ellisonleao/gruvbox.nvim' },
-
-        { "rebelot/kanagawa.nvim" },
-
-        { 'rose-pine/neovim', lazy = false },
-
-        { 'savq/melange-nvim' },
-
-        { 'shaunsingh/nord.nvim' },
-
-        { 'sainnhe/edge' },
-
-        { 'sainnhe/everforest' },
-
-        {
-            'sainnhe/gruvbox-material',
-            lazy = false,
-            priority = 1,
-        },
-
-        { 'sainnhe/sonokai', lazy = false, },
-
-        { 
-            "catppuccin/nvim",
-            lazy=false,
-            priority=1,
-        },
-
-        { 'tpope/vim-fugitive' },
-
-        { 'tpope/vim-obsession' },
-
-        {
-            "monaqa/dial.nvim",
-            keys = { "<C-a>", { "<C-x>", mode = "n" } },
-        },
-
         { 'kyazdani42/nvim-tree.lua' },
-
-        {
-            'nvim-telescope/telescope.nvim',
-            dependencies = { 'nvim-lua/plenary.nvim' },
-        },
-
-        { 'lewis6991/gitsigns.nvim' },
-
-        { 'sbdchd/neoformat' },
-
-        { 'wellle/targets.vim' },
-
-        {
-            "ThePrimeagen/refactoring.nvim",
-            dependencies = {
-                "nvim-lua/plenary.nvim",
-                "nvim-treesitter/nvim-treesitter"
-            },
-        },
-
-        { 'jamestthompson3/nvim-remote-containers' },
-
-        { 'ray-x/go.nvim' },
 
         {
             "hrsh7th/nvim-cmp",

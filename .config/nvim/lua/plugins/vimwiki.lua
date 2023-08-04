@@ -1,5 +1,6 @@
 local M = {
-    'vimwiki/vimwiki'
+    'vimwiki/vimwiki',
+    ft = "md"
 }
 
 return M

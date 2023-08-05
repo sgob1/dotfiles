@@ -17,6 +17,10 @@ function M.install()
     return false
 end
 
+function M.set_mapleader(mapleader_setter)
+    mapleader_setter.set()
+end
+
 function M.setup()
     require("lazy").setup("plugins", {
         defaults = {

@@ -1,18 +1,4 @@
-local M = {
-    mapleader = ',',
-}
-
-MapleaderSetter = {
-    set = function()
-        vim.g.mapleader = mapleader
-    end,
-}
-
-function M.leader_setter()
-    return MapleaderSetter
-end
-
-function M.set_global_keys()
+local function set_global_keys()
     local keymap = vim.keymap.set
 
     keymap('n', 'Y', 'y$')
@@ -28,7 +14,7 @@ function M.set_global_keys()
     keymap('n', '<F6>', ':set number relativenumber<CR>')
 end
 
-function M.set_plugin_keys()
+local function set_plugin_keys()
     local keymap = vim.keymap.set
     local nvim_keymap = vim.api.nvim_set_keymap
 
@@ -57,6 +43,26 @@ function M.set_plugin_keys()
     keymap("v", "<C-x>", require("dial.map").dec_visual(), {noremap = true})
     keymap("v", "g<C-a>",require("dial.map").inc_gvisual(), {noremap = true})
     keymap("v", "g<C-x>",require("dial.map").dec_gvisual(), {noremap = true})
+end
+
+local M = {
+    mapleader = ',',
+}
+
+MapleaderSetter = {
+    set = function()
+        vim.g.mapleader = mapleader
+    end,
+}
+
+function M.leader_setter()
+    return MapleaderSetter
+end
+
+function M.setup()
+    M.leader_setter().set()
+    set_global_keys()
+    set_plugin_keys()
 end
 
 return M

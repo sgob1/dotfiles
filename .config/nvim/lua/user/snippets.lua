@@ -1,6 +1,4 @@
-local M = {}
-
-function M.latex()
+local function latex()
     vim.keymap.set('n', '<leader>figure', 'o<ESC>:-1read $HOME/.snippets/latex-picture.tex<CR>2j$i')
     vim.keymap.set('n', '<leader>code', 'o<ESC>o<ESC>:-1read $HOME/.snippets/latex-code.tex<CR>o')
     vim.keymap.set('n', '<leader>verb', 'o<ESC>:-1read $HOME/.snippets/latex-verbatim.tex<CR>o')
@@ -23,6 +21,12 @@ function M.latex()
     vim.keymap.set('i', '<leader>ee', '\\emph{')
     vim.keymap.set('i', '<leader>bb', '\\textbf{')
     vim.keymap.set('i', '<leader>cc', '\\textsc{')
+end
+
+local M = {}
+
+function M.setup()
+    latex()
 end
 
 return M

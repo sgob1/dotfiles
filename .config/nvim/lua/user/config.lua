@@ -1,6 +1,6 @@
 local M = {}
 
-function M.apply()
+function M.setup()
     local opt = vim.opt
 
     opt.path = vim.opt.path + '**';

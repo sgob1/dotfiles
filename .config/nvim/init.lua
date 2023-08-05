@@ -5,12 +5,15 @@ plugin_manager.set_mapleader(keymaps.leader_setter())
 plugin_manager.setup()
 
 if not first_install then
-    -- local require_all = require('loader').require_all
-    require('user.config')
+    config = require('user.config')
+    commands = require('user.commands')
+    snippets = require('user.snippets')
+    config.apply()
     keymaps.set_global_keys()
     keymaps.set_plugin_keys()
-    -- require_all("user.commands")
-    -- require_all("user.snippets")
+    commands.load_commands()
+    commands.load_autocommands()
+    snippets.latex()
     require('themes').load()
 else
     plugin_manager.update()

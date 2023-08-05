@@ -43,21 +43,6 @@ end
     return {
         { 'nvim-treesitter/nvim-treesitter', lazy = false },
 
-        { 'kyazdani42/nvim-tree.lua' },
-
-        {
-            "hrsh7th/nvim-cmp",
-            event = "InsertEnter",
-            dependencies = {
-                "hrsh7th/cmp-nvim-lsp",
-                "hrsh7th/cmp-buffer",
-                "hrsh7th/cmp-path",
-                "hrsh7th/cmp-cmdline",
-                "rafamadriz/friendly-snippets",
-                "L3MON4D3/LuaSnip",
-            }
-        },
-
         {
             "ray-x/lsp_signature.nvim",
             config = function()

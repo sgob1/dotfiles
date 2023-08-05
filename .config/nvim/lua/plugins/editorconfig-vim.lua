@@ -1,5 +1,6 @@
 local M = {
-    "editorconfig/editorconfig-vim"
+    "editorconfig/editorconfig-vim",
+    lazy = false,
 }
 
 return M

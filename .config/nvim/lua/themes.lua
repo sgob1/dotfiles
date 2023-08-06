@@ -1,6 +1,6 @@
 local M = {}
 
-function M.load()
+function M.apply()
     local desktop_session = vim.env.DESKTOP_SESSION
     local keymap = vim.keymap.set
     local colorscheme = vim.cmd.colorscheme

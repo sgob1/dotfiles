@@ -43,7 +43,16 @@ local function set_plugin_keys()
     keymap("v", "<C-x>", require("dial.map").dec_visual(), {noremap = true})
     keymap("v", "g<C-a>",require("dial.map").inc_gvisual(), {noremap = true})
     keymap("v", "g<C-x>",require("dial.map").dec_gvisual(), {noremap = true})
+
+    -- Use default path (i.e. ~/wiki/)
+    local kiwi = require('kiwi')
+
+    -- Necessary keybindings
+    vim.keymap.set('n', '<leader>ww', kiwi.open_wiki_index, {})
+    vim.keymap.set('n', '<leader>wd', kiwi.open_diary_index, {})
+    vim.keymap.set('n', '<leader>wn', kiwi.open_diary_new, {})
 end
+
 
 local M = {
     mapleader = ',',

@@ -45,8 +45,6 @@ end
 
 --[[ function M.get_list()
     return {
-        { 'nvim-treesitter/nvim-treesitter', lazy = false },
-
         {
             "ray-x/lsp_signature.nvim",
             config = function()

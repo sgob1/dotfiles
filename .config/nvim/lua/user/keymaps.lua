@@ -19,13 +19,13 @@ local function set_plugin_keys()
     local nvim_keymap = vim.api.nvim_set_keymap
 
     keymap('n', '<leader>s', '<cmd>NvimTreeToggle<cr>')
-    keymap('n', '<leader>ff', ':lua require(\'telescope.builtin\').find_files({no_ignore = true})<cr>', {}) -- find files
-    keymap('n', '<leader>fpf', ':lua require(\'telescope.builtin\').find_files()<cr>', {}) -- find project files
-    keymap('n', '<leader>fg', ':lua require(\'telescope.builtin\').live_grep()<cr>', {})
-    keymap('n', '<leader>fb', ':lua require(\'telescope.builtin\').buffers()<cr>', {})
-    keymap('n', '<leader>fh', ':lua require(\'telescope.builtin\').help_tags()<cr>', {})
-    keymap('n', '<leader>ft', ':lua require(\'telescope.builtin\').tags()<cr>', {})
-    keymap('n', '<leader>fc', ':lua require(\'telescope.builtin\').commands()<cr>', {})
+    keymap('n', '<leader>tf', ':lua require(\'telescope.builtin\').find_files({no_ignore = true})<cr>', {}) -- find files
+    keymap('n', '<leader>tpf', ':lua require(\'telescope.builtin\').find_files()<cr>', {}) -- find project files
+    keymap('n', '<leader>tg', ':lua require(\'telescope.builtin\').live_grep({no_ignore = true})<cr>', {})
+    keymap('n', '<leader>tb', ':lua require(\'telescope.builtin\').buffers()<cr>', {})
+    keymap('n', '<leader>th', ':lua require(\'telescope.builtin\').help_tags()<cr>', {})
+    keymap('n', '<leader>tt', ':lua require(\'telescope.builtin\').tags()<cr>', {})
+    keymap('n', '<leader>tc', ':lua require(\'telescope.builtin\').commands()<cr>', {})
     keymap('n', '<leader>bc', '<cmd>Bdelete<CR>')
     keymap('n', '<C-M-l>', '<cmd>Neoformat<CR>')
     nvim_keymap("v", "<leader>re", [[ <Esc><Cmd>lua require('refactoring').refactor('Extract Function')<CR>]], {noremap = true, silent = true, expr = false})
@@ -60,7 +60,7 @@ local M = {
 
 MapleaderSetter = {
     set = function()
-        vim.g.mapleader = mapleader
+        vim.g.mapleader = M.mapleader
     end,
 }
 
@@ -69,7 +69,6 @@ function M.leader_setter()
 end
 
 function M.setup()
-    M.leader_setter().set()
     set_global_keys()
     set_plugin_keys()
 end

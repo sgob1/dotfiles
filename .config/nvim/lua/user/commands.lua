@@ -5,6 +5,8 @@ local function load_commands()
     command('SpellingItalian', ':set spell spelllang=it', {})
     command('SpellingEnglish', ':set spell spelllang=en', {})
     command('NoSpelling', ':set nospell', {})
+    command('TelescopeFindFiles', ':lua require(\'telescope.builtin\').find_files({no_ignore = true})<CR>', {})
+    command('TelescopeFindFilesFromHome', ":lua require('telescope.builtin').find_files({no_ignore = true, cwd = '~'})<CR>", {})
     command('W', ':w', {})
 end
 

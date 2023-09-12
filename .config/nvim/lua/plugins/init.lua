@@ -1,5 +1,5 @@
 local g = vim.g
-g.vimtex_view_method = 'zathura'
+-- g.vimtex_view_method = 'zathura'
 g.gruvbox_material_foreground = 'material'
 g.gruvbox_material_background = 'hard'
 g.gruvbox_material_diagnostic_text_highlight = true

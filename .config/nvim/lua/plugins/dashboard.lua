@@ -34,6 +34,14 @@ local M = {
                         action = 'TelescopeFindFilesFromHome',
                         key = 'h',
                     },
+                    {
+                        icon = 'K ',
+                        icon_hl = '@variable',
+                        desc = 'Knowledge',
+                        group = 'Label',
+                        action = 'edit ~/org/kiwi/index.md',
+                        key = 'w',
+                    },
                 },
             },
         })

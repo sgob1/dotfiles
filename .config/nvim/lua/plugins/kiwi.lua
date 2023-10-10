@@ -8,7 +8,7 @@ local M = {
         require('kiwi').setup({
             {
                 name = "kiwi",
-                path = "/home/sirduke/org/kiwi" -- For Windows users
+                path = "/home/sirduke/notes/kiwi"
             }
         })
     end

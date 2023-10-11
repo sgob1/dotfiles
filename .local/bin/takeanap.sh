@@ -1,3 +1,3 @@
 #!/usr/bin/env bash
-swaylock --image $HOME/wallpapers-legacy/google-earth/$(ls $HOME/wallpapers-legacy/google-earth/ | rg -e .jpg -e .png | shuf -n 1) --daemonize
+swaylock --image /home/sirduke/wallpapers-legacy/some-wallpapers-shuffle/$(ls /home/sirduke/wallpapers-legacy/some-wallpapers-shuffle/ | rg -e .jpg -e .png | shuf -n 1) --daemonize
 systemctl suspend

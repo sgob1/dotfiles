@@ -1,2 +1,2 @@
 #!/usr/bin/env bash
-swaylock --image $HOME/wallpapers-legacy/google-earth/$(ls $HOME/wallpapers-legacy/google-earth | rg -e .jpg -e .png | shuf -n 1)
+swaylock --image $HOME/wallpapers-legacy/some-wallpapers-shuffle/$(ls $HOME/wallpapers-legacy/some-wallpapers-shuffle | rg -e .jpg -e .png | shuf -n 1)

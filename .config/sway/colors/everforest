@@ -1,7 +1,7 @@
 set $background             "#1e2326ff"
 set $inside_title_unfocus   "#374145ff"
 set $title_border           "#374145ff"
-set $text_bright            "#eeeeeeff"
+set $text_bright            "#fffbefff"
 set $text                   "#d3c6aaff"
 set $text_dim               "#9da9a0ff"
 set $accent                 "#a7c080ff"

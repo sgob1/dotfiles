@@ -38,6 +38,7 @@ bar {
 		background $background
 		focused_workspace  $accent $accent $background
 		inactive_workspace $background $background $text
+		urgent_workspace $alert $alert $background
 		separator $text
 	}
 }

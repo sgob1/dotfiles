@@ -35,7 +35,7 @@ light="  $light%"
 hostname=$(hostnamectl hostname)
 hostname=" $hostname"
 
-battery=$(acpi | grep -o -P '.{0,3}%' | xargs | awk '{print $3}')
+battery=$(acpi | grep -o -P '.{0,3}%' | awk '{print $1}')
 battery=" $battery"
 
 date=$(date +"%a %d %b %Y | %H:%M |")

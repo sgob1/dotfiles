@@ -39,7 +39,7 @@ local M = {
                         icon_hl = '@variable',
                         desc = 'Knowledge',
                         group = 'Label',
-                        action = 'edit ~/org/kiwi/index.md',
+                        action = 'edit ~/notes/kiwi/index.md',
                         key = 'w',
                     },
                 },

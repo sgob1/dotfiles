@@ -128,7 +128,7 @@ alias xopen='xdg-open'
 alias bookm='nvim ~/org/bookmarks'
 alias files='nvim ~/org/files'
 alias d='~/.local/bin/today.sh'
-alias wiki='nvim -S ~/org/kiwi/kiwi.vim'
+alias wiki='nvim ~/notes/kiwi/index.md'
 alias birthdays='bat ~/org/birthdays'
 # -----------------------------------------------------------------------------
 #

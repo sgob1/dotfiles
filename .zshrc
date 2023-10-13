@@ -235,51 +235,51 @@ autoload -Uz add-zsh-hook
 add-zsh-hook -Uz chpwd osc7_cwd
 #
 # -----------------------------------------------------------------------------
-# Sets zsh prompt
+# Deprecated: Sets zsh prompt via powerline-go
 # -----------------------------------------------------------------------------
-function powerline_precmd() {
-    PS1="$($GOPATH/bin/powerline-go -error $? -jobs ${${(%):%j}:-0} -theme default)"
+# function powerline_precmd() {
+#     PS1="$($GOPATH/bin/powerline-go -error $? -jobs ${${(%):%j}:-0} -theme default)"
+#
+#     # Uncomment the following line to automatically clear errors after showing
+#     # them once. This not only clears the error for powerline-go, but also for
+#     # everything else you run in that shell. Don't enable this if you're not
+#     # sure this is what you want.
+#
+#     #set "?"
+# }
+#
+# function install_powerline_precmd() {
+#   for s in "${precmd_functions[@]}"; do
+#     if [ "$s" = "powerline_precmd" ]; then
+#       return
+#     fi
+#   done
+#   precmd_functions+=(powerline_precmd)
+# }
+#
+# if [ "$TERM" != "linux" ] && [ -f "$GOPATH/bin/powerline-go" ]; then
+#     install_powerline_precmd
+# fi
+# -----------------------------------------------------------------------------
+# custom prompt
+# -----------------------------------------------------------------------------
+PROMPT_COMMAND=__prompt_command
 
-    # Uncomment the following line to automatically clear errors after showing
-    # them once. This not only clears the error for powerline-go, but also for
-    # everything else you run in that shell. Don't enable this if you're not
-    # sure this is what you want.
-
-    #set "?"
-}
-
-function install_powerline_precmd() {
-  for s in "${precmd_functions[@]}"; do
-    if [ "$s" = "powerline_precmd" ]; then
-      return
+__prompt_command() {
+    local EXIT="$?"
+    if [ $EXIT != 0 ]; then
+        PROMPT="%F{red}%B%n%b%f@%F{blue}%B%m%b%f%F{yellow}(%B%~%b)%f %F{red}%B—>%b%f % "
+        RPROMPT="[%F{red}%B$EXIT%b%f]"
+    else
+        PROMPT="%F{red}%B%n%b%f@%F{blue}%B%m%b%f%F{yellow}(%B%~%b)%f %F{green}%B—>%b%f % "
+        RPROMPT=""
     fi
-  done
-  precmd_functions+=(powerline_precmd)
 }
 
-if [ "$TERM" != "linux" ] && [ -f "$GOPATH/bin/powerline-go" ]; then
-    install_powerline_precmd
-fi
-# -----------------------------------------------------------------------------
-# Deprecated: old prompt
-# -----------------------------------------------------------------------------
-#PROMPT_COMMAND=__prompt_command
-#
-#__prompt_command() {
-#    local EXIT="$?"
-#    if [ $EXIT != 0 ]; then
-#        PROMPT="%F{red}%B%n%b%f@%F{blue}%B%m%b%f%F{yellow}(%B%~%b)%f %F{red}%B—>%b%f % "
-#        RPROMPT="[%F{red}%B$EXIT%b%f]"
-#    else
-#        PROMPT="%F{red}%B%n%b%f@%F{blue}%B%m%b%f%F{yellow}(%B%~%b)%f %F{green}%B—>%b%f % "
-#        RPROMPT=""
-#    fi
-#}
-#
-#precmd() { eval "$PROMPT_COMMAND" }
-#
-#PROMPT='%F{red}%B%n%b%f@%F{blue}%B%m%b%f%F{yellow}(%B%~%b)%f %F{green}%B—>%b%f % '
-#RPROMPT=""
+precmd() { eval "$PROMPT_COMMAND" }
+
+PROMPT='%F{red}%B%n%b%f@%F{blue}%B%m%b%f%F{yellow}(%B%~%b)%f %F{green}%B—>%b%f % '
+RPROMPT=""
 # -----------------------------------------------------------------------------
 # Tilix VTE fix
 # -----------------------------------------------------------------------------

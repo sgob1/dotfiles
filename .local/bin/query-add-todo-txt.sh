@@ -1,6 +1,5 @@
 #!/usr/bin/bash
 set -e
-source ~/.config/sway/colors/source.sh
 file=~/org/todo.txt
 date=$(date --iso-8601)
 

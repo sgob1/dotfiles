@@ -139,15 +139,6 @@ alias birthdays='bat ~/org/birthdays'
 bkm() {
     grep -v '^#' ~/org/bookmarks | grep . | fzf --preview-window 'right:0%' | cut -d ' ' -f1 | wl-copy
 }
-# Picks an entry from todo.txt file, and edits from there
-todo() {
-    file=~/org/todo.txt
-    query=$1
-    result="$(grep -v '^#' $file | grep -v '^x' | fzf --preview-window 'right:0%' --query=$query)"
-    if [ ! -z "$result" -a "$result" != " " ]; then
-        nvim +/"$result" $file
-    fi
-}
 # Usage: ytdl FORMAT TARGET
 ytdl() {
     yt-dlp -ix --audio-quality 0 --audio-format $1 "$2"

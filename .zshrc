@@ -184,6 +184,15 @@ addfl() {
     ~/.local/bin/add-file.sh "$file"
     file=""
 }
+# Starts a movie
+watch_movie() {
+    gsettings set org.gnome.desktop.session idle-delay 0
+    gsettings set org.gnome.settings-daemon.plugins.power idle-dim false
+    mpv --save-position-on-quit "$1"
+    gsettings set org.gnome.desktop.session idle-delay 300
+    gsettings set org.gnome.settings-daemon.plugins.color night-light-enabled true
+    gsettings set org.gnome.settings-daemon.plugins.power idle-dim true
+}
 # -----------------------------------------------------------------------------
 #
 # -----------------------------------------------------------------------------

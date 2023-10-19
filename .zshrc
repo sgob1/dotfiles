@@ -105,10 +105,10 @@ compinit
 # -----------------------------------------------------------------------------
 # Aliases
 # -----------------------------------------------------------------------------
-#alias ls='ls --color=auto'
-#alias ll='ls -lash --color=auto'
-alias ls='lsd'
-alias ll='lsd -lah'
+alias ls='ls --color=auto'
+alias ll='ls -lash --color=auto'
+#alias ls='lsd'
+#alias ll='lsd -lah'
 alias pdflatex='pdflatex -synctex=15 -interaction=nonstopmode -file-line-error'
 alias mpv='mpv --no-audio-display'
 alias newsboat='/usr/bin/newsboat --config-file=$HOME/.config/newsboat/config \

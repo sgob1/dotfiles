@@ -13,7 +13,7 @@ set $j4_accent              "#e69875ff"
 set $dmenu_font             "Iosevka Slab Bold 11"
 set $dmenu_font_pango       "Iosevka Slab Medium:size=8.5"
 set $dmenu_font_launcher    "Iosevka Slab Heavy 11"
-set $wallpaper_day          /home/sirduke/wallpapers-legacy/forest/pexels-valeriia-miller-2527559.jpg
-set $wallpaper_night        /home/sirduke/wallpapers-legacy/forest/pexels-kyle-loftus-2734519.jpg
-set $wallpaper_dir          "$HOME/wallpapers-legacy/google-earth/"
+set $wallpaper_day          /home/sirduke/walls/forest/pexels-valeriia-miller-2527559.jpg
+set $wallpaper_night        /home/sirduke/walls/forest/pexels-kyle-loftus-2734519.jpg
+set $wallpaper_dir          "$HOME/walls/google-earth/"
 set $wallpaper_mode         "fill"

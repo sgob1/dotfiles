@@ -12,7 +12,7 @@ function M.apply()
     opt.background = "dark";
 
     if desktop_session == "gnome" then
-        dark_theme = 'kanagawa'
+        dark_theme = 'catppuccin-macchiato'
         light_theme = 'dawnfox'
     elseif desktop_session == "sway" then
         dark_theme = 'everforest'

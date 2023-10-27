@@ -16,7 +16,8 @@ function M.setup()
     opt.relativenumber = true;
     opt.tabstop = 4;
     opt.shiftwidth = 4;
-    opt.expandtab = true;
+    opt.autoindent = true;
+    opt.expandtab = false;
     opt.smarttab = true;
     opt.shiftround = true;
     opt.ignorecase = true;

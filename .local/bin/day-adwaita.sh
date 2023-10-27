@@ -4,6 +4,6 @@ gsettings set org.gnome.desktop.interface icon-theme Adwaita
 gsettings set org.gnome.desktop.interface color-scheme 'default'
 if [ "$DESKTOP_SESSION" = "sway" ]; then
     killall swaybg
-    swaybg --image "$(cat ~/.config/sway/colors/everforest | ag "wallpaper_day" | awk '{print $3}')" --mode fill
+    swaybg --image "$(cat ~/.config/sway/colors/gruvbox | ag "wallpaper_day" | awk '{print $3}')" --mode fill
 fi
 #notify-send --expire-time=4000 --urgency=low "Daily mode set. Let the light be."

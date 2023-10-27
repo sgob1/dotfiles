@@ -23,13 +23,13 @@ local M = {
                 },
                 styles = {               -- Style to be applied to different syntax groups
                     comments = "italic",     -- Value is any valid attr-list value `:help attr-list`
-                    conditionals = "NONE",
+                    conditionals = "italic",
                     constants = "NONE",
                     functions = "NONE",
                     keywords = "bold",
                     numbers = "NONE",
                     operators = "NONE",
-                    strings = "NONE",
+                    strings = "italic",
                     types = "italic,bold",
                     variables = "NONE",
                 },

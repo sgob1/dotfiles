@@ -14,8 +14,8 @@ function M.setup()
     opt.ruler = true;
     opt.number = true;
     opt.relativenumber = true;
-    opt.tabstop = 4;
-    opt.shiftwidth = 4;
+    opt.tabstop = 8;
+    opt.shiftwidth = 8;
     opt.autoindent = true;
     opt.expandtab = false;
     opt.smarttab = true;

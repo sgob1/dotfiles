@@ -199,6 +199,10 @@ tdsrch() {
 tdisrch() {
     cat ~/org/todo.txt | rg -v "^x" | rg $1 --ignore-case
 }
+# prints active todo.txt projects
+tdprntap() {
+	cat ~/org/todo.txt | rg -v "^x" | sed -n 's/.*+//p' | cut -d " " -f 1 | sort -u
+}
 # -----------------------------------------------------------------------------
 #
 # -----------------------------------------------------------------------------

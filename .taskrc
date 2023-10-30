@@ -29,3 +29,13 @@ include /usr/share/task/dark-16.theme
 #include /usr/share/task/no-color.theme
 
 news.version=2.6.0
+context.trieste.read=@trieste
+context.trieste.write=@trieste
+context.self.read=@self
+context.self.write=@self
+context.study.read=@study
+context.study.write=@study
+context.fedora.read=@fedora
+context.fedora.write=@fedora
+context.udine.read=@udine
+context.udine.write=@udine

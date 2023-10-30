@@ -191,6 +191,14 @@ watch_movie() {
     gsettings set org.gnome.settings-daemon.plugins.color night-light-enabled true
     gsettings set org.gnome.settings-daemon.plugins.power idle-dim true
 }
+# filters todo.txt
+tds() {
+    cat ~/org/todo.txt | rg -v "^x" | rg $1
+}
+# filters todo.txt, but ignore cases
+tdsi() {
+    cat ~/org/todo.txt | rg -v "^x" | rg $1 --ignore-case
+}
 # -----------------------------------------------------------------------------
 #
 # -----------------------------------------------------------------------------

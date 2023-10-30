@@ -193,11 +193,11 @@ watch_movie() {
 }
 # filters todo.txt
 tdsrch() {
-    cat ~/org/todo.txt | rg -v "^x" | rg $1
+    cat ~/org/todo.txt | rg -v "^x" | rg $@
 }
 # filters todo.txt, but ignore cases
 tdisrch() {
-    cat ~/org/todo.txt | rg -v "^x" | rg $1 --ignore-case
+    cat ~/org/todo.txt | rg -v "^x" | rg --ignore-case $@
 }
 # -----------------------------------------------------------------------------
 #

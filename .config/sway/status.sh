@@ -9,17 +9,17 @@ if [ "$player" != "" ]; then
 		player="$player $artist"
 	fi
 	if [ "$playerstatus" == "Playing" ]; then
-		player="契  $player"
+		player="play:  $player"
 	elif [ "$playerstatus" == "Paused" ]; then
-		player="  $player"
+		player="pause:  $player"
 	fi
 fi
 
 network=$(nmcli -t -f name connection show --active | head -n 1)
 if [ "$network" != "" ]; then
-    network="  $network"
+    network="net:  $network"
 else
-    network="  Off-grid"
+    network="net:  Off-grid"
 fi
 
 mute=$(amixer get Master | grep -o 'off' | tail -1)
@@ -27,17 +27,17 @@ if [ "$mute" == "off" ];
 	then volume=" Muted"
 else volume=$(pactl list sinks | grep -o -P '.{0,3}%' | tail -3 | head -1) 
 fi
-volume=" $volume"
+volume="vol: $volume"
 
 light=$(light | cut -f 1 -d ".")
-light="  $light%"
+light="bri:  $light%"
 
 hostname=$(hostnamectl hostname)
-hostname=" $hostname"
+hostname="hst: $hostname"
 
 battery=$(cat /sys/class/power_supply/BAT0/capacity)
-battery="  $battery"
+battery="bat:  $battery"
 
 date=$(date +"%a %d %b %Y | %H:%M |")
 
-echo -e -n "$player | $network | $volume | $light | $battery | $hostname |   $date"
+echo -e -n "$player | $network | $volume | $light | $battery | $hostname | $date"

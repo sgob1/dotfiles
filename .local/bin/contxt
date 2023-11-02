@@ -1,0 +1,21 @@
+#!/usr/bin/bash
+set -e
+if [[ -v DEBUG ]]; then
+	set -x
+fi
+
+if [ "$1" = "--help" ] || [ "$1" = "-h" ]; then
+	echo "Todo.txt context filter"
+	echo "Usage: first argument sets context in file $HOME/.contxt"
+	echo "       no arguments just prints current context"
+fi
+
+if [[ -z "$1" ]]; then
+	CONTXT="@$(cat $HOME/.contxt)"
+else
+	CONTXT="@$1"
+	echo "$CONTXT" > "$HOME"/.contxt
+fi
+echo "Current context: $CONTXT"
+echo ""
+cat "$HOME"/org/todo.txt | grep -v "^x" | rg "$CONTXT"

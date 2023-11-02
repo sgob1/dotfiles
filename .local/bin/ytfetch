@@ -1,6 +1,6 @@
 #!/usr/bin/bash
-set -e
 if [[ -v DEBUG ]]; then
+	set -e
 	set -x
 fi
 
@@ -13,4 +13,8 @@ fi
 
 notify-send --expire-time=4000 --urgency=low "Starting download in format $AUDIO_FORMAT..."
 yt-dlp -ix --audio-quality 0 --audio-format "$AUDIO_FORMAT" "$URL" --paths home:"$HOME"/patterns/automated
-notify-send --expire-time=7000 --urgency=low "Download finished!"
+if [ "$?" == "0" ]; then
+	notify-send --expire-time=7000 --urgency=low "Download finished!"
+else
+	notify-send --expire-time=7000 --urgency=low "Download aborted with error code $?"
+fi

@@ -172,7 +172,7 @@ yyfp() {
     file=""
 }
 # Adds file to files list
-addfl() {
+fadd() {
     if [ "$1" = "" ]; then
         file="."
     else

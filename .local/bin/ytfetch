@@ -1,0 +1,16 @@
+#!/usr/bin/bash
+set -e
+if [[ -v DEBUG ]]; then
+	set -x
+fi
+
+URL="$(wl-paste)"
+if [[ -z "$1" ]]; then
+	AUDIO_FORMAT="opus"
+else
+	AUDIO_FORMAT="$1"
+fi
+
+notify-send --expire-time=4000 --urgency=low "Starting download in format $AUDIO_FORMAT..."
+yt-dlp -ix --audio-quality 0 --audio-format "$AUDIO_FORMAT" "$URL" --paths home:"$HOME"/patterns/automated
+notify-send --expire-time=7000 --urgency=low "Download finished!"

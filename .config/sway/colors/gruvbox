@@ -11,7 +11,7 @@ set $fuzzel_accent          "#fabd2fff"
 set $sysclip_accent         "#dc8addff"
 set $j4_accent              "#7daea3ff"
 set $dmenu_font             "Iosevka Slab Bold 11"
-set $dmenu_font_pango       "Iosevka Slab Medium:size=8.5"
+set $dmenu_font_pango       "Iosevka Slab Medium:size=14"
 set $dmenu_font_launcher    "Iosevka Slab Heavy 11"
 set $wallpaper_day          /home/sirduke/walls/swaywm-shuffle/49.png
 set $wallpaper_night        /home/sirduke/walls/swaywm-shuffle/wallhaven-e7j33o_3840x2160-degirl.png

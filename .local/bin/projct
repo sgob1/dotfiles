@@ -1,0 +1,21 @@
+#!/usr/bin/bash
+set -e
+if [[ -v DEBUG ]]; then
+	set -x
+fi
+
+if [ "$1" = "--help" ] || [ "$1" = "-h" ]; then
+	echo "Todo.txt project filter"
+	echo "Usage: first argument sets project in file $HOME/.projct"
+	echo "       no arguments just prints current project"
+fi
+
+if [[ -z "$1" ]]; then
+	PROJCT="$(cat $HOME/.projct)"
+else
+	PROJCT="+$1"
+	echo "$PROJCT" > "$HOME"/.projct
+fi
+echo "Current project: $PROJCT"
+echo ""
+cat "$HOME"/org/todo.txt | grep -v "^x" | rg "\\$PROJCT"

@@ -113,7 +113,6 @@ alias ls='ls --color=auto'
 unalias ll
 alias sk="sk --color=16 --ansi --preview='bat --color=always --style=header,grid --line-range :500 {}' --preview-window='right:38%'"
 alias salto='cd "`sk --color=16 --ansi -c \"fd --type d --no-ignore\"`"'
-alias gancio='cp "`sk -c \"fd --no-ignore . $HOME\"`" ./ -r'
 alias pdflatex='pdflatex -synctex=15 -interaction=nonstopmode -file-line-error'
 alias mpv='mpv --no-audio-display'
 alias newsboat='/usr/bin/newsboat --config-file=$HOME/.config/newsboat/config \

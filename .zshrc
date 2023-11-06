@@ -23,7 +23,7 @@ export PATH=$HOME/.emacs.d/bin:$PATH
 export FZF_DEFAULT_OPTS="--ansi --preview-window 'right:60%' --preview \
 'bat --color=always --style=header,grid --line-range :500 {}'"
 export FZF_DEFAULT_COMMAND="fd --no-ignore"
-export SKIM_DEFAULT_COMMAND="fd --type f || git ls-tree -r --name-only HEAD || rg --files || find ."
+export SKIM_DEFAULT_COMMAND="fd --type f | git ls-tree -r --name-only HEAD | rg --files | find ."
 export FZF_CTRL_T_COMMAND="fd --no-ignore"
 HISTFILE=~/.zsh_history
 HISTSIZE=50000

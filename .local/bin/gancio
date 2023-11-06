@@ -1,4 +1,4 @@
 #!/usr/bin/sh
 set -e
 
-cp "`sk -c \"fd --no-ignore . $HOME\"`" ./ -r
+mv "`sk -c \"fd --no-ignore --hidden . $HOME\"`" ./

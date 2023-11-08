@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 file=~/org/sysclip
 query=$1
-entry="$(grep -v '^#' $file | grep -v '^x' | fzf --preview-window 'right:0%' --query=$query)"
+entry="$(grep -v '^#' $file | grep -v '^x' | sk --preview-window 'right:0%' --query=$query)"
 
 if [ "$entry" = "" ]; then
     notify-send --expire-time=10000 "Nothing to remove from $file"

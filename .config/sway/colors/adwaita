@@ -1,4 +1,5 @@
 set $background             "#000000ff"
+set $window_borders         "#000000ff"
 set $inside_title_unfocus   "#3d3846ff"
 set $title_border           "#3d3846ff"
 set $text_bright            "#ffffffff"

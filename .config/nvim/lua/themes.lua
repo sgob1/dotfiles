@@ -15,8 +15,8 @@ function M.apply()
         dark_theme = 'nightfox'
         light_theme = 'dawnfox'
     elseif desktop_session == "sway" then
-        dark_theme = 'gruvbox-material'
-        light_theme = 'gruvbox-material'
+        dark_theme = 'everforest'
+        light_theme = 'everforest'
     else
         dark_theme = 'github_dark'
         light_theme = 'github_light'

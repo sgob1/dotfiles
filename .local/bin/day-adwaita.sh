@@ -5,5 +5,5 @@ gsettings set org.gnome.desktop.interface color-scheme 'default'
 if [ "$DESKTOP_SESSION" = "sway" ]; then
     killall swaybg
     notify-send --expire-time=4000 --urgency=low "Daily mode set. Let the light be."
-    swaybg --image "$(cat ~/.config/sway/colors/everforest | ag "wallpaper_day" | awk '{$1=$2=""; print $0}' | xargs)" --mode fill
+    swaybg --image "$(cat ~/.config/sway/colors/gruvbox | ag "wallpaper_day" | awk '{$1=$2=""; print $0}' | xargs)" --mode fill
 fi

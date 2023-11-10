@@ -1,5 +1,5 @@
-set $gaps_size              "2"
-set $border_pixel           "2"
+set $gaps_size              "0"
+set $border_pixel           "1"
 set $swaybar_cmd            "swaybar"
 set $statusbar_font         "Iosevka Heavy 9.5"
 set $statusbar_cmd          "while bash  ~/.config/sway/status.sh; do sleep 1.25; done"
@@ -9,8 +9,8 @@ set $sway_default_font      "Cascadia Code Semibold 10"
 
 # Ricing
 client.focused $accent $accent $background $accent $accent
-client.focused_inactive $title_border $inside_title_unfocus $accent $background $background
-client.unfocused $title_border $inside_title_unfocus $text_dim $title_border $background
+client.focused_inactive $title_border $inside_title_unfocus $accent $window_borders $window_borders
+client.unfocused $title_border $inside_title_unfocus $text_dim $title_border $window_borders
 client.urgent $alert $alert $background $title_border $title_border
 font pango: $sway_default_font
 titlebar_border_thickness 1

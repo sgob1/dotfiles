@@ -1,5 +1,6 @@
 font="Iosevka Slab Bold 11"
 background="#282828ff"
+window_borders="#1d2021ff"
 inside_title_unfocus="#3d3846ff"
 title_border="#3d3846ff"
 text_bright="#fbf1c7ff"

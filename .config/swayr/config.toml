@@ -1,0 +1,133 @@
+[menu]
+executable = 'fuzzel'
+args = [
+    '--dmenu',
+    '--dpi-aware=no',
+    "--lines=15",
+    "--width=80",
+    "--border-radius=5",
+    "--border-width=2",
+    "--border-color=#fabd2fff",
+    "--background=#282828ff",
+    "--selection-color=fabd2fff",
+    "--selection-text-color=#282828ff",
+    "--match-color=#a9b665ff",
+    "--text-color=#ebdbb2ff",
+    '--font=Iosevka Slab Medium:size=14',
+]
+
+[format]
+window_format = "{app_name:{:<11.11}} “{title:{:<60.60}...}” {id:{:<3.3}} on {workspace_name:{:<13.13}}\u0000icon\u001f{app_icon}"
+indent = '    '
+
+
+#[menu]
+#executable = "fuzzel"
+#args = [
+    #"--dpi-aware=no",
+    #"--dmenu",
+    #"--lines=15",
+    #"--width=80",
+    #"--border-radius=5",
+    #"--border-width=2",
+    #"--border-color=#fabd2fff",
+    #"--background=#282828ff",
+    #"--selection-color=fabd2fff",
+    #"--selection-text-color=#282828ff",
+    #"--match-color=#a9b665ff",
+    #"--text-color=#ebdbb2ff",
+    #"--font=Iosevka Slab Medium:size=14",
+#]
+
+#[format]
+#output_format = "{name}"
+#workspace_format = "Workspace {name} [{layout}] on output {output_name}({id})"
+#container_format = "{indent}Container [{layout}] {marks} on workspace {workspace_name}({id})"
+#window_format = "{indent}img:{app_icon}{app_name} — {urgency_start}“{title}”{urgency_end} {marks} on workspace {workspace_name} / {output_name}({id})"
+#indent = "    "
+#urgency_start = ""
+#urgency_end = ""
+#html_escape = true
+#icon_dirs = [
+    #"/usr/share/icons/hicolor/scalable/apps",
+    #"/usr/share/icons/hicolor/128x128/apps",
+    #"/usr/share/icons/hicolor/64x64/apps",
+    #"/usr/share/icons/hicolor/48x48/apps",
+    #"/usr/share/icons/Adwaita/64x64/apps",
+    #"/usr/share/icons/Adwaita/48x48/apps",
+    #"/usr/share/pixmaps",
+#]
+
+[layout]
+auto_tile = false
+auto_tile_min_window_width_per_output_width = [
+    [
+    800,
+    400,
+],
+    [
+    1024,
+    500,
+],
+    [
+    1280,
+    600,
+],
+    [
+    1400,
+    680,
+],
+    [
+    1440,
+    700,
+],
+    [
+    1600,
+    780,
+],
+    [
+    1680,
+    780,
+],
+    [
+    1920,
+    920,
+],
+    [
+    2048,
+    980,
+],
+    [
+    2560,
+    1000,
+],
+    [
+    3440,
+    1200,
+],
+    [
+    3840,
+    1280,
+],
+    [
+    4096,
+    1400,
+],
+    [
+    4480,
+    1600,
+],
+    [
+    7680,
+    2400,
+],
+]
+
+[focus]
+lockin_delay = 750
+
+[misc]
+seq_inhibit = false
+
+[swaymsg_commands]
+include_predefined = true

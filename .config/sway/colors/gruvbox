@@ -14,7 +14,7 @@ set $j4_accent              "#d8a657ff"
 set $dmenu_font             "Iosevka Slab Bold 11"
 set $dmenu_font_pango       "Iosevka Slab Medium:size=14"
 set $dmenu_font_launcher    "Iosevka Slab Heavy 11"
-set $wallpaper_day          /home/sirduke/walls/gruvbox/astrogm.jpg
+set $wallpaper_day          /home/sirduke/walls/gruv-walls-again/gruvbox/more-coffee.jpg
 set $wallpaper_night        /home/sirduke/walls/gruvbox/astrogm.jpg
 set $wallpaper_dir          "/home/sirduke/walls/swaywm-shuffle/"
 set $wallpaper_mode         "fill"

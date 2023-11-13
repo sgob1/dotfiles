@@ -2,9 +2,11 @@
     /* `otf-font-awesome` is required to be installed for icons */
     font-family: JetBrains Mono, FontAwesome, Roboto, Helvetica, Arial, sans-serif;
     font-weight: bold;
-    font-size: 13px;
+    font-size: 14px;
     min-height: 0px;
     border: none;
+    padding: 0;
+    margin: 0;
 }
 
 window#waybar {
@@ -13,7 +15,6 @@ window#waybar {
     color: #ebdbb2;
     transition-property: background-color;
     transition-duration: .5s;
-    padding: 10px 5px 10px;
 }
 
 window#waybar.hidden {
@@ -105,8 +106,10 @@ button:hover {
 #idle_inhibitor,
 #scratchpad,
 #mpd {
-    padding: 0 3px;
+    margin: 0 0 0;
+    padding: 0 3px 0;
     color: #ebdbb2;
+    border: none;
     border-radius: 5;
     margin-bottom: 2px;
 }
@@ -215,7 +218,7 @@ label:focus {
     background-color: rgba(0, 0, 0, 0.2);
     color: #ebdbb2;
     min-width: 100px;
-    padding: 0px 3px;
+    padding: 0px 0px;
     margin-left: 7px;
 }
 

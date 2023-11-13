@@ -11,7 +11,7 @@ if [ "$input_file" = "" ]; then
 elif grep "^$input_file" "$file" | grep -q -v "^#"; then
     notify-send --expire-time=10000 "File already present"
 else
-    tags=$(bemenu -i -l 10 --nb $background --nf $white --hb $light_brown --hf $background --fb $background --ff $white --tb $light_brown --tf $background --fn "$font" --line-height 23 -p "Tags: #" < /dev/null)
+    tags=$(bemenu -i -l 10 --nb $background --nf $white --hb $light_brown --hf $background --fb $background --ff $white --tb $light_brown --tf $background --fn "$font" --line-height 21 -p "Tags: #" < /dev/null)
     if [ ! -z "$tags" -a "$tags" != " " ]; then
         echo $input_file " #" $tags >> $file
     else

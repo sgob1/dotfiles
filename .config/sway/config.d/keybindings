@@ -8,9 +8,9 @@ bindsym $mod+Shift+c reload
 #bindsym $mod+Shift+p exec setrandom --mode scale $wallpaper_dir
 bindsym $mod+Shift+e exec swaynag -t warning -m 'You pressed the exit shortcut. Do you really want to exit sway? This will end your Wayland session.' -b 'Yes, exit sway' 'swaymsg exit'
 
-bindsym $mod+x exec PATH=$HOME/.local/bin:$PATH bemenu-run -i --nb $background --nf $text --hb $dmenu_accent --hf $background --fb $background --ff $text --tb $dmenu_accent --tf $background --fn $dmenu_font_launcher -p "Shell " --line-height 23 | xargs swaymsg exec --
-#bindsym $mod+d exec j4-dmenu-desktop --dmenu='bemenu -i --nb $background --nf $text --hb $j4_accent --hf $background --fb $background --ff $text --tb $j4_accent --tf $background --fn $dmenu_font_launcher -p "Application " --line-height 23' | xargs swaymsg exec --
-bindsym $mod+d exec 'fuzzel --dpi-aware=no --border-color=$fuzzel_accent --border-radius=5 --border-width=2 --background=$background --selection-color=$fuzzel_accent --selection-text-color=$background --match-color=$accent --text-color=$text --font $dmenu_font_pango --fields=filename,name,generic,exec --lines=15 --width=80'
+bindsym $mod+x exec PATH=$HOME/.local/bin:$PATH bemenu-run -i --nb $background --nf $text --hb $dmenu_accent --hf $background --fb $background --ff $text --tb $dmenu_accent --tf $background --fn $dmenu_font_launcher -p "Shell " --line-height 23 --bottom | xargs swaymsg exec --
+bindsym $mod+d exec j4-dmenu-desktop --dmenu='bemenu -i --nb $background --nf $text --hb $j4_accent --hf $background --fb $background --ff $text --tb $j4_accent --tf $background --fn $dmenu_font_launcher -p "Application " --line-height 23 --bottom' | xargs swaymsg exec --
+#bindsym $mod+d exec 'fuzzel --dpi-aware=no --border-color=$fuzzel_accent --border-radius=5 --border-width=2 --background=$background --selection-color=$fuzzel_accent --selection-text-color=$background --match-color=$accent --text-color=$text --font $dmenu_font_pango --fields=filename,name,generic,exec --lines=15 --width=80'
 bindsym $mod+Tab exec swayr switch-window
 bindsym Alt+Tab exec swayr switch-window
 bindsym $mod+m exec grep -v '^#' ~/org/bookmarks | grep . | bemenu -i -l 8 --nb $background --nf $text --hb $dmenu_accent --hf $background --fb $background --ff $text --tb $dmenu_accent --tf $background --fn $dmenu_font --line-height 23 -p "Bookmarks" | cut -d ' ' -f1 | wl-copy

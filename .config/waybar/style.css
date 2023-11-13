@@ -107,6 +107,7 @@ button:hover {
     padding: 0 3px;
     color: #ebdbb2;
     border-radius: 5;
+    margin-bottom: 2px;
 }
 
 #window,

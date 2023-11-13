@@ -6,7 +6,7 @@ if [ "$player" != "" ]; then
 	artist=$(playerctl metadata xesam:artist 2> /dev/null)
 	artist="- $artist"
 	if [ "$artist" != "- " ]; then
-		player="$player $artist"
+		player='$player $artist'
 	fi
 	if [ "$playerstatus" == "Playing" ]; then
 		player="play:  $player"

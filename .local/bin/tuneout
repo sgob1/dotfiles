@@ -1,0 +1,12 @@
+#!/usr/bin/bash
+source ~/.config/sway/colors/source.sh
+
+file=~/org/tunes
+
+result="`grep -v '^#' $file | grep . | bemenu -i -l 8 --nb $background --nf $text --hb $pastel_blue --hf $background --fb $background --ff $text --tb $pastel_blue --tf $background --fn "$font" --line-height 21 -p "Tunes"`"
+
+url="`echo $result | cut -d'#' -f1 | xargs`"
+tags="`echo $result | cut -d'#' -f2-`"
+
+notify-send --expire-time=10000 --urgency=low "Tuning # $tags"
+foot -e mpv --shuffle --no-video "$url"

@@ -152,6 +152,11 @@ button:hover {
     }
 }
 
+#battery.warning:not(.charging) {
+    background-color: #f53c3c;
+    color: #ffffff;
+}
+
 #battery.critical:not(.charging) {
     background-color: #f53c3c;
     color: #ffffff;

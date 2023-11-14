@@ -8,4 +8,6 @@ while [ "$start" -ge `date +%s` ]; do
     printf 'Remaining time: %s\r' "$(date -u -d "@$time" +%H:%M:%S)"
 done
 
-notify-send --urgency=normal --expire-time=7000 --app-name=Timer "Timer elapsed. Time for a pause!"
+notify-send --urgency=normal --expire-time=7000 "Timer elapsed.
+
+Time for a pause!"

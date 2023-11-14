@@ -214,7 +214,8 @@ label:focus {
     background-color: #f53c3c;
 }
 
-#custom-media {
+#custom-media,
+#mpris {
     background-color: rgba(0, 0, 0, 0.2);
     color: #ebdbb2;
     min-width: 100px;

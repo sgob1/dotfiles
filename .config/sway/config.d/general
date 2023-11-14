@@ -19,5 +19,3 @@ focus_follows_mouse no
 
 output HDMI-A-1 scale 2
 seat * hide_cursor when-typing enable
-
-for_window [title="diary"] floating enable

@@ -241,6 +241,13 @@ osc7_cwd() {
     printf '\e]7;file://%s%s\e\\' "$HOSTNAME" "$(_urlencode "$PWD")"
 }
 # -----------------------------------------------------------------------------
+# Called when executing a command; used in foot terminal
+# -----------------------------------------------------------------------------
+function preexec {
+    print -Pn "\e]0;${(q)1}\e\\"
+}
+
+# -----------------------------------------------------------------------------
 autoload -Uz add-zsh-hook
 add-zsh-hook -Uz chpwd osc7_cwd
 #

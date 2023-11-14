@@ -14,7 +14,7 @@ bindsym $mod+d exec j4-dmenu-desktop --dmenu='bemenu -i --nb $background --nf $t
 bindsym $mod+Tab exec swayr switch-window
 bindsym Alt+Tab exec swayr switch-window
 bindsym $mod+m exec grep -v '^#' ~/org/bookmarks | grep . | bemenu -i -l 8 --nb $background --nf $text --hb $dmenu_accent --hf $background --fb $background --ff $text --tb $dmenu_accent --tf $background --fn $dmenu_font --line-height 21 -p "Bookmarks" | cut -d ' ' -f1 | wl-copy
-bindsym $mod+Shift+d exec ~/.local/bin/today.sh $term
+bindsym $mod+Shift+d exec ~/.local/bin/today.sh "$term --title='diary'"
 bindsym $mod+Shift+m exec sh ~/.local/bin/add-bookmark.sh
 bindsym $mod+t exec ~/.local/bin/manage-file.sh $term ~/org/todo.txt
 bindsym $mod+Shift+t exec sh ~/.local/bin/add-todo-txt.sh

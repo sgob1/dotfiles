@@ -25,8 +25,8 @@ export FZF_DEFAULT_COMMAND="fd --no-ignore"
 export SKIM_DEFAULT_COMMAND="fd --no-ignore --hidden"
 export FZF_CTRL_T_COMMAND="fd --no-ignore"
 HISTFILE=~/.zsh_history
-HISTSIZE=50000
-SAVEHIST=5000
+HISTSIZE=100000
+SAVEHIST=100000
 setopt HIST_EXPIRE_DUPS_FIRST
 setopt HIST_IGNORE_DUPS
 setopt HIST_IGNORE_ALL_DUPS

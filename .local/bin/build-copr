@@ -3,10 +3,11 @@ set -e
 
 VERSION=0.0.1
 SUBDIR=0
+ASYNC=0
 BRANCH=main
 TIMEOUT=43200
 
-while getopts 'hvsp:u:c:b:t:' opt; do
+while getopts 'hvsp:u:c:b:t:a' opt; do
 	case "$opt" in
 		h)
 			echo "TODO: help message"
@@ -34,6 +35,9 @@ while getopts 'hvsp:u:c:b:t:' opt; do
 		t)
 			TIMEOUT=$OPTARG
 		;;
+		a)
+			ASYNC=1
+		;;
 		*)
 			echo "Unrecognized option $opt"
 		;;
@@ -60,24 +64,21 @@ PACKAGES="${*}"
 echo "$PACKAGES" | tr ' ' '\n' | while read -r package; do
 	PACKAGE_NAME=$package;
 	PACKAGE_SPEC=$PACKAGE_NAME.spec;
+	CMD="copr-cli buildscm"
+	CMD="$CMD --clone-url $CLONE_URL"
+	CMD="$CMD --commit $BRANCH"
+	CMD="$CMD --spec $PACKAGE_SPEC"
+	CMD="$CMD --timeout $TIMEOUT"
+	if [ $SUBDIR = 1 ]; then
+		PACKAGE_SUBDIR=$PACKAGE_NAME
+		CMD="$CMD --subdir $PACKAGE_SUBDIR"
+	fi
+	if [ $ASYNC = 1 ]; then
+		CMD="$CMD --nowait"
+	fi
+	CMD="$CMD $COPR_REPO"
 
 	echo "Building package $PACKAGE_NAME"
-	if [ $SUBDIR = 1 ]; then
-		PACKAGE_SUBDIR=$PACKAGE_NAME;
-		copr-cli buildscm                 \
-        		--clone-url "$CLONE_URL"    \
-        		--commit "$BRANCH"          \
-        		--subdir "$PACKAGE_SUBDIR"  \
-        		--spec "$PACKAGE_SPEC"      \
-        		--timeout "$TIMEOUT"        \
-             		"$COPR_REPO"
-	else
-		copr-cli buildscm                 \
-        		--clone-url "$CLONE_URL"    \
-        		--commit "$BRANCH"          \
-        		--spec "$PACKAGE_SPEC"      \
-        		--timeout "$TIMEOUT"        \
-             		"$COPR_REPO"
-        fi
+	$CMD
 done
 

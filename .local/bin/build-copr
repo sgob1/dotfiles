@@ -1,0 +1,82 @@
+#!/usr/bin/sh
+set -e
+
+VERSION=0.0.1
+SUBDIR=0
+
+while getopts 'h?vsp:a:u:' opt; do
+	case "$opt" in
+		h)
+			echo "TODO: help message"
+			exit 0
+		;;
+		v)
+			echo "Version $VERSION"
+			exit 0
+		;;
+		s)
+			SUBDIR=1
+		;;
+		p)
+			PROJECT_NAME=$OPTARG
+		;;
+		a)
+			AUTHOR=$OPTARG
+		;;
+		u)
+			CLONE_URL=$OPTARG
+		;;
+	esac
+done
+shift $(expr $OPTIND - 1)
+
+if [ -z $PROJECT_NAME ]; then
+	echo "Missing project name"
+	exit 1;
+fi
+
+if [ -z $AUTHOR ]; then
+	echo "Missing author"
+	exit 1;
+fi
+
+if [ -z $CLONE_URL ]; then
+	echo "Missing clone url"
+	exit 1;
+fi
+
+CLONE_URL=https://git.sr.ht/~sgob/copr-$PROJECT_NAME
+BRANCH=main
+TIMEOUT=43200
+COPR_REPO=sgob/$PROJECT_NAME
+
+PACKAGES=${@}
+
+if [ $SUBDIR = 1 ]; then
+	echo "subdir is equal to one"
+fi
+
+for p in ${PACKAGES[@]}; do
+	PACKAGE_NAME=${p};
+	PACKAGE_SPEC=$PACKAGE_NAME.spec;
+
+	echo "Building package $PACKAGE_NAME"
+	if [ $SUBDIR = 1 ]; then
+		PACKAGE_SUBDIR=$PACKAGE_NAME;
+		copr-cli buildscm                 \
+        		--clone-url $CLONE_URL    \
+        		--commit $BRANCH          \
+        		--subdir $PACKAGE_SUBDIR  \
+        		--spec $PACKAGE_SPEC      \
+        		--timeout $TIMEOUT        \
+             		$COPR_REPO
+	else
+		copr-cli buildscm                 \
+        		--clone-url $CLONE_URL    \
+        		--commit $BRANCH          \
+        		--spec $PACKAGE_SPEC      \
+        		--timeout $TIMEOUT        \
+             		$COPR_REPO
+        fi
+done
+

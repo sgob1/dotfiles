@@ -20,8 +20,8 @@ set copyindent
 set belloff=all
 set ruler
 set number relativenumber
-set tabstop=4
-set shiftwidth=4
+set tabstop=8
+set shiftwidth=8
 set expandtab
 set smarttab
 set shiftround

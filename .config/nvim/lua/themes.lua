@@ -18,8 +18,8 @@ function M.apply()
         dark_theme = 'gruvbox-material'
         light_theme = 'everforest'
     else
-        dark_theme = 'github_dark'
-        light_theme = 'github_light'
+        dark_theme = 'gruvbox-material'
+        light_theme = 'gruvbox-material'
     end
 
 

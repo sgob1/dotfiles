@@ -1,0 +1,10 @@
+#!/bin/sh
+#FIXME: the script does not work
+source ~/.config/sway/colors/source.sh
+
+
+bemenu_cmd="bemenu -i --nb $background --nf $text --hb $j4_accent --hf $background --fb $background --ff $text --tb $j4_accent --tf $background --fn $dmenu_font_launcher -p 'Application ' --line-height 21"
+$bemenu_cmd
+notify-send "$bemenu_cmd"
+cmd=$(j4-dmenu-desktop --dmenu="$bemenu_cmd")
+exec $cmd

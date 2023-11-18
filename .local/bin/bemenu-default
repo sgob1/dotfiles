@@ -1,0 +1,5 @@
+#!/bin/sh
+source ~/.config/sway/colors/source.sh
+
+cmd=$(bemenu-run -i -p "Shell " --line-height 24 --fn "JetBrains Mono Bold 11" --nb $background --nf $text --hb $dmenu_accent --hf $background --fb $background --ff $text --tb $dmenu_accent --tf $background)
+exec $cmd

@@ -2,5 +2,5 @@
 #
 source ~/.config/sway/colors/source.sh
 
-bookm=$(grep -v '^#' ~/org/bookmarks | grep . | bemenu -i -l 8 --nb $background --nf $text --hb $dmenu_accent --hf $background --fb $background --ff $text --tb $dmenu_accent --tf $background --fn 'JetBrains Mono Bold 11' --line-height 21 -p "Bookmarks" | cut -d ' ' -f1)
+bookm=$(grep -v '^#' ~/org/bookmarks | grep . | bemenu -i -l 8 --nb $background --nf $text --hb $dmenu_accent --hf $background --fb $background --ff $text --tb $dmenu_accent --tf $background --fn "$font" --line-height 21 -p "Bookmarks" | cut -d ' ' -f1)
 echo $bookm | xargs | wl-copy

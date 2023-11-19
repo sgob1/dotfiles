@@ -1,0 +1,16 @@
+#!/bin/sh
+#
+# https://wiki.archlinux.org/title/Dunst#Using_dunstify_as_brightness/brightness_level_indicator
+
+# Arbitrary but unique message tag
+msgTag="mybrightnesscontrol"
+
+# Change the brightness using alsa(might differ if you use pulseaudio)
+brightnessctl set "$@"
+
+# Query amixer for the current brightness and whether or not the speaker is muted
+brightness="$(light | cut -f 1 -d ".")%"
+
+# Show the brightness notification
+dunstify -a "change-brightness-dunst" -t 1000 -u low -h string:x-dunst-stack-tag:$msgTag \
+-h int:value:"$brightness" "brightness: ${brightness}"

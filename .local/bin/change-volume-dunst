@@ -14,7 +14,7 @@ fi
 # Change the volume using alsa(might differ if you use pulseaudio)
 
 # Query amixer for the current volume and whether or not the speaker is muted
-volume="$(pactl list sinks | grep -o -P '.{0,3}%' | tail -3 | head -1)"
+volume="$(wpctl get-volume @DEFAULT_AUDIO_SINK@ | cut -f2 -d'.')%"
 mute="$(amixer -c 0 get Master | tail -1 | awk '{print $6}' | sed 's/[^a-z]*//g')"
 if [[ $volume == 0 || "$mute" == "off" ]]; then
     # Show the sound muted notification

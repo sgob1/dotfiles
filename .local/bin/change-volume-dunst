@@ -5,8 +5,13 @@
 # Arbitrary but unique message tag
 msgTag="myvolumecontrol"
 
+if [ -z $1 ]; then
+    amixer sset Master toggle | sed -En '/\[on\]/ s/.*\[([0-9]+)%\].*/\1/ p; /\[off\]/ s/.*/0/p' > /dev/null
+else
+    wpctl set-volume -l 1.5 @DEFAULT_AUDIO_SINK@ "$@" > /dev/null
+fi
+
 # Change the volume using alsa(might differ if you use pulseaudio)
-wpctl set-volume -l 1.5 @DEFAULT_AUDIO_SINK@ "$@"
 
 # Query amixer for the current volume and whether or not the speaker is muted
 volume="$(pactl list sinks | grep -o -P '.{0,3}%' | tail -3 | head -1)"

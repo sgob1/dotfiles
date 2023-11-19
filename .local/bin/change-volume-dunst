@@ -18,9 +18,9 @@ volume="$(pactl list sinks | grep -o -P '.{0,3}%' | tail -3 | head -1)"
 mute="$(amixer -c 0 get Master | tail -1 | awk '{print $6}' | sed 's/[^a-z]*//g')"
 if [[ $volume == 0 || "$mute" == "off" ]]; then
     # Show the sound muted notification
-    dunstify -a "change-volume-dunst" -t 1000 -u low -i audio-volume-muted -h string:x-dunst-stack-tag:$msgTag "Volume muted"
+    dunstify -a "change-volume-dunst" -t 1000 -u low -h string:x-dunst-stack-tag:$msgTag "Volume muted"
 else
     # Show the volume notification
-    dunstify -a "change-volume-dunst" -t 1000 -u low -i audio-volume-high -h string:x-dunst-stack-tag:$msgTag \
+    dunstify -a "change-volume-dunst" -t 1000 -u low -h string:x-dunst-stack-tag:$msgTag \
     -h int:value:"$volume" "Volume: ${volume}"
 fi

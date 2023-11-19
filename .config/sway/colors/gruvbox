@@ -14,7 +14,7 @@ set $j4_accent              "#d8a657ff"
 set $dmenu_font             "JetBrains Mono Bold 11"
 set $dmenu_font_pango       "JetBrains Mono Medium:size=14"
 set $dmenu_font_launcher    "JetBrains Mono Bold 11"
-set $wallpaper_day          /home/sirduke/.wallpapers/astrogm.jpg
+set $wallpaper_day          /home/sirduke/walls/various-wallpapers/Gruv/gruv-temple.png
 set $wallpaper_night        /home/sirduke/.wallpapers/astrogm.jpg
 set $wallpaper_dir          "/home/sirduke/walls/swaywm-shuffle/"
 set $wallpaper_mode         "fill"

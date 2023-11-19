@@ -1,0 +1,6 @@
+#!/bin/sh
+#
+source ~/.config/sway/colors/source.sh
+
+clip=$(grep -v '^#' ~/org/bookmarks | grep . | bemenu -i -l 8 --nb $background --nf $text --hb $pastel_purple --hf $background --fb $background --ff $text --tb $pastel_purple --tf $background --fn "$font" --line-height 21 -p "Bookmarks" | cut -d ' ' -f1)
+echo $clip | xargs | wl-copy

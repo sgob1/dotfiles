@@ -2,7 +2,6 @@
 #
 # https://wiki.archlinux.org/title/Dunst#Using_dunstify_as_volume/brightness_level_indicator
 
-# Arbitrary but unique message tag
 msgTag="myvolumecontrol"
 
 if [ -z $1 ]; then
@@ -11,18 +10,12 @@ else
     wpctl set-volume -l 1.5 @DEFAULT_AUDIO_SINK@ "$@" > /dev/null
 fi
 
-# Change the volume using alsa(might differ if you use pulseaudio)
-
-# Query amixer for the current volume and whether or not the speaker is muted
-#volume="$(wpctl get-volume @DEFAULT_AUDIO_SINK@ | cut -f2 -d'.')"
 val="$(wpctl get-volume @DEFAULT_AUDIO_SINK@ | cut -f2 -d' ')"
 volume=$(echo "$val * 100" | bc | cut -f1 -d'.')
 mute="$(amixer -c 0 get Master | tail -1 | awk '{print $6}' | sed 's/[^a-z]*//g')"
 if [[ "$mute" == "off" ]]; then
-    # Show the sound muted notification
     dunstify -a "change-volume-dunst" -t 1000 -u low -h string:x-dunst-stack-tag:$msgTag "Volume muted"
 else
-    # Show the volume notification
     dunstify -a "change-volume-dunst" -t 1000 -u low -h string:x-dunst-stack-tag:$msgTag \
     -h int:value:"$volume" "Volume: ${volume}%"
 fi

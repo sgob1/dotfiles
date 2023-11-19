@@ -1,0 +1,14 @@
+#!/bin/sh
+
+urgency="low"
+timeout=1500
+format=png
+# FIXME: this should be more decently implemented as POSIX argument
+fullscreen=$1
+if [ -z $fullscreen ]; then
+	grim -t $format  $(xdg-user-dir PICTURES)/$(date +%Y-%m-%d_%H-%m-%s).png
+	dunstify -a "screenshot" -u $urgency -t $timeout "Full screenshot taken"
+else
+	grim -t $format -g "$(slurp)" $(xdg-user-dir PICTURES)/$(date +'%Y-%m-%d-%H%M%S_grim.png')
+	dunstify -a "screenshot" -u $urgency -t $timeout "Partial screenshot taken"
+fi

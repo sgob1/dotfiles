@@ -2,13 +2,10 @@
 #
 # https://wiki.archlinux.org/title/Dunst#Using_dunstify_as_brightness/brightness_level_indicator
 
-# Arbitrary but unique message tag
 msgTag="mybrightnesscontrol"
 
-# Change the brightness using alsa(might differ if you use pulseaudio)
-brightnessctl set "$@"
+brightnessctl -s --exponent=2 set "$@"
 
-# Query amixer for the current brightness and whether or not the speaker is muted
 brightness="$(light | cut -f 1 -d ".")%"
 
 # Show the brightness notification

@@ -1,6 +1,6 @@
 set $gaps_size              "4"
 set $border_pixel           "2"
-set $swaybar_cmd            "waybar"
+set $swaybar_cmd            "waybar --config=/home/sirduke/.config/waybar/config-sway"
 set $statusbar_font         "JetBrains Mono Heavy 9"
 set $statusbar_cmd          "while bash  ~/.config/sway/status.sh 2> /dev/null; do sleep 1.25; done"
 set $sway_default_font      "Cascadia Code Semibold 10"

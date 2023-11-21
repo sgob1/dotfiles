@@ -4,5 +4,6 @@ exec swayrd
 exec gammastep -l 46:13 -r -t 6500:3300 &> /dev/null &
 exec amixer set Master 0%
 exec lxpolkit
+exec dunst
 exec foot --server
 exec dbus-update-activation-environment --systemd WAYLAND_DISPLAY XDG_CURRENT_DESKTOP=sway

@@ -1,6 +1,6 @@
 set $gaps_size              "4"
 set $border_pixel           "2"
-set $swaybar_cmd            "waybar --config=/home/sirduke/.config/waybar/config-sway"
+set $swaybar_cmd            "waybar --config /home/sirduke/.config/waybar/config-sway"
 set $statusbar_font         "JetBrains Mono Heavy 9"
 set $statusbar_cmd          "while bash  ~/.config/sway/status.sh 2> /dev/null; do sleep 1.25; done"
 set $sway_default_font      "Cascadia Code Semibold 10"
@@ -26,23 +26,20 @@ gaps top $gaps_size
 gaps bottom $gaps_size
 gaps left $gaps_size
 gaps right $gaps_size
-bar {
-	swaybar_command $swaybar_cmd
-	position top
-	workspace_buttons yes
-	status_command $statusbar_cmd
-	font pango: $statusbar_font
-	mode dock
-	colors {
-		statusline $text
-		background $background
-		focused_workspace  $accent $accent $background
-		inactive_workspace $background $background $text
-		urgent_workspace $alert $alert $background
-		separator $text
-	}
-}
+#bar {
+	#swaybar_command $swaybar_cmd
+	#position top
+	#workspace_buttons yes
+	#status_command $statusbar_cmd
+	#font pango: $statusbar_font
+	#mode dock
+	#colors {
+		#statusline $text
+		#background $background
+		#focused_workspace  $accent $accent $background
+		#inactive_workspace $background $background $text
+		#urgent_workspace $alert $alert $background
+		#separator $text
+	#}
+#}
 output * bg $wallpaper_day $wallpaper_mode
-#exec_always setwallpaper --mode scale $wallpaper
-#exec_always setrandom --mode scale $wallpaper_dir
-

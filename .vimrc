@@ -56,6 +56,8 @@ inoremap <ESC> <ESC><ESC>
 nnoremap <F2> :set background=dark<CR>
 nnoremap <F3> :set background=light<CR>
 
+highlight LineNr ctermfg=grey
+
 command! MakeTags !ctags -R .
 command Spelling :set spell spelllang=en,it
 command SpellingItalian :set spell spelllang=it

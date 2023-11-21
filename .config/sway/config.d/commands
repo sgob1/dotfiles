@@ -7,3 +7,4 @@ exec lxpolkit
 exec dunst
 exec foot --server
 exec dbus-update-activation-environment --systemd WAYLAND_DISPLAY XDG_CURRENT_DESKTOP=sway
+exec waybar --config /home/sirduke/.config/waybar/config-sway

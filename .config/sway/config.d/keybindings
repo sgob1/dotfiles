@@ -32,19 +32,15 @@ bindsym $mod+F3 exec ~/.local/bin/day-adwaita.sh
 
 
 # Code for wob
-set $WOBSOCK $XDG_RUNTIME_DIR/wob.sock
-exec rm -f $WOBSOCK && mkfifo $WOBSOCK && tail -f $WOBSOCK | wob
-bindsym XF86AudioRaiseVolume exec pactl set-sink-volume @DEFAULT_SINK@ +5% && pactl get-sink-volume @DEFAULT_SINK@ | head -n 1| awk '{print substr($5, 1, length($5)-1)}' > $WOBSOCK
-bindsym XF86AudioLowerVolume exec pactl set-sink-volume @DEFAULT_SINK@ -5% && pactl get-sink-volume @DEFAULT_SINK@ | head -n 1 | awk '{print substr($5, 1, length($5)-1)}' > $WOBSOCK
-bindsym XF86AudioMute exec amixer sset Master toggle | sed -En '/\[on\]/ s/.*\[([0-9]+)%\].*/\1/ p; /\[off\]/ s/.*/0/p' | head -1 > $WOBSOCK
-bindsym XF86MonBrightnessDown exec brightnessctl set 5%- | sed -En 's/.*\(([0-9]+)%\).*/\1/p' > $WOBSOCK
-bindsym XF86MonBrightnessUp exec brightnessctl set +5% | sed -En 's/.*\(([0-9]+)%\).*/\1/p' > $WOBSOCK
-bindsym $mod+Ctrl+k exec pactl set-sink-volume @DEFAULT_SINK@ +5% && pactl get-sink-volume @DEFAULT_SINK@ | head -n 1| awk '{print substr($5, 1, length($5)-1)}' > $WOBSOCK
-bindsym $mod+Ctrl+j exec pactl set-sink-volume @DEFAULT_SINK@ -5% && pactl get-sink-volume @DEFAULT_SINK@ | head -n 1 | awk '{print substr($5, 1, length($5)-1)}' > $WOBSOCK
-bindsym $mod+right exec pactl set-sink-volume @DEFAULT_SINK@ +5% && pactl get-sink-volume @DEFAULT_SINK@ | head -n 1| awk '{print substr($5, 1, length($5)-1)}' > $WOBSOCK
-bindsym $mod+left exec pactl set-sink-volume @DEFAULT_SINK@ -5% && pactl get-sink-volume @DEFAULT_SINK@ | head -n 1 | awk '{print substr($5, 1, length($5)-1)}' > $WOBSOCK
-bindsym $mod+down exec brightnessctl set 5%- | sed -En 's/.*\(([0-9]+)%\).*/\1/p' > $WOBSOCK
-bindsym $mod+up exec brightnessctl set +5% | sed -En 's/.*\(([0-9]+)%\).*/\1/p' > $WOBSOCK
+bindsym XF86AudioRaiseVolume exec ~/.local/bin/change-volume-dunst 5%+
+bindsym XF86AudioLowerVolume exec ~/.local/bin/change-volume-dunst 5%-
+bindsym XF86AudioMute exec ~/.local/bin/change-volume-dunst
+bindsym XF86MonBrightnessDown exec ~/.local/bin/change-brightness-dunst 5%-
+bindsym XF86MonBrightnessUp exec ~/.local/bin/change-brightness-dunst 5%+
+bindsym $mod+right exec ~/.local/bin/change-volume-dunst 5%+
+bindsym $mod+left exec ~/.local/bin/change-volume-dunst 5%-
+bindsym $mod+down exec ~/.local/bin/change-brightness-dunst 5%-
+bindsym $mod+up exec ~/.local/bin/change-brightness-dunst 5%+
 
 
 #bindsym XF86AudioRaiseVolume exec pactl set-sink-volume @DEFAULT_SINK@ +5%

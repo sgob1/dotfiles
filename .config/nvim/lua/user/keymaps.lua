@@ -19,13 +19,6 @@ local function set_plugin_keys()
     local nvim_keymap = vim.api.nvim_set_keymap
 
     keymap('n', '<leader>s', '<cmd>NvimTreeToggle<cr>')
-    keymap('n', '<leader>tf', ':lua require(\'telescope.builtin\').find_files({no_ignore = true})<cr>', {}) -- find files
-    keymap('n', '<leader>tpf', ':lua require(\'telescope.builtin\').find_files()<cr>', {}) -- find project files
-    keymap('n', '<leader>tg', ':lua require(\'telescope.builtin\').live_grep({no_ignore = true})<cr>', {})
-    keymap('n', '<leader>tb', ':lua require(\'telescope.builtin\').buffers()<cr>', {})
-    keymap('n', '<leader>th', ':lua require(\'telescope.builtin\').help_tags()<cr>', {})
-    keymap('n', '<leader>tt', ':lua require(\'telescope.builtin\').tags()<cr>', {})
-    keymap('n', '<leader>tc', ':lua require(\'telescope.builtin\').commands()<cr>', {})
     keymap('n', '<leader>bc', '<cmd>Bdelete<CR>')
     keymap('n', '<C-M-l>', '<cmd>Neoformat<CR>')
     nvim_keymap("v", "<leader>re", [[ <Esc><Cmd>lua require('refactoring').refactor('Extract Function')<CR>]], {noremap = true, silent = true, expr = false})
@@ -36,7 +29,6 @@ local function set_plugin_keys()
     nvim_keymap("n", "<leader>rbf", [[ <Cmd>lua require('refactoring').refactor('Extract Block To File')<CR>]], {noremap = true, silent = true, expr = false})
     nvim_keymap("n", "<leader>ri", [[ <Cmd>lua require('refactoring').refactor('Inline Variable')<CR>]], {noremap = true, silent = true, expr = false})
     nvim_keymap( "v", "<leader>rr", ":lua require('refactoring').select_refactor()<CR>", { noremap = true, silent = true, expr = false })
-    nvim_keymap( "v", "<leader>rr", "<Esc><cmd>lua require('telescope').extensions.refactoring.refactors()<CR>", { noremap = true })
     keymap("n", "<C-a>", require("dial.map").inc_normal(), {noremap = true})
     keymap("n", "<C-x>", require("dial.map").dec_normal(), {noremap = true})
     keymap("v", "<C-a>", require("dial.map").inc_visual(), {noremap = true})

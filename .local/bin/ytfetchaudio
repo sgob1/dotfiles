@@ -13,6 +13,7 @@ else
 	AUDIO_FORMAT="$1"
 fi
 
+mkdir -p $DL_PATH
 notify-send --expire-time=4000 --urgency=low "Starting download in format $AUDIO_FORMAT..."
 yt-dlp -ix --audio-quality 0 --audio-format "$AUDIO_FORMAT" "$URL" --paths home:"$DL_PATH"
 if [ "$?" == "0" ]; then

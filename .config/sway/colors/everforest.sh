@@ -1,4 +1,4 @@
-font="JetBrains Mono Bold 11"
+font="Iosevka Bold 11"
 background="#1e2326ff"
 window_borders="#1e2326ff"
 inside_title_unfocus="#374145ff"

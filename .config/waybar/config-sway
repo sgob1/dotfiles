@@ -155,6 +155,9 @@
         },
         "on-click": "pavucontrol"
     },
+    "custom/arrow": {
+        "format": ""
+    },
     "custom/media": {
         "format": "{icon} {}",
         //"return-type": "json",

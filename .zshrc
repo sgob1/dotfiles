@@ -255,7 +255,7 @@ add-zsh-hook -Uz chpwd osc7_cwd
 # Sets zsh prompt via powerline-go
 # -----------------------------------------------------------------------------
 function powerline_precmd() {
-    PS1="$($GOPATH/bin/powerline-go -error $? -jobs ${${(%):%j}:-0} -theme default)"
+    PS1="$($GOPATH/bin/powerline-go -error $? -jobs ${${(%):%j}:-0} -theme gruvbox)"
 
     # Uncomment the following line to automatically clear errors after showing
     # them once. This not only clears the error for powerline-go, but also for

@@ -27,8 +27,8 @@ bindsym $mod+p exec ~/.local/bin/open-file.sh
 bindsym $mod+Ctrl+p exec playerctl play-pause
 bindsym $mod+greater exec playerctl next
 bindsym $mod+less exec playerctl previous
-bindsym $mod+F2 exec ~/.local/bin/night-adwaita.sh
-bindsym $mod+F3 exec ~/.local/bin/day-adwaita.sh
+bindsym $mod+F2 exec ~/.local/bin/night-adwaita
+bindsym $mod+F3 exec ~/.local/bin/day-adwaita
 
 
 # Code for wob

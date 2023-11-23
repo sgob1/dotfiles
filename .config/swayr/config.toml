@@ -13,7 +13,7 @@ args = [
     "--selection-text-color=#222222ff",
     "--match-color=#ffffffff",
     "--text-color=#eeeeeeff",
-    '--font=JetBrains Mono Medium:size=14',
+    '--font=Iosevka SS16 Medium:size=14',
 ]
 
 [format]

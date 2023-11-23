@@ -1,0 +1,50 @@
+format = """
+[](bg:#55887c fg:#55887c)\
+$username\
+[](bg:#8a9647 fg:#55887c)\
+$directory\
+[](fg:#8a9647 bg:#b27d29)\
+$git_branch\
+$git_status\
+[ ](fg:#b27d29)\
+[ ]()
+"""
+# [╭─](#D4BE98)[](#55887c)\
+# [╰─ ](#D4BE98)
+add_newline = false
+right_format = """$pipestatus $status"""
+
+[status]
+symbol = "✖ "
+not_executable_symbol = "🚫"
+not_found_symbol = "🔍"
+signal_symbol = "⚡"
+style = "bold red"
+recognize_signal_code = true
+disabled = false
+pipestatus = true
+format = "[$symbol$status]($style) "
+
+[username]
+show_always = true
+style_user = "bg:#55887c fg:#282828"
+style_root = "bg:#55887c fg:#282828"
+format = '[$user ]($style)'
+
+[directory]
+style = "bg:#8a9647 fg:#282828"
+format = "[ $path ]($style)"
+truncation_length = 3
+truncation_symbol = ".../"
+
+[git_branch]
+symbol = ""
+style = "bg:#b27d29 fg:#282828"
+format = '[ $symbol $branch ]($style)'
+
+[git_status]
+style = "bg:#b27d29 fg:#282828"
+format = '[$all_status$ahead_behind]($style)'
+
+# (bg:#b27d29)
+#Next color if needed: #c1537?

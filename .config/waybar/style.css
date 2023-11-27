@@ -1,3 +1,5 @@
+@import url("./style-gruv.css");
+
 * {
     /* `otf-font-awesome` is required to be installed for icons */
     font-family: Iosevka, JetBrains Mono, FontAwesome, Roboto, Helvetica, Arial, sans-serif;
@@ -10,9 +12,9 @@
 }
 
 window#waybar {
-    background-color: #282828;
-    border-bottom: 3px solid #282828;
-    color: #ebdbb2;
+    background-color: @black;
+    border-bottom: 3px solid @black;
+    color: @white;
     transition-property: background-color;
     transition-duration: .5s;
 }
@@ -22,12 +24,12 @@ window#waybar.hidden {
 }
 
 tooltip {
-    background-color: #282828;
+    background-color: @black;
 }
 
 tooltip label {
     font-weight: normal;
-    color: #ebdbb2;
+    color: @white;
 }
 
 /*
@@ -35,18 +37,18 @@ window#waybar.empty {
     background-color: transparent;
 }
 window#waybar.solo {
-    background-color: #FFFFFF;
+    background-color: @pure_white;
 }
 */
 
-window#waybar.termite {
+/*window#waybar.termite {
     background-color: #3F3F3F;
-}
+}*/
 
-window#waybar.chromium {
-    background-color: #000000;
+/*window#waybar.chromium {
+    background-color: @pure_black;
     border: none;
-}
+}*/
 
 button {
     /* Use box-shadow instead of border so the text isn't offset */
@@ -59,41 +61,41 @@ button {
 /* https://github.com/Alexays/Waybar/wiki/FAQ#the-workspace-buttons-have-a-strange-hover-effect */
 button:hover {
     background: inherit;
-    box-shadow: inset 0 -3px #f9f5d7;
+    box-shadow: inset 0 -3px @white_bright;
 }
 
 #workspaces button {
     padding: 0 3px;
-    background-color: #282828;
-    color: #ebdbb2;
+    background-color: @black;
+    color: @white;
 }
 
 #workspaces button:hover {
-    background: #dde5c2;
-    color: #282828;
-    box-shadow: inset 0 -3px #e4edc8;
+    background: @green_bright;
+    color: @black;
+    box-shadow: inset 0 -3px @green_even_bright;
 }
 
 #workspaces button.focused {
-    background-color: #a9b665;
-    color: #282828;
-    box-shadow: inset 0 -3px #dde5c2;
+    background-color: @green;
+    color: @black;
+    box-shadow: inset 0 -3px @green_bright;
 }
 
 #workspaces button.active {
-    background-color: #a9b665;
-    color: #282828;
-    box-shadow: inset 0 -3px #dde5c2;
+    background-color: @green;
+    color: @black;
+    box-shadow: inset 0 -3px @green_bright;
 }
 
 #workspaces button.urgent {
-    background-color: #ea6962;
-    color: #282828;
+    background-color: @red;
+    color: @black;
 }
 
 #mode {
-    background-color: #3c3836;
-    border-bottom: 3px solid #ebdbb2;
+    background-color: @black_bright;
+    border-bottom: 3px solid @white;
 }
 
 #clock,
@@ -114,7 +116,7 @@ button:hover {
 #mpd {
     margin: 0 0 0;
     padding: 0 5px 0;
-    color: #ebdbb2;
+    color: @white;
     border: none;
     border-radius: 0;
     margin-bottom: 2px;
@@ -137,34 +139,34 @@ button:hover {
 }
 
 #clock {
-    background-color: #ebdbb2;
-    color: #282828
+    background-color: @white;
+    color: @black
 }
 
 #battery {
-    background-color: #89b482;
-    color: #282828;
+    background-color: @aqua;
+    color: @black;
 }
 
 #battery.charging, #battery.plugged {
-    background-color: #e78a4e;
+    background-color: @orange;
 }
 
 @keyframes blink {
     to {
-        background-color: #ffffff;
-        color: #000000;
+        background-color: @pure_white;
+        color: @pure_black;
     }
 }
 
 #battery.warning:not(.charging) {
-    background-color: #f53c3c;
-    color: #ffffff;
+    background-color: @red_bright;
+    color: @pure_white;
 }
 
 #battery.critical:not(.charging) {
-    background-color: #f53c3c;
-    color: #ffffff;
+    background-color: @red_bright;
+    color: @pure_white;
     animation-name: blink;
     animation-duration: 0.5s;
     animation-timing-function: linear;
@@ -173,34 +175,34 @@ button:hover {
 }
 
 label:focus {
-    background-color: #282828;
-    color: #ebdbb2;
+    background-color: @black;
+    color: @white;
 }
 
 #cpu {
-    background-color: #7daea3;
-    color: #282828;
+    background-color: @blue;
+    color: @black;
 }
 
 #memory {
-    background-color: #d8a657;
-    color: #282828;
+    background-color: @yellow;
+    color: @black;
 }
 
 #disk {
-    background-color: #ba9566;
-    color: #282828;
+    background-color: @brownish;
+    color: @black;
 }
 
 #backlight {
-    background-color: #d3869b;
-    color: #282828;
+    background-color: @red_dim;
+    color: @black;
 }
 
 #network {
-    /*background-color: #2980b9;*/
-    background-color: #e78a4e;
-    color: #282828;
+    /*background-color: @dark_blue;*/
+    background-color: @orange;
+    color: @black;
 }
 
 #network.disconnected {
@@ -208,8 +210,8 @@ label:focus {
 }
 
 #pulseaudio {
-    background-color: #f1c40f;
-    color: #000000;
+    background-color: @yellow_bright;
+    color: @pure_black;
 }
 
 #pulseaudio.muted {
@@ -219,42 +221,42 @@ label:focus {
 
 #wireplumber {
     background-color: #fff0f5;
-    color: #000000;
+    color: @pure_black;
 }
 
 #wireplumber.muted {
-    background-color: #f53c3c;
+    background-color: @red_bright;
 }
 
 #custom-media,
 #mpris {
     background-color: rgba(0, 0, 0, 0.2);
-    color: #ebdbb2;
+    color: @white;
     min-width: 0px;
     padding: 0px 0px;
     margin-left: 7px;
 }
 
 
-#custom-media.custom-spotify {
+/*#custom-media.custom-spotify {
     background-color: #66cc99;
 }
 
 #custom-media.custom-vlc {
     background-color: #ffa000;
-}
+}*/
 
 #temperature {
-    background-color: #e78a4e;
-    color: #282828;
+    background-color: @orange;
+    color: @black;
 }
 
 #temperature.critical {
-    background-color: #f53c3c;
+    background-color: @red_bright;
 }
 
 #tray {
-    background-color: #3c3836;
+    background-color: @black_bright;
 }
 
 #tray > .passive {
@@ -263,16 +265,16 @@ label:focus {
 
 #tray > .needs-attention {
     -gtk-icon-effect: highlight;
-    background-color: #ea6962;
+    background-color: @red;
 }
 
 #idle_inhibitor {
-    background-color: #3c3836;
+    background-color: @black_bright;
 }
 
 #idle_inhibitor.activated {
-    background-color: #ecf0f1;
-    color: #2d3436;
+    background-color: @vanilla;
+    color: @dark_grey;
 }
 
 #mpd {
@@ -281,7 +283,7 @@ label:focus {
 }
 
 #mpd.disconnected {
-    background-color: #f53c3c;
+    background-color: @red_bright;
 }
 
 #mpd.stopped {
@@ -302,7 +304,7 @@ label:focus {
 
 #keyboard-state {
     background: #97e1ad;
-    color: #000000;
+    color: @pure_black;
     padding: 0 0px;
     margin: 0 5px;
     min-width: 16px;
@@ -325,6 +327,6 @@ label:focus {
 }
 
 #custom-arrow {
-    color: #f1c40f;
-    background-color: #282828;
+    color: @yellow_bright;
+    background-color: @black;
 }

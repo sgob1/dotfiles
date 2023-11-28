@@ -180,11 +180,7 @@ autoload -Uz add-zsh-hook
 # Sets zsh prompt via powerline-go
 # -----------------------------------------------------------------------------
 function powerline_precmd() {
-    if [ "$XDG_SESSION_DESKTOP" = "GNOME" ]; then
-    	PS1="$($GOPATH/bin/powerline-go -error $? -jobs ${${(%):%j}:-0} -theme default)"
-    elif [ "$XDG_SESSION_DESKTOP" = "sway" ]; then
-    	PS1="$($GOPATH/bin/powerline-go -error $? -jobs ${${(%):%j}:-0} -theme gruvbox)"
-    fi
+    PS1="$($GOPATH/bin/powerline-go -error $? -jobs ${${(%):%j}:-0} -theme default)"
 
     # Uncomment the following line to automatically clear errors after showing
     # them once. This not only clears the error for powerline-go, but also for

@@ -1,4 +1,4 @@
-@import url("./style-gruv.css");
+@import url("./style-adwaita.css");
 
 * {
     /* `otf-font-awesome` is required to be installed for icons */
@@ -195,7 +195,7 @@ label:focus {
 }
 
 #backlight {
-    background-color: @red_dim;
+    background-color: @purple;
     color: @black;
 }
 

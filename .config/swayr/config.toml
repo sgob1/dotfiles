@@ -7,13 +7,13 @@ args = [
     "--width=100",
     "--border-radius=5",
     "--border-width=2",
-    "--border-color=#7fbbb3ff",
-    "--background=#222222ff",
-    "--selection-color=7fbbb3ff",
-    "--selection-text-color=#222222ff",
+    "--border-color=#57e389ff",
+    "--background=#241f31ff",
+    "--selection-color=#57e389ff",
+    "--selection-text-color=#241f31ff",
     "--match-color=#ffffffff",
-    "--text-color=#eeeeeeff",
-    '--font=Iosevka SS16 Medium:size=14',
+    "--text-color=#f6f5f4ff",
+    '--font=Iosevka SS05 Medium:size=14',
 ]
 
 [format]

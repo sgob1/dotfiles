@@ -16,10 +16,7 @@
 # Variables setup and exporting
 # -----------------------------------------------------------------------------
 HYPHEN_INSENSITIVE="true"
-OSNAME=$(cat /etc/os-release | grep ^NAME= | cut -d "\"" -f 2)
-ZSH_THEME="agnoster"
 export PATH=$HOME/.local/bin:$PATH
-export PATH=$HOME/.emacs.d/bin:$PATH
 export FZF_DEFAULT_OPTS="--ansi"
 export FZF_DEFAULT_COMMAND="fd --no-ignore"
 export SKIM_DEFAULT_COMMAND="fd --no-ignore --hidden"
@@ -34,56 +31,45 @@ setopt HIST_IGNORE_SPACE
 setopt HIST_FIND_NO_DUPS
 setopt HIST_SAVE_NO_DUPS
 bindkey -v
-# -----------------------------------------------------------------------------
-#
-# -----------------------------------------------------------------------------
-# OS-aware section
-# -----------------------------------------------------------------------------
-if [ "$OSNAME" = "Fedora Linux" ]; then
-    source /usr/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
-    source /usr/share/zsh-autosuggestions/zsh-autosuggestions.zsh
-    source /usr/share/fzf/shell/key-bindings.zsh
-    export LESS_TERMCAP_mb=$(
-        tput bold
-        tput setaf 2
-    )
-    export LESS_TERMCAP_md=$(
-        tput bold
-        tput setaf 6
-    )
-    export LESS_TERMCAP_me=$(tput sgr0)
-    export LESS_TERMCAP_so=$(
-        tput bold
-        tput setaf 3
-        tput setab 4
-    )
-    export LESS_TERMCAP_se=$(
-        tput rmso
-        tput sgr0
-    )
-    export LESS_TERMCAP_us=$(
-        tput smul
-        tput bold
-        tput setaf 7
-    )
-    export LESS_TERMCAP_ue=$(
-        tput rmul
-        tput sgr0
-    )
-    export LESS_TERMCAP_mr=$(tput rev)
-    export LESS_TERMCAP_mh=$(tput dim)
-    export LESS_TERMCAP_ZN=$(tput ssubm)
-    export LESS_TERMCAP_ZV=$(tput rsubm)
-    export LESS_TERMCAP_ZO=$(tput ssupm)
-    export LESS_TERMCAP_ZW=$(tput rsupm)
-    export GROFF_NO_SGR=1
-elif [ "$OSNAME" = "Arch Linux" ]; then
-    source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
-    source /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
-    source /usr/share/fzf/key-bindings.zsh
-    source /usr/share/fzf/completion.zsh
-    bindkey -v
-fi
+
+source /usr/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+source /usr/share/zsh-autosuggestions/zsh-autosuggestions.zsh
+source /usr/share/fzf/shell/key-bindings.zsh
+
+export LESS_TERMCAP_mb=$(
+tput bold
+tput setaf 2
+)
+export LESS_TERMCAP_md=$(
+tput bold
+tput setaf 6
+)
+export LESS_TERMCAP_me=$(tput sgr0)
+export LESS_TERMCAP_so=$(
+tput bold
+tput setaf 3
+tput setab 4
+)
+export LESS_TERMCAP_se=$(
+tput rmso
+tput sgr0
+)
+export LESS_TERMCAP_us=$(
+tput smul
+tput bold
+tput setaf 7
+)
+export LESS_TERMCAP_ue=$(
+tput rmul
+tput sgr0
+)
+export LESS_TERMCAP_mr=$(tput rev)
+export LESS_TERMCAP_mh=$(tput dim)
+export LESS_TERMCAP_ZN=$(tput ssubm)
+export LESS_TERMCAP_ZV=$(tput rsubm)
+export LESS_TERMCAP_ZO=$(tput ssupm)
+export LESS_TERMCAP_ZW=$(tput rsupm)
+export GROFF_NO_SGR=1
 # -----------------------------------------------------------------------------
 #
 # -----------------------------------------------------------------------------
@@ -106,9 +92,6 @@ compinit
 # Aliases
 # -----------------------------------------------------------------------------
 alias ls='ls --color=auto'
-#alias ll='ls -lash --color=auto'
-#alias ls='lsd'
-#alias ll='lsd -lah'
 unalias ll
 alias sk="sk --color=16 --ansi --preview='bat --color=always --style=header,grid --line-range :500 {}' --preview-window='right:38%'"
 alias salto='cd "`sk --color=16 --ansi -c \"fd --type d --no-ignore . $HOME\"`"'
@@ -136,10 +119,6 @@ alias birthdays='bat ~/org/birthdays'
 # -----------------------------------------------------------------------------
 # Custom functions
 # -----------------------------------------------------------------------------
-# Picks an entry from the bookmarks, invoking fzf
-bkm() {
-    grep -v '^#' ~/org/bookmarks | grep . | fzf --preview-window 'right:0%' | cut -d ' ' -f1 | wl-copy
-}
 # Usage: ytdl FORMAT TARGET
 ytdl() {
     yt-dlp -ix --audio-quality 0 --audio-format $1 "$2"
@@ -152,38 +131,9 @@ use_zathura() {
 use_evince() {
     xdg-mime default org.gnome.Evince.desktop application/pdf
 }
-# Starts planner in a convenient way
-organize() {
-    nvim -S ~/org/org.vim
-}
 # Pulls all git repos located in the pwd, in parallel
 git_pull_all() {
     ls | xargs -P10 -I{} git -C {} pull
-}
-# Unzips all files in pwd
-unzip_all() {
-    find . -name '*.zip' -exec sh -c 'unzip -d "${1%.*}" "$1"' _ {} \;
-}
-# Yanks file path
-yyfp() {
-    if [ "$1" = "" ]; then
-        file="."
-    else
-        file="$1"
-    fi
-    echo "$(readlink --canonicalize $file)" | wl-copy
-    file=""
-}
-# Adds file to files list
-fadd() {
-    if [ "$1" = "" ]; then
-        file="."
-    else
-        file="$1"
-    fi
-    file="$(readlink --canonicalize $file)"
-    ~/.local/bin/add-file.sh "$file"
-    file=""
 }
 # Starts a movie
 watch_movie() {
@@ -210,31 +160,6 @@ take() {
 # -----------------------------------------------------------------------------
 #
 # -----------------------------------------------------------------------------
-# nnn cd on quit
-# -----------------------------------------------------------------------------
-if [ -f /usr/share/nnn/quitcd/quitcd.bash_zsh ]; then
-    source /usr/share/nnn/quitcd/quitcd.bash_zsh
-fi
-# -----------------------------------------------------------------------------
-#
-# -----------------------------------------------------------------------------
-# nnn plugins
-# -----------------------------------------------------------------------------
-export NNN_PLUG='f:finder;o:fzopen;d:diffs;v:imgview;'
-export NNN_OPENER=$HOME/.config/nnn/plugins/nuke
-_urlencode() {
-    local length="${#1}"
-    for ((i = 0; i < length; i++)); do
-        local c="${1:$i:1}"
-        case $c in
-            %) printf '%%%02X' "'$c" ;;
-            *) printf "%s" "$c" ;;
-        esac
-    done
-}
-# -----------------------------------------------------------------------------
-#
-# -----------------------------------------------------------------------------
 # Implements OSC 7 for foot terminal
 # -----------------------------------------------------------------------------
 osc7_cwd() {
@@ -254,29 +179,33 @@ add-zsh-hook -Uz chpwd osc7_cwd
 # -----------------------------------------------------------------------------
 # Sets zsh prompt via powerline-go
 # -----------------------------------------------------------------------------
-function powerline_precmd() {
-    PS1="$($GOPATH/bin/powerline-go -error $? -jobs ${${(%):%j}:-0} -theme default)"
-
-    # Uncomment the following line to automatically clear errors after showing
-    # them once. This not only clears the error for powerline-go, but also for
-    # everything else you run in that shell. Don't enable this if you're not
-    # sure this is what you want.
-
-    #set "?"
-}
-
-function install_powerline_precmd() {
-  for s in "${precmd_functions[@]}"; do
-    if [ "$s" = "powerline_precmd" ]; then
-      return
-    fi
-  done
-  precmd_functions+=(powerline_precmd)
-}
-
-if [ "$TERM" != "linux" ] && [ -f "$GOPATH/bin/powerline-go" ]; then
-    install_powerline_precmd
-fi
+# function powerline_precmd() {
+#     if [ "$XDG_CURRENT_DESKTOP" = "GNOME" ]; then
+#     	PS1="$($GOPATH/bin/powerline-go -error $? -jobs ${${(%):%j}:-0} -theme default)"
+#     else
+#     	PS1="$($GOPATH/bin/powerline-go -error $? -jobs ${${(%):%j}:-0} -theme gruvbox)"
+#     fi
+#
+#     # Uncomment the following line to automatically clear errors after showing
+#     # them once. This not only clears the error for powerline-go, but also for
+#     # everything else you run in that shell. Don't enable this if you're not
+#     # sure this is what you want.
+#
+#     #set "?"
+# }
+#
+# function install_powerline_precmd() {
+#   for s in "${precmd_functions[@]}"; do
+#     if [ "$s" = "powerline_precmd" ]; then
+#       return
+#     fi
+#   done
+#   precmd_functions+=(powerline_precmd)
+# }
+#
+# if [ "$TERM" != "linux" ] && [ -f "$GOPATH/bin/powerline-go" ]; then
+#     install_powerline_precmd
+# fi
 # -----------------------------------------------------------------------------
 # custom prompt
 # -----------------------------------------------------------------------------
@@ -300,7 +229,7 @@ fi
 # -----------------------------------------------------------------------------
 # Tilix VTE fix
 # -----------------------------------------------------------------------------
-#eval "$(~/.cargo/bin/starship init zsh)"
+eval "$(~/.cargo/bin/starship init zsh)"
 
 if [ $TILIX_ID ] || [ $VTE_VERSION ]; then
         source /etc/profile.d/vte.sh

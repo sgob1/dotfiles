@@ -46,7 +46,7 @@
     # Turn on the progess bar. It appears when a progress hint is passed with
     # for example dunstify -h int:value:12
     progress_bar = true
-    highlight = "#7daea3"
+    highlight = "#b1c89d"
 
     # Set the progress bar height. This includes the frame, so make sure
     # it's at least twice as big as the frame width.
@@ -96,7 +96,7 @@
     frame_width = 3
 
     # Defines color of the frame around the notification window.
-    frame_color = "#aaaaaa"
+    frame_color = "#c0c8d8"
 
     # Size of gap to display between notifications - requires a compositor.
     # If value is greater than 0, separator_height will be ignored and a border
@@ -315,23 +315,23 @@
 [urgency_low]
     # IMPORTANT: colors have to be defined in quotation marks.
     # Otherwise the "#" and following would be interpreted as a comment.
-    background = "#241f31"
-    foreground = "#99c1f1"
-    frame_color = "#3584e4"
+    background = "#242933"
+    foreground = "#a3be8c"
+    frame_color = "#a3be8c"
     timeout = 10
     # Icon for notifications with low urgency, uncomment to enable
     #default_icon = /path/to/icon
 
 [urgency_normal]
-    background = "#282828"
-    foreground = "#dbbc7f"
-    frame_color = "#dbbc7f"
+    background = "#242933"
+    foreground = "#ebcb8b"
+    frame_color = "#ebcb8b"
     timeout = 10
     # Icon for notifications with normal urgency, uncomment to enable
     #default_icon = /path/to/icon
 
 [urgency_critical]
-    background = "#282828"
+    background = "#242933"
     foreground = "#e67e80"
     frame_color = "#e67e80"
     timeout = 300

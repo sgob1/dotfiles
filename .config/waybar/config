@@ -156,7 +156,7 @@
         "on-click": "pavucontrol"
     },
     "custom/arrow": {
-        "format": ""
+        "format": "" //
     },
     "custom/media": {
         "format": "{icon} {}",

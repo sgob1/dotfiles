@@ -34,8 +34,7 @@ function M.setup()
     opt.mouse = 'a';
     opt.undofile = true;
     opt.list = true;
-    --opt.listchars = {tab = '▎ ', trail = '·'};
-    opt.listchars = {trail = '·'};
+    opt.listchars = {tab = '▎ ', trail = '·'};
     opt.termguicolors = true;
     opt.background = 'dark';
     opt.showmode = false

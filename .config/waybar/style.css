@@ -77,15 +77,15 @@ button:hover {
 }
 
 #workspaces button.focused {
-    background-color: @green;
+    background-color: @orange;
     color: @black;
-    box-shadow: inset 0 -3px @green_bright;
+    box-shadow: inset 0 -3px @orange_bright;
 }
 
 #workspaces button.active {
-    background-color: @green;
+    background-color: @orange;
     color: @black;
-    box-shadow: inset 0 -3px @green_bright;
+    box-shadow: inset 0 -3px @orange_bright;
 }
 
 #workspaces button.urgent {

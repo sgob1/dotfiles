@@ -12,7 +12,7 @@ set $fuzzel_accent          "#3584e4ff"
 set $sysclip_accent         "#dc8addff"
 set $j4_accent              "#57e389ff"
 set $dmenu_font             "Iosevka Bold 11"
-set $dmenu_font_pango       "Iosevka Medium:size=8.5"
+set $dmenu_font_pango       "Iosevka Medium:size=14"
 set $dmenu_font_launcher    "Iosevka Heavy 11"
 set $wallpaper_day          /home/sirduke/walls/kde/landscape-l.jpeg
 set $wallpaper_night        /home/sirduke/walls/kde/landscape-d.jpeg

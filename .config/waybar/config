@@ -7,7 +7,7 @@
     // Choose the order of the modules
     "modules-left": ["sway/workspaces", "sway/mode", "sway/scratchpad", "mpris"],
     //"modules-center": ["sway/window"],
-    "modules-right": ["custom/arrow", "pulseaudio", "network", "backlight", "keyboard-state", "battery", "clock", "tray"],
+    "modules-right": ["custom/arrow1", "pulseaudio", "custom/arrow2", "network", "custom/arrow3", "backlight", "keyboard-state", "custom/arrow4", "battery", "custom/arrow5", "clock", "tray"],
     // Modules configuration
     // "sway/workspaces": {
     //     "disable-scroll": true,
@@ -155,7 +155,19 @@
         },
         "on-click": "pavucontrol"
     },
-    "custom/arrow": {
+    "custom/arrow1": {
+        "format": "" //
+    },
+    "custom/arrow2": {
+        "format": "" //
+    },
+    "custom/arrow3": {
+        "format": "" //
+    },
+    "custom/arrow4": {
+        "format": "" //
+    },
+    "custom/arrow5": {
         "format": "" //
     },
     "custom/media": {

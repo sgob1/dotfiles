@@ -122,6 +122,17 @@ button:hover {
     margin-bottom: 2px;
 }
 
+#custom-arrow1,
+#custom-arrow2,
+#custom-arrow3,
+#custom-arrow4,
+#custom-arrow5 {
+    border: none;
+    border-radius: 0;
+    margin-bottom: 2px;
+}
+
+
 #window,
 #workspaces {
     margin: 0 4px;
@@ -140,7 +151,7 @@ button:hover {
 
 #clock {
     background-color: @white;
-    color: @black
+    color: @black;
 }
 
 #battery {
@@ -326,7 +337,25 @@ label:focus {
 	background-color: transparent;
 }
 
-#custom-arrow {
+#custom-arrow1 {
     color: @yellow_bright;
     background-color: @black;
+}
+
+#custom-arrow2 {
+    color: @orange;
+    background-color: @yellow_bright;
+}
+
+#custom-arrow3 {
+    color: @purple;
+    background-color: @orange;
+}
+#custom-arrow4 {
+    color: @aqua;
+    background-color: @purple;
+}
+#custom-arrow5 {
+    color: @white;
+    background-color: @aqua;
 }

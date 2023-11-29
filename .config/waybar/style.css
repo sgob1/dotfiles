@@ -150,7 +150,7 @@ button:hover {
 }
 
 #clock {
-    background-color: @white;
+    background-color: @green_even_bright;
     color: @black;
 }
 
@@ -356,6 +356,6 @@ label:focus {
     background-color: @purple;
 }
 #custom-arrow5 {
-    color: @white;
+    color: @green_even_bright;
     background-color: @aqua;
 }

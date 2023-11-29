@@ -1,0 +1,7 @@
+#!/bin/sh
+#
+# mpvs: mpv + save position on quit
+set -e
+set -x
+
+mpv --save-position-on-quit "$@"

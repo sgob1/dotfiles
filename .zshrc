@@ -119,22 +119,6 @@ alias birthdays='bat ~/org/birthdays'
 # -----------------------------------------------------------------------------
 # Custom functions
 # -----------------------------------------------------------------------------
-# Usage: ytdl FORMAT TARGET
-ytdl() {
-    yt-dlp -ix --audio-quality 0 --audio-format $1 "$2"
-}
-# Sets zathura as default pdf viewer
-use_zathura() {
-    xdg-mime default org.pwmt.zathura.desktop application/pdf
-}
-# Sets evince as default pdf viewer
-use_evince() {
-    xdg-mime default org.gnome.Evince.desktop application/pdf
-}
-# Pulls all git repos located in the pwd, in parallel
-git_pull_all() {
-    ls | xargs -P10 -I{} git -C {} pull
-}
 # filters todo.txt
 tdsrch() {
     cat ~/org/todo.txt | rg -v "^x" | rg $@

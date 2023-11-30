@@ -1,0 +1,5 @@
+#!/bin/sh
+set -e
+set -x
+
+yt-dlp -ix --audio-quality 0 --audio-format $1 "$2"

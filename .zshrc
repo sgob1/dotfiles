@@ -153,9 +153,9 @@ take() {
 # -----------------------------------------------------------------------------
 # Implements OSC 7 for foot terminal
 # -----------------------------------------------------------------------------
-# osc7_cwd() {
-#     printf '\e]7;file://%s%s\e\\' "$HOSTNAME" "$(_urlencode "$PWD")"
-# }
+osc7_cwd() {
+    printf '\e]7;file://%s%s\e\\' "$HOSTNAME" "$(urlencode "$PWD")"
+}
 # -----------------------------------------------------------------------------
 # Called when executing a command; used in foot terminal
 # -----------------------------------------------------------------------------
@@ -165,7 +165,7 @@ function preexec {
 
 # -----------------------------------------------------------------------------
 autoload -Uz add-zsh-hook
-#add-zsh-hook -Uz chpwd osc7_cwd
+add-zsh-hook -Uz chpwd osc7_cwd
 #
 # -----------------------------------------------------------------------------
 # Sets zsh prompt via powerline-go

@@ -126,7 +126,8 @@ button:hover {
 #custom-arrow2,
 #custom-arrow3,
 #custom-arrow4,
-#custom-arrow5 {
+#custom-arrow5,
+#custom-arrow6 {
     border: none;
     border-radius: 0;
     margin-bottom: 2px;
@@ -358,4 +359,8 @@ label:focus {
 #custom-arrow5 {
     color: @green_even_bright;
     background-color: @aqua;
+}
+#custom-arrow6 {
+    color: @black_bright;
+    background-color: @green_even_bright;
 }

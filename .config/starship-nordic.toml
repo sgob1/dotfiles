@@ -1,0 +1,50 @@
+format = """
+[](bg:#81a1c1 fg:#81a1c1)\
+$username\
+[](bg:#a3be8c fg:#81a1c1)\
+$directory\
+[](fg:#a3be8c bg:#d79784)\
+$git_branch\
+$git_status\
+[ ](fg:#d79784)\
+[ ]()
+"""
+# [╭─](#D4BE98)[](#81a1c1)\
+# [╰─ ](#D4BE98)
+add_newline = false
+right_format = """$pipestatus $status"""
+
+[status]
+symbol = "✖ "
+not_executable_symbol = "🚫"
+not_found_symbol = "🔍"
+signal_symbol = "⚡"
+style = "bold red"
+recognize_signal_code = true
+disabled = false
+pipestatus = true
+format = "[$symbol$status]($style) "
+
+[username]
+show_always = true
+style_user = "bg:#81a1c1 fg:#242923"
+style_root = "bg:#81a1c1 fg:#242923"
+format = '[$user ]($style)'
+
+[directory]
+style = "bg:#a3be8c fg:#242923"
+format = "[ $path ]($style)"
+truncation_length = 3
+truncation_symbol = ".../"
+
+[git_branch]
+symbol = ""
+style = "bg:#d79784 fg:#242923"
+format = '[ $symbol $branch ]($style)'
+
+[git_status]
+style = "bg:#d79784 fg:#242923"
+format = '[$all_status$ahead_behind]($style)'
+
+# (bg:#d79784)
+#Next color if needed: #c1537?

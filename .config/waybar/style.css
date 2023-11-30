@@ -268,7 +268,7 @@ label:focus {
 }
 
 #tray {
-    background-color: @black_bright;
+    background-color: @blue_navy;
 }
 
 #tray > .passive {
@@ -352,15 +352,18 @@ label:focus {
     color: @purple;
     background-color: @orange;
 }
+
 #custom-arrow4 {
     color: @aqua;
     background-color: @purple;
 }
+
 #custom-arrow5 {
     color: @green_even_bright;
     background-color: @aqua;
 }
+
 #custom-arrow6 {
-    color: @black_bright;
+    color: @blue_navy;
     background-color: @green_even_bright;
 }

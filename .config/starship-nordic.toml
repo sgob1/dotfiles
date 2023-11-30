@@ -1,9 +1,9 @@
 format = """
 [](bg:#81a1c1 fg:#81a1c1)\
 $username\
-[](bg:#a3be8c fg:#81a1c1)\
+[](bg:#a3be8c fg:#81a1c1)\
 $directory\
-[](fg:#a3be8c bg:#d79784)\
+[](fg:#a3be8c bg:#d79784)\
 $git_branch\
 $git_status\
 [ ](fg:#d79784)\

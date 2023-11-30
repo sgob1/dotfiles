@@ -13,7 +13,7 @@ function M.apply()
 
     if desktop_session == "gnome" then
         dark_theme = 'nordic'
-        light_theme = 'solarized-osaka-day'
+        light_theme = 'kanagawa-lotus'
     elseif desktop_session == "sway" then
         dark_theme = 'nordic'
         light_theme = 'kanagawa-lotus'

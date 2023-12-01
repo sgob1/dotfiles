@@ -143,6 +143,12 @@ function osc7-pwd() {
     local LC_ALL=C
     printf '\e]7;file://%s%s\e\' $HOST ${PWD//(#m)([^@-Za-z&-;_~])/%${(l:2::0:)$(([##16]#MATCH))}}
 }
+# -----------------------------------------------------------------------------
+# Called when executing a command; used in foot terminal
+# -----------------------------------------------------------------------------
+function preexec {
+    print -Pn "\e]0;${(q)1}\e\\"
+}
 
 function chpwd-osc7-pwd() {
     (( ZSH_SUBSHELL )) || osc7-pwd

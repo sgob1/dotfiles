@@ -1,0 +1,9 @@
+#!/bin/sh
+set -e
+set -x
+
+xdg-mime default org.pwmt.zathura.desktop application/pdf
+xdg-mime default imv-dir.desktop image/jpeg
+xdg-mime default imv-dir.desktop image/jpg
+xdg-mime default imv-dir.desktop image/png
+xdg-mime default imv-dir.desktop image/webp

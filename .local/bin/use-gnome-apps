@@ -1,0 +1,9 @@
+#!/bin/sh
+set -e
+set -x
+
+xdg-mime default org.gnome.Evince.desktop application/pdf
+xdg-mime default org.gnome.Loupe.desktop image/jpeg
+xdg-mime default org.gnome.Loupe.desktop image/jpg
+xdg-mime default org.gnome.Loupe.desktop image/png
+xdg-mime default org.gnome.Loupe.desktop image/webp

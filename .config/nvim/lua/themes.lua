@@ -12,8 +12,8 @@ function M.apply()
     opt.background = "dark";
 
     if desktop_session == "gnome" then
-        dark_theme = 'nordic'
-        light_theme = 'kanagawa-lotus'
+        dark_theme = 'rose-pine-moon'
+        light_theme = 'rose-pine-dawn'
     elseif desktop_session == "sway" then
         dark_theme = 'nordic'
         light_theme = 'kanagawa-lotus'

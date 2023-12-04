@@ -6,7 +6,7 @@ local M = {
     lazy = false,
     config = function()
         require('telescope').setup({})
-        vim.keymap.set('n', '<leader>tf', ':lua require(\'telescope.builtin\').find_files({no_ignore = true})<cr>', {}) -- find files
+        vim.keymap.set('n', '<C-p>', ':lua require(\'telescope.builtin\').find_files({no_ignore = true})<cr>', {}) -- find files
         vim.keymap.set('n', '<leader>tpf', ':lua require(\'telescope.builtin\').find_files()<cr>', {}) -- find project files
         vim.keymap.set('n', '<leader>tg', ':lua require(\'telescope.builtin\').live_grep({no_ignore = true})<cr>', {})
         vim.keymap.set('n', '<leader>tb', ':lua require(\'telescope.builtin\').buffers()<cr>', {})

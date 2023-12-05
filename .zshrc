@@ -147,7 +147,8 @@ function osc7-pwd() {
 # Called when executing a command; used in foot terminal
 # -----------------------------------------------------------------------------
 function preexec {
-    print -Pn "\e]0;${(q)1}\e\\"
+    #print -Pn "\e]0;${(q)1}\e\\"
+    echo -en "\e]2;${@:3}\007\e]1;\007"
 }
 
 function chpwd-osc7-pwd() {

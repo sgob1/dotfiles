@@ -2,7 +2,7 @@
 
 * {
     /* `otf-font-awesome` is required to be installed for icons */
-    font-family: Iosevka, JetBrains Mono, FontAwesome, Roboto, Helvetica, Arial, sans-serif;
+    font-family: JetBrains Mono, Iosevka, JetBrains Mono, FontAwesome, Roboto, Helvetica, Arial, sans-serif;
     font-weight: bold;
     font-size: 14px;
     min-height: 0px;

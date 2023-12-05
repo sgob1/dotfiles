@@ -2,7 +2,7 @@ set selection-clipboard clipboard
 set recolor-reverse-video true
 set recolor-keephue
 set adjust-open width
-set scroll-step 85
+set scroll-step 75
 set font 'JetBrains Mono normal 10'
 
 # color section

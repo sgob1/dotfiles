@@ -3,6 +3,7 @@ set recolor-reverse-video true
 set recolor-keephue
 set adjust-open width
 set scroll-step 85
+set font 'JetBrains Mono normal 10'
 
 # color section
 set recolor-lightcolor \#242933
@@ -18,3 +19,6 @@ set statusbar-bg \#242933
 set statusbar-fg \#c0bfbc
 set highlight-active-color \#b1c89d
 set highlight-color \#81a1c1
+set completion-bg \#242933
+set completion-highlight-bg \#ff7800
+set completion-highlight-fg \#242933

@@ -1,7 +1,3 @@
-set selection-clipboard clipboard
-set recolor-reverse-video true
-set recolor-keephue
-set adjust-open width
 set recolor-lightcolor \#242933
 set recolor-darkcolor \#c0c8d8
 #set recolor-lightcolor \#c0c8d8

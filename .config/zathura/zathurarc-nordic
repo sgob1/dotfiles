@@ -14,3 +14,5 @@ set highlight-color \#81a1c1
 set completion-bg \#242933
 set completion-highlight-bg \#ff7800
 set completion-highlight-fg \#242933
+set completion-group-bg \#ff7800
+set completion-group-fg \#242933

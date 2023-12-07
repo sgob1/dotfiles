@@ -106,4 +106,5 @@ call plug#end()
 let base16colorspace=256  " Access colors present in 256 colorspace
 let g:gruvbox_contrast_light='hard'
 let g:gruvbox_contrast_dark='medium'
+let g:gruvbox_italic=1
 colorscheme gruvbox

@@ -12,11 +12,11 @@ function M.apply()
     opt.background = "dark";
 
     if desktop_session == "gnome" then
-        dark_theme = 'catppuccin-mocha'
-        light_theme = 'catppuccin-latte'
+        dark_theme = 'gruvbox-material'
+        light_theme = 'gruvbox-material'
     elseif desktop_session == "sway" then
-        dark_theme = 'nordic'
-        light_theme = 'kanagawa-lotus'
+        dark_theme = 'gruvbox-material'
+        light_theme = 'gruvbox-material'
     elseif desktop_session == "hyprland" then
         dark_theme = 'nordic'
         light_theme = 'kanagawa-lotus'

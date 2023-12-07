@@ -1,5 +1,5 @@
-set $gaps_size              "2"
-set $border_pixel           "2"
+set $gaps_size              "0"
+set $border_pixel           "1"
 set $swaybar_cmd            "waybar --config /home/sirduke/.config/waybar/config-sway"
 set $statusbar_font         "JetBrains Mono Heavy 9"
 set $statusbar_cmd          "while bash  ~/.config/sway/status.sh 2> /dev/null; do sleep 1.25; done"
@@ -9,6 +9,7 @@ set $sway_default_font      "Cascadia Code Semibold 10"
 
 # Ricing
 client.focused $accent $accent $background $accent $accent
+client.focused_tab_title $accent $accent $background $accent $accent
 client.focused_inactive $title_border $inside_title_unfocus $accent $window_borders $window_borders
 client.unfocused $title_border $inside_title_unfocus $text_dim $title_border $window_borders
 client.urgent $alert $alert $background $title_border $title_border

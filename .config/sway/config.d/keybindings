@@ -1,3 +1,9 @@
+# defining directions
+set $left h
+set $down j
+set $up k
+set $right l
+
 # Key bindings
 bindsym Ctrl+Mod1+T exec $term
 bindsym $mod+Return exec $term

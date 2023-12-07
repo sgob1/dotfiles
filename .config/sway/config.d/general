@@ -1,11 +1,6 @@
 set $mod Mod4
-set $left h
-set $down j
-set $up k
-set $right l
 
 set $term footclient
-#set $term alacritty
 
 set $lockscreen swaylock --image $wallpaper_dir/$(ls $wallpaper_dir | shuf -n 1) # sets a random wallpaper as lockscreen
 set $lockscreen_turnoff_after 5

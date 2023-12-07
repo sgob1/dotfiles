@@ -38,8 +38,10 @@ set notimeout
 set nottimeout
 set incsearch hlsearch
 set mouse=v
-set list
-set lcs=tab:»·
+"set list
+set list!
+set listchars=tab:\|\ ,trail:·
+"set lcs=tab:»·
 set lcs+=trail:·
 set undodir=~/.vim/undodir
 set undofile
@@ -86,3 +88,22 @@ nnoremap <leader>bb i\textbf{
 inoremap <leader>bb \textbf{
 nnoremap <leader>cc i\textsc{
 inoremap <leader>cc \textsc{
+
+call plug#begin()
+Plug 'airblade/vim-gitgutter'
+Plug 'chriskempson/base16-vim'
+Plug 'kien/ctrlp.vim'
+Plug 'morhetz/gruvbox'
+Plug 'preservim/nerdtree', { 'on': 'NERDTreeToggle' }
+Plug 'tpope/vim-commentary'
+Plug 'tpope/vim-fugitive'
+Plug 'tpope/vim-obsession'
+Plug 'tpope/vim-sensible'
+Plug 'tpope/vim-speeddating'
+Plug 'tpope/vim-unimpaired'
+call plug#end()
+
+let base16colorspace=256  " Access colors present in 256 colorspace
+let g:gruvbox_contrast_light='hard'
+let g:gruvbox_contrast_dark='medium'
+colorscheme gruvbox

@@ -13,7 +13,7 @@ function M.apply()
 
     if desktop_session == "gnome" then
         dark_theme = 'catppuccin-mocha'
-        light_theme = 'catppuccin-latte'
+        light_theme = 'rose-pine-dawn'
     elseif desktop_session == "sway" then
         dark_theme = 'catppuccin-mocha'
         light_theme = 'catppuccin-latte'

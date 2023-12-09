@@ -34,10 +34,10 @@ macro q set browser "qutebrowser %u"; open-in-browser
 macro f set browser "firefox %u"; open-in-browser
 
 color listnormal          color8        default
-color listnormal_unread   green         default bold
+color listnormal_unread   yellow        default bold
 color listfocus           black         color8
 color listfocus_unread    white         color8 bold
-color info                green         color235 bold standout
+color info                yellow        color235 bold standout
 color article             default       default
 highlight article "^(Feed|Link):.*$" green default bold
 highlight article "^(Title|Date|Author):.*$" green default bold

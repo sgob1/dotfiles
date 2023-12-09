@@ -1,6 +1,6 @@
 local M = {
     'sainnhe/everforest',
-    lazy = true,
+    lazy = false,
     config = function()
         vim.g.everforest_background = 'hard'
         vim.g.everforest_enable_italic = true

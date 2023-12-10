@@ -20,6 +20,7 @@ https://tails.net/news/index.it.atom
 https://drewdevault.com/blog/index.xml
 https://soatok.blog/feed/
 https://www.ypsidanger.com/rss/
+https://danluu.com/atom.xml
 " "
 "---Tech---"
 https://solar.lowtechmagazine.com/posts/index.xml
@@ -43,3 +44,10 @@ https://github.com/xyproto/wallutils/releases.atom
 https://git.sr.ht/~sotirisp/today/log/master/rss.xml
 https://git.sr.ht/~tsdh/swayr/log/main/rss.xml
 https://github.com/pystardust/ytfzf/releases.atom
+" "
+"---Evaluating---"
+https://www.windytan.com/feeds/posts/default
+https://idlewords.com/index.xml
+https://meaningness.com/rss.xml
+https://www.sevarg.net/feed.xml
+https://waitbutwhy.com/feed

@@ -7,13 +7,13 @@ args = [
     "--width=100",
     "--border-radius=5",
     "--border-width=2",
-    "--border-color=#57e389ff",
-    "--background=#241f31ff",
-    "--selection-color=#57e389ff",
-    "--selection-text-color=#241f31ff",
-    "--match-color=#ffffffff",
-    "--text-color=#f6f5f4ff",
-    '--font=Iosevka SS05 Medium:size=14',
+    "--border-color=#81a1c1ff",
+    "--background=#242933ff",
+    "--selection-color=#81a1c1ff",
+    "--selection-text-color=#242933ff",
+    "--match-color=#c0c8d8ff",
+    "--text-color=#c0c8d8ff",
+    '--font=Iosevka SS05 Medium:size=13',
 ]
 
 [format]

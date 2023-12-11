@@ -1,0 +1,5 @@
+#!/bin/sh
+set -x
+set -e
+
+brightnessctl -s --exponent=2 set 0

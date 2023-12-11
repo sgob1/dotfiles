@@ -1,7 +1,7 @@
 # Commands execution and similar stuff
 #exec gnome-keyring-daemon --start
 exec swayrd
-exec gammastep -l 46:13 -r -t 6500:3300 &> /dev/null &
+exec gammastep -l 45.6:13.8 -r -t 6500:3300 &> /dev/null &
 exec amixer set Master 0%
 exec lxpolkit
 exec dunst

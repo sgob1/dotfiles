@@ -7,13 +7,13 @@ args = [
     "--width=100",
     "--border-radius=5",
     "--border-width=2",
-    "--border-color=#81a1c1ff",
-    "--background=#242933ff",
-    "--selection-color=#81a1c1ff",
-    "--selection-text-color=#242933ff",
-    "--match-color=#c0c8d8ff",
-    "--text-color=#c0c8d8ff",
-    '--font=Iosevka SS05 Medium:size=13',
+    "--border-color=#fab387ff",
+    "--background=#1e1e2eff",
+    "--selection-color=#fab387ff",
+    "--selection-text-color=#1e1e2eff",
+    "--match-color=#cdd6f4ff",
+    "--text-color=#cdd6f4ff",
+    '--font=IBM Plex Mono:weight=medium:size=13',
 ]
 
 [format]

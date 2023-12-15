@@ -1,0 +1,3 @@
+#!/bin/sh
+
+foot --config=/home/sirduke/.config/foot/foot-light.ini

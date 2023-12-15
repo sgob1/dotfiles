@@ -9,10 +9,11 @@ set $accent                 "#89b4faff"
 set $alert                  "#f38ba8ff"
 set $dmenu_accent           "#f9e2afff"
 set $fuzzel_accent          "#a6e3a1ff"
+set $fuzzel_match           "#eba0acff"
 set $sysclip_accent         "#dc8addff"
 set $j4_accent              "#a6e3a1ff"
 set $dmenu_font             "IBM Plex Mono Bold 9"
-set $dmenu_font_pango       "IBM Plex Mono:weight=bold:size=9"
+set $dmenu_font_pango       "IBM Plex Mono:weight=medium:size=13"
 set $dmenu_font_launcher    "IBM Plex Mono Bold 9"
 set $wallpaper_day          /home/sirduke/walls/catppuccin-alt/gradients/red_peach.png
 set $wallpaper_night        /home/sirduke/walls/catppuccin-alt/gradients/bkg3_bkg5.png

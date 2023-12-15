@@ -140,6 +140,10 @@ button:hover {
     border-bottom: 1.5pt solid transparent;
 }
 
+#window {
+    font-style: italic;
+}
+
 /* If workspaces is the leftmost module, omit left margin */
 .modules-left > widget:first-child > #workspaces {
     margin-left: 0;
@@ -242,6 +246,7 @@ label:focus {
 #custom-media,
 #mpris {
     background-color: @base;
+    font-style: italic;
     color: @text;
     min-width: 0px;
     padding: 0px 0px;

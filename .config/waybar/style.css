@@ -2,7 +2,7 @@
 
 * {
     /* `otf-font-awesome` is required to be installed for icons */
-    font-family: JetBrains Mono, Iosevka, JetBrains Mono, FontAwesome, Roboto, Helvetica, Arial, sans-serif;
+    font-family: IBM Plex Mono, JetBrains Mono, Iosevka, JetBrains Mono, FontAwesome, Roboto, Helvetica, Arial, sans-serif;
     font-weight: bold;
     font-size: 12px;
     min-height: 0px;
@@ -12,9 +12,9 @@
 }
 
 window#waybar {
-    background-color: @black;
-    border-bottom: 3px solid @black;
-    color: @white;
+    background-color: @base;
+    border-bottom: 3px solid @base;
+    color: @text;
     transition-property: background-color;
     transition-duration: .5s;
 }
@@ -24,12 +24,12 @@ window#waybar.hidden {
 }
 
 tooltip {
-    background-color: @black;
+    background-color: @base;
 }
 
 tooltip label {
     font-weight: normal;
-    color: @white;
+    color: @text;
 }
 
 /*
@@ -46,7 +46,7 @@ window#waybar.solo {
 }*/
 
 /*window#waybar.chromium {
-    background-color: @pure_black;
+    background-color: @mantle;
     border: none;
 }*/
 
@@ -61,41 +61,41 @@ button {
 /* https://github.com/Alexays/Waybar/wiki/FAQ#the-workspace-buttons-have-a-strange-hover-effect */
 button:hover {
     background: inherit;
-    box-shadow: inset 0 -3px @white_bright;
+    box-shadow: inset 0 -3px @text_bright;
 }
 
 #workspaces button {
     padding: 0 3px;
-    background-color: @black;
-    color: @white;
+    background-color: @base;
+    color: @text;
 }
 
 #workspaces button:hover {
-    background: @yellow;
-    color: @black;
-    box-shadow: inset 0 -3px @yellow_bright;
+    background: @flamingo;
+    color: @base;
+    box-shadow: inset 0 -3px @rosewater;
 }
 
 #workspaces button.focused {
-    background-color: @blue_bright;
-    color: @black;
-    box-shadow: inset 0 -3px @blue_even_bright;
+    background-color: @blue;
+    color: @base;
+    box-shadow: inset 0 -3px @text;
 }
 
 #workspaces button.active {
-    background-color: @orange;
-    color: @black;
-    box-shadow: inset 0 -3px @orange_bright;
+    background-color: @peach;
+    color: @base;
+    box-shadow: inset 0 -3px @yellow;
 }
 
 #workspaces button.urgent {
     background-color: @red;
-    color: @black;
+    color: @base;
 }
 
 #mode {
-    background-color: @black_bright;
-    border-bottom: 3px solid @white;
+    background-color: @overlay0;
+    border-bottom: 3px solid @text;
 }
 
 #clock,
@@ -116,7 +116,7 @@ button:hover {
 #mpd {
     margin: 0 0 0;
     padding: 0 5px 0;
-    color: @white;
+    color: @text;
     border: none;
     border-radius: 0;
     margin-bottom: 2px;
@@ -151,34 +151,34 @@ button:hover {
 }
 
 #clock {
-    background-color: @green_even_bright;
-    color: @black;
+    background-color: @green;
+    color: @base;
 }
 
 #battery {
-    background-color: @aqua;
-    color: @black;
+    background-color: @teal;
+    color: @base;
 }
 
 #battery.charging, #battery.plugged {
-    background-color: @aqua;
+    background-color: @teal;
 }
 
 @keyframes blink {
     to {
-        background-color: @pure_white;
-        color: @pure_black;
+        background-color: @text_bright;
+        color: @mantle;
     }
 }
 
 #battery.warning:not(.charging) {
-    background-color: @red_bright;
-    color: @pure_white;
+    background-color: @red;
+    color: @text_bright;
 }
 
 #battery.critical:not(.charging) {
-    background-color: @red_bright;
-    color: @pure_white;
+    background-color: @red;
+    color: @text_bright;
     animation-name: blink;
     animation-duration: 0.5s;
     animation-timing-function: linear;
@@ -187,88 +187,78 @@ button:hover {
 }
 
 label:focus {
-    background-color: @black;
-    color: @white;
+    background-color: @base;
+    color: @text;
 }
 
 #cpu {
     background-color: @blue;
-    color: @black;
+    color: @base;
 }
 
 #memory {
     background-color: @yellow;
-    color: @black;
+    color: @base;
 }
 
 #disk {
-    background-color: @brownish;
-    color: @black;
+    background-color: @maroon;
+    color: @base;
 }
 
 #backlight {
-    background-color: @purple;
-    color: @black;
+    background-color: @mauve;
+    color: @base;
 }
 
 #network {
-    /*background-color: @dark_blue;*/
-    background-color: @orange;
-    color: @black;
+    background-color: @peach;
+    color: @base;
 }
 
 #network.disconnected {
-    background-color: #3c1f1e;
+    background-color: @maroon;
 }
 
 #pulseaudio {
-    background-color: @yellow_bright;
-    color: @pure_black;
+    background-color: @yellow;
+    color: @mantle;
 }
 
 #pulseaudio.muted {
-    background-color: @yellow_bright;
-    color: @pure_black;
+    background-color: @yellow;
+    color: @mantle;
 }
 
 #wireplumber {
-    background-color: #fff0f5;
-    color: @pure_black;
+    background-color: @text;
+    color: @mantle;
 }
 
 #wireplumber.muted {
-    background-color: @red_bright;
+    background-color: @lavender;
 }
 
 #custom-media,
 #mpris {
-    background-color: rgba(0, 0, 0, 0.2);
-    color: @white;
+    background-color: @base;
+    color: @text;
     min-width: 0px;
     padding: 0px 0px;
     margin-left: 7px;
 }
 
-
-/*#custom-media.custom-spotify {
-    background-color: #66cc99;
-}
-
-#custom-media.custom-vlc {
-    background-color: #ffa000;
-}*/
-
 #temperature {
-    background-color: @orange;
-    color: @black;
+    background-color: @pink;
+    color: @base;
 }
 
 #temperature.critical {
-    background-color: @red_bright;
+    background-color: @red;
 }
 
 #tray {
-    background-color: @blue_navy;
+    background-color: @surface1;
 }
 
 #tray > .passive {
@@ -281,15 +271,15 @@ label:focus {
 }
 
 #idle_inhibitor {
-    background-color: @black_bright;
+    background-color: @surface1;
 }
 
 #idle_inhibitor.activated {
-    background-color: @vanilla;
-    color: @dark_grey;
+    background-color: @subtext0;
+    color: @overlay0;
 }
 
-#mpd {
+/*#mpd {
     background-color: #66cc99;
     color: #2a5c45;
 }
@@ -316,7 +306,7 @@ label:focus {
 
 #keyboard-state {
     background: #97e1ad;
-    color: @pure_black;
+    color: @mantle;
     padding: 0 0px;
     margin: 0 5px;
     min-width: 16px;
@@ -328,10 +318,10 @@ label:focus {
 
 #keyboard-state > label.locked {
     background: rgba(0, 0, 0, 0.2);
-}
+}*/
 
 #scratchpad {
-    background: rgba(0, 0, 0, 0.2);
+    background: @base;
 }
 
 #scratchpad.empty {
@@ -339,31 +329,31 @@ label:focus {
 }
 
 #custom-arrow1 {
-    color: @yellow_bright;
-    background-color: @black;
+    color: @yellow;
+    background-color: @base;
 }
 
 #custom-arrow2 {
-    color: @orange;
-    background-color: @yellow_bright;
+    color: @peach;
+    background-color: @yellow;
 }
 
 #custom-arrow3 {
-    color: @purple;
-    background-color: @orange;
+    color: @mauve;
+    background-color: @peach;
 }
 
 #custom-arrow4 {
-    color: @aqua;
-    background-color: @purple;
+    color: @teal;
+    background-color: @mauve;
 }
 
 #custom-arrow5 {
-    color: @green_even_bright;
-    background-color: @aqua;
+    color: @green;
+    background-color: @teal;
 }
 
 #custom-arrow6 {
-    color: @blue_navy;
-    background-color: @green_even_bright;
+    color: @surface1;
+    background-color: @green;
 }

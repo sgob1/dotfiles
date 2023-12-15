@@ -14,7 +14,7 @@ set $j4_accent              "#a3be8cff"
 set $dmenu_font             "Iosevka Bold 11"
 set $dmenu_font_pango       "Iosevka Medium:size=14"
 set $dmenu_font_launcher    "Iosevka Heavy 11"
-set $wallpaper_day          /home/sirduke/walls/some-wallpapers/unsorted/japan.jpg
-set $wallpaper_night        /home/sirduke/walls/some-wallpapers/unsorted/japan.jpg
+set $wallpaper_day          /home/sirduke/walls/catppuccin-alt/gradients/red_peach.png
+set $wallpaper_night        /home/sirduke/walls/catppuccin-alt/gradients/bkg3_bkg5.png
 set $wallpaper_dir          "$HOME/walls/google-earth/"
 set $wallpaper_mode         "fill"

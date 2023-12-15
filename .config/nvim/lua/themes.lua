@@ -18,8 +18,8 @@ function M.apply()
         dark_theme = 'catppuccin-mocha'
         light_theme = 'catppuccin-latte'
     elseif desktop_session == "hyprland" then
-        dark_theme = 'nordic'
-        light_theme = 'kanagawa-lotus'
+        dark_theme = 'catppuccin-mocha'
+        light_theme = 'catppuccin-latte'
     else
         dark_theme = 'gruvbox-material'
         light_theme = 'gruvbox-material'

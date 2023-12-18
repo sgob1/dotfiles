@@ -15,7 +15,7 @@ set $j4_accent              "#a6e3a1ff"
 set $dmenu_font             "IBM Plex Mono Bold 9"
 set $dmenu_font_pango       "IBM Plex Mono:weight=medium:size=13"
 set $dmenu_font_launcher    "IBM Plex Mono Bold 9"
-set $wallpaper_day          /home/sirduke/walls/catppuccin/latte-kanagawa-unc.png
-set $wallpaper_night        /home/sirduke/walls/catppuccin/latte-kanagawa-unc-d.png
+set $wallpaper_day          /home/sirduke/walls/catppuccin/latte-kanagawa-unc.jpg
+set $wallpaper_night        /home/sirduke/walls/catppuccin/latte-kanagawa-unc-d.jpg
 set $wallpaper_dir          "$HOME/walls/google-earth/"
 set $wallpaper_mode         "fill"

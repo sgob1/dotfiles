@@ -1,0 +1,8 @@
+#!/bin/sh
+set -e
+set -x
+
+pics_dir="$HOME/walls/shuffle"
+random_pic="$(ls $pics_dir | rg -e .jpg -e .png -e .jpeg | shuf -n 1)"
+picture="$pics_dir/$random_pic"
+gsettings set org.gnome.desktop.background picture-uri "$picture"

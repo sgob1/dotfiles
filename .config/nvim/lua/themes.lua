@@ -12,8 +12,8 @@ function M.apply()
     opt.background = "dark";
 
     if desktop_session == "gnome" then
-        dark_theme = 'nordic'
-        light_theme = 'everforest'
+        dark_theme = 'catppuccin-mocha'
+        light_theme = 'catppuccin-latte'
     elseif desktop_session == "sway" then
         dark_theme = 'catppuccin-mocha'
         light_theme = 'catppuccin-latte'

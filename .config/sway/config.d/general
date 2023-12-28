@@ -13,4 +13,5 @@ xwayland enable
 focus_follows_mouse no
 
 output HDMI-A-1 scale 2
+output HDMI-A-1 res 3840x2160@60Hz
 seat * hide_cursor when-typing enable

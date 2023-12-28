@@ -14,7 +14,7 @@ args = [
     "--match-color=#89b4faff",
     "--selection-match-color=#89b4faff",
     "--text-color=#cdd6f4ff",
-    '--font=IBM Plex Mono:weight=medium:size=13',
+    '--font=IBM Plex Mono:weight=medium:size=11.5',
 ]
 
 [format]

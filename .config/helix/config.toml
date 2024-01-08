@@ -2,14 +2,49 @@ theme = "default"
 
 [editor]
 line-number = "relative"
-mouse = true
+scroll-lines = 1
+auto-save = false
+mouse = false
 cursorline = true
+true-color = true
+color-modes = true
+auto-pairs = true
+rulers = [80, 120]
+idle-timeout = 50
 
 [editor.cursor-shape]
 insert = "bar"
 normal = "block"
-#select = "underline"
+select = "underline"
 
 [editor.file-picker]
 hidden = false
+
+[editor.indent-guides]
+render = true
+character = "▏"
+
+[editor.lsp]
+display-messages = true
+display-inlay-hints = true
+
+[editor.statusline]
+left = ["mode", "spinner", "file-name", "file-type", "total-line-numbers", "file-encoding"]
+center = []
+right = ["selections", "primary-selection-length", "position", "position-percentage", "spacer", "diagnostics", "workspace-diagnostics", "version-control"]
+
+[editor.soft-wrap]
+enable = true
+
+[editor.whitespace.render]
+space = "none"
+tab = "none"
+newline = "none"
+
+[editor.whitespace.characters]
+space = "·"
+nbsp = "⍽"
+tab = "→"
+newline = "⏎"
+tabpad = "·" # Tabs will look like "→···" (depending on tab width)
 

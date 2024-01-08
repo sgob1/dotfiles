@@ -43,8 +43,8 @@ bindsym XF86AudioLowerVolume exec ~/.local/bin/change-volume-dunst 5%-
 bindsym XF86AudioMute exec ~/.local/bin/change-volume-dunst
 bindsym XF86MonBrightnessDown exec ~/.local/bin/change-brightness-dunst 5%-
 bindsym XF86MonBrightnessUp exec ~/.local/bin/change-brightness-dunst 5%+
-bindsym $mod+right exec ~/.local/bin/change-volume-dunst 5%+
-bindsym $mod+left exec ~/.local/bin/change-volume-dunst 5%-
+bindsym $mod+right exec ~/.local/bin/change-volume-dunst 1%+
+bindsym $mod+left exec ~/.local/bin/change-volume-dunst 1%-
 bindsym $mod+down exec ~/.local/bin/change-brightness-dunst 5%-
 bindsym $mod+up exec ~/.local/bin/change-brightness-dunst 5%+
 

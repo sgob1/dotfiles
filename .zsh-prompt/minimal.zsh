@@ -174,7 +174,7 @@ function mnml_files {
     if [ "${h_files:-0}" -gt 0 ]; then
         output="$output $_w($_g$h_files$_w)"
     fi
-    utput="$output${_w}]"
+    output="$output${_w}]"
     
     printf '%b' "$output"
 }

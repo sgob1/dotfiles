@@ -27,8 +27,8 @@ bindsym $mod+Shift+t exec sh ~/.local/bin/add-todo-txt.sh
 bindsym $mod+z exec ~/.local/bin/wsearch.sh "firefox --new-tab" "https://start.duckduckgo.com/?q="
 bindsym $mod+Shift+z exec wl-paste | xargs firefox --new-tab --
 bindsym $mod+y exec grep -v '^#' ~/org/sysclip | grep . | bemenu -i -l 8 --nb $background --nf $text --hb $sysclip_accent --hf $background --fb $background --ff $text --tb $sysclip_accent --tf $background --fn $dmenu_font --line-height 21 -p "Sysclip" | wl-copy
-bindsym $mod+Shift+y exec sh ~/.local/bin/add-sysclip.sh
-bindsym $mod+Ctrl+y exec sh ~/.local/bin/rm-sysclip.sh
+bindsym $mod+Shift+y exec sh ~/.local/bin/add-sysclip
+bindsym $mod+Ctrl+y exec sh ~/.local/bin/rm-sysclip
 bindsym $mod+p exec ~/.local/bin/open-file.sh
 bindsym $mod+Ctrl+p exec playerctl play-pause
 bindsym $mod+greater exec playerctl next

@@ -160,8 +160,8 @@ add-zsh-hook -Uz chpwd chpwd-osc7-pwd
 # -----------------------------------------------------------------------------
 # Sets zsh prompt via powerline-go
 # -----------------------------------------------------------------------------
-function powerline_precmd() {
-    PS1="$($GOPATH/bin/powerline-go -error $? -jobs ${${(%):%j}:-0} -theme default)"
+# function powerline_precmd() {
+    # PS1="$($GOPATH/bin/powerline-go -error $? -jobs ${${(%):%j}:-0} -theme default)"
 
     # Uncomment the following line to automatically clear errors after showing
     # them once. This not only clears the error for powerline-go, but also for
@@ -169,20 +169,20 @@ function powerline_precmd() {
     # sure this is what you want.
 
     #set "?"
-}
+# }
 
-function install_powerline_precmd() {
-  for s in "${precmd_functions[@]}"; do
-    if [ "$s" = "powerline_precmd" ]; then
-      return
-    fi
-  done
-  precmd_functions+=(powerline_precmd)
-}
+# function install_powerline_precmd() {
+  # for s in "${precmd_functions[@]}"; do
+    # if [ "$s" = "powerline_precmd" ]; then
+      # return
+    # fi
+  # done
+  # precmd_functions+=(powerline_precmd)
+# }
 
-if [ "$TERM" != "linux" ] && [ -f "$GOPATH/bin/powerline-go" ]; then
-    install_powerline_precmd
-fi
+# if [ "$TERM" != "linux" ] && [ -f "$GOPATH/bin/powerline-go" ]; then
+    # install_powerline_precmd
+# fi
 # -----------------------------------------------------------------------------
 # custom prompt
 # -----------------------------------------------------------------------------
@@ -213,3 +213,8 @@ fi
 # Starship prompt
 # -----------------------------------------------------------------------------
 # eval "$(~/.cargo/bin/starship init zsh)"
+#
+# -----------------------------------------------------------------------------
+# Minimal prompt
+# -----------------------------------------------------------------------------
+source ~/.zsh-prompt/minimal.zsh

@@ -38,11 +38,8 @@ set notimeout
 set nottimeout
 set incsearch hlsearch
 set mouse=v
-"set list
 set list!
-set listchars=tab:\|\ ,trail:·
-"set lcs=tab:»·
-set lcs+=trail:·
+set listchars=trail:·
 set undodir=~/.vim/undodir
 set undofile
 set viminfo=!,'100,<50,s100,%,/50,:50

@@ -51,7 +51,6 @@ newline = "⏎"
 tabpad = "·" # Tabs will look like "→···" (depending on tab width)
 
 [keys.normal]
-A-f = "flip_selections"
 H = "extend_char_left"
 L = "extend_char_right"
 J = "extend_line_down"
@@ -74,7 +73,7 @@ E = "extend_next_word_end"
 # space.g.H = "extend_till_prev_char"
 
 # g.h = "goto_line_start"
-g.s = "goto_file_start"
+g.g = "goto_file_start"
 g.t = "goto_file_end"
 # g.r = "goto_line_end"
 g.i = "goto_first_nonwhitespace"
@@ -119,8 +118,6 @@ C-y = "scroll_up"
 S = "select_regex"
 # z = "split_selection"
 X = "extend_line_above"
-g.s = "goto_file_start"
-A-f = "flip_selections"
 
 # [keys.insert]
 # " " = ["collapse_selection", ":insert-output printf ' '", "move_char_right"]

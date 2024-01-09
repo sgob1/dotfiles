@@ -73,7 +73,7 @@ E = "extend_next_word_end"
 # space.g.H = "extend_till_prev_char"
 
 # g.h = "goto_line_start"
-g.g = "goto_file_start"
+g.s = "goto_file_start"
 g.t = "goto_file_end"
 # g.r = "goto_line_end"
 g.i = "goto_first_nonwhitespace"
@@ -102,6 +102,7 @@ C-y = "scroll_up"
 A-f = "flip_selections"
 
 [keys.select]
+g.s = "goto_file_start"
 # c = "extend_char_left"
 # r = "extend_char_right"
 # t = "extend_line_down"

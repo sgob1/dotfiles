@@ -48,6 +48,8 @@ set undofile
 set viminfo=!,'100,<50,s100,%,/50,:50
 set background=dark
 
+set termguicolors
+
 nnoremap Y y$
 nnoremap \\ :noh<cr>
 let mapleader=","
@@ -91,9 +93,9 @@ inoremap <leader>cc \textsc{
 
 call plug#begin()
 Plug 'airblade/vim-gitgutter'
-Plug 'chriskempson/base16-vim'
 Plug 'kien/ctrlp.vim'
 Plug 'morhetz/gruvbox'
+Plug 'catppuccin/vim', { 'as': 'catppuccin' }
 Plug 'preservim/nerdtree', { 'on': 'NERDTreeToggle' }
 Plug 'tpope/vim-commentary'
 Plug 'tpope/vim-fugitive'
@@ -107,4 +109,4 @@ let base16colorspace=256  " Access colors present in 256 colorspace
 let g:gruvbox_contrast_light='hard'
 let g:gruvbox_contrast_dark='medium'
 let g:gruvbox_italic=1
-colorscheme gruvbox
+colorscheme catppuccin_mocha

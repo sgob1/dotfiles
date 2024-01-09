@@ -99,6 +99,8 @@ C-y = "scroll_up"
 # space.w.s = "jump_view_up"
 # space.w.o = "hsplit"
 
+A-f = "flip_selections"
+
 [keys.select]
 # c = "extend_char_left"
 # r = "extend_char_right"
@@ -121,3 +123,5 @@ X = "extend_line_above"
 
 # [keys.insert]
 # " " = ["collapse_selection", ":insert-output printf ' '", "move_char_right"]
+
+A-f = "flip_selections"

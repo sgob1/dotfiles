@@ -43,6 +43,8 @@ set listchars=tab:\ \ ,trail:·
 set undodir=~/.vim/undodir
 set undofile
 set viminfo=!,'100,<50,s100,%,/50,:50
+set swapfile
+set dir=~/.vim-swap
 set background=dark
 
 "set termguicolors

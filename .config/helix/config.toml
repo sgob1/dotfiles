@@ -9,7 +9,7 @@ cursorline = true
 true-color = true
 color-modes = true
 auto-pairs = true
-rulers = [80]
+rulers = [80, 120]
 idle-timeout = 50
 # completion-trigger-len = 1
 

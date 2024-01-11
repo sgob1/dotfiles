@@ -17,6 +17,7 @@
 # -----------------------------------------------------------------------------
 HYPHEN_INSENSITIVE="true"
 export PATH=$HOME/.local/bin:$PATH
+export PATH=$HOME/.cargo/bin:$PATH
 export FZF_DEFAULT_OPTS="--ansi"
 export FZF_DEFAULT_COMMAND="fd --no-ignore"
 export SKIM_DEFAULT_COMMAND="fd --no-ignore --hidden"

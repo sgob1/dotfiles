@@ -1,0 +1,88 @@
+-- Pull in the wezterm API
+local wezterm = require 'wezterm'
+
+-- This table will hold the configuration.
+local config = {}
+
+-- In newer versions of wezterm, use the config_builder which will
+-- help provide clearer error messages
+if wezterm.config_builder then
+  config = wezterm.config_builder()
+end
+
+config.default_prog = {'/usr/bin/zsh'}
+config.enable_wayland = true;
+
+-- This is where you actually apply your config choices
+
+-- For example, changing the color scheme:
+config.color_scheme = 'Catppuccin Mocha'
+
+config.font = wezterm.font('IBM Plex Mono', { weight = 'Medium', italic = false })
+
+config.font_size = 10.7
+config.cell_width = 0.8
+
+config.inactive_pane_hsb = {
+  saturation = 0.95,
+  brightness = 0.95,
+}
+
+
+config.window_background_opacity = 1.0
+config.window_decorations = "NONE"
+config.initial_rows = 24
+config.initial_cols = 96
+config.enable_tab_bar = false
+config.scrollback_lines = 10000
+config.enable_scroll_bar = false
+config.check_for_updates = false
+
+config.keys = {
+  {
+    key = 'd',
+    mods = 'CTRL|ALT',
+    action = wezterm.action.SplitVertical {domain="CurrentPaneDomain"},
+  },
+
+  {
+    key = 'r',
+    mods = 'CTRL|ALT',
+    action = wezterm.action.SplitHorizontal {domain="CurrentPaneDomain"},
+  },
+  {
+    key = 'k',
+    mods = 'ALT',
+    action = wezterm.action.ActivatePaneDirection "Up",
+  },
+  {
+    key = 'j',
+    mods = 'ALT',
+    action = wezterm.action.ActivatePaneDirection "Down",
+  },
+  {
+    key = 'h',
+    mods = 'ALT',
+    action = wezterm.action.ActivatePaneDirection "Left",
+  },
+  {
+    key = 'l',
+    mods = 'ALT',
+    action = wezterm.action.ActivatePaneDirection "Right",
+  },
+}
+
+function scheme_for_appearance(appearance)
+  if appearance:find "Dark" then
+    return "Catppuccin Mocha"
+  else
+    --return "Catppuccin Latte"
+    return "Catppuccin Mocha"
+  end
+end
+
+config.color_scheme = scheme_for_appearance(wezterm.gui.get_appearance())
+
+
+-- and finally, return the configuration to wezterm
+return config

@@ -12,8 +12,8 @@ return {
                 normal_line = "mS",
                 normal_cur_line = "mSS",
                 visual = "mS",
-                visual_line = "mS",
-                delete = "dm",
+                visual_line = "mSg",
+                delete = "dms",
                 change = "cms",
                 change_line = "mcS"
             }

@@ -3,18 +3,19 @@ return {
     lazy = false,
     config = function()
         -- Setup language servers.
-        local lspconfig = require('lspconfig')
-        lspconfig.pyright.setup {}
-        lspconfig.tsserver.setup {}
-        lspconfig.clangd.setup {}
-        lspconfig.lua_ls.setup {}
-        lspconfig.java_language_server.setup {}
-        lspconfig.rust_analyzer.setup {
+        require('lspconfig').pyright.setup {}
+        require('lspconfig').tsserver.setup {}
+        require('lspconfig').clangd.setup {}
+        require('lspconfig').lua_ls.setup {}
+        require('lspconfig').java_language_server.setup {}
+        require('lspconfig').rust_analyzer.setup {
             -- Server-specific settings. See `:help lspconfig-setup`
             settings = {
                 ['rust-analyzer'] = {},
             },
         }
+        require('lspconfig').texlab.setup{}
+
 
 
         -- Global mappings.

@@ -13,8 +13,8 @@ return {
             nmap myss <Plug>Yssurround
             nmap mySs <Plug>YSsurround
             nmap mySS <Plug>YSsurround
-            xmap mS   <Plug>VSurround
-            xmap mgS  <Plug>VgSurround
+            xmap ms   <Plug>VSurround
+            xmap mgs  <Plug>VgSurround
             if !exists("g:surround_no_insert_mappings") || ! g:surround_no_insert_mappings
                 if !hasmapto("<Plug>Isurround","i") && "" == mapcheck("<C-S>","i")
                     imap    <C-S> <Plug>Isurround

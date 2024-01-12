@@ -19,24 +19,32 @@ config.enable_wayland = true;
 config.color_scheme = 'Catppuccin Mocha'
 
 config.font = wezterm.font('IBM Plex Mono', { weight = 'Medium', italic = false })
+-- config.font.font_antialias = "Subpixel"
 
 config.font_size = 10.7
 config.cell_width = 0.8
 
 config.inactive_pane_hsb = {
-  saturation = 0.95,
-  brightness = 0.95,
+  saturation = 0.90,
+  brightness = 0.86,
 }
 
 
 config.window_background_opacity = 1.0
-config.window_decorations = "NONE"
+config.window_decorations = "RESIZE"
 config.initial_rows = 24
 config.initial_cols = 96
 config.enable_tab_bar = false
+config.tab_bar_at_bottom = true
 config.scrollback_lines = 10000
 config.enable_scroll_bar = false
 config.check_for_updates = false
+
+-- The filled in variant of the < symbol
+local SOLID_LEFT_ARROW = wezterm.nerdfonts.pl_right_hard_divider
+
+-- The filled in variant of the > symbol
+local SOLID_RIGHT_ARROW = wezterm.nerdfonts.pl_left_hard_divider
 
 config.keys = {
   {
@@ -69,6 +77,26 @@ config.keys = {
     key = 'l',
     mods = 'ALT',
     action = wezterm.action.ActivatePaneDirection "Right",
+  },
+  {
+    key = 'k',
+    mods = 'CTRL|ALT|SHIFT',
+    action = wezterm.action.AdjustPaneSize { "Up", 1 }
+  },
+  {
+    key = 'j',
+    mods = 'CTRL|ALT|SHIFT',
+    action = wezterm.action.AdjustPaneSize { "Down", 1 }
+  },
+  {
+    key = 'h',
+    mods = 'CTRL|ALT|SHIFT',
+    action = wezterm.action.AdjustPaneSize { "Left", 2 }
+  },
+  {
+    key = 'l',
+    mods = 'CTRL|ALT|SHIFT',
+    action = wezterm.action.AdjustPaneSize { "Right", 2 }
   },
 }
 

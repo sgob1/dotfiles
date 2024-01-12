@@ -40,12 +40,6 @@ config.scrollback_lines = 10000
 config.enable_scroll_bar = false
 config.check_for_updates = false
 
--- The filled in variant of the < symbol
-local SOLID_LEFT_ARROW = wezterm.nerdfonts.pl_right_hard_divider
-
--- The filled in variant of the > symbol
-local SOLID_RIGHT_ARROW = wezterm.nerdfonts.pl_left_hard_divider
-
 config.keys = {
   {
     key = 'd',

@@ -18,11 +18,11 @@ config.enable_wayland = true;
 -- For example, changing the color scheme:
 config.color_scheme = 'Catppuccin Mocha'
 
-config.font = wezterm.font('IBM Plex Mono', { weight = 'Medium', italic = false })
+config.font = wezterm.font('Iosevka', { weight = 'Medium', italic = false })
 -- config.font.font_antialias = "Subpixel"
 
-config.font_size = 10.8
-config.cell_width = 0.8
+config.font_size = 11.8
+config.cell_width = 1.0
 
 config.inactive_pane_hsb = {
   saturation = 0.90,

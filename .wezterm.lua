@@ -29,6 +29,13 @@ config.inactive_pane_hsb = {
   brightness = 0.92,
 }
 
+config.window_padding = {
+  left = 2,
+  right = 2,
+  top = 2,
+  bottom = 2,
+}
+
 
 config.window_background_opacity = 1.0
 config.window_decorations = "RESIZE"

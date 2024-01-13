@@ -26,7 +26,7 @@ config.cell_width = 0.8
 
 config.inactive_pane_hsb = {
   saturation = 0.90,
-  brightness = 0.86,
+  brightness = 0.92,
 }
 
 

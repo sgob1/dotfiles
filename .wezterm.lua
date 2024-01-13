@@ -21,7 +21,7 @@ config.color_scheme = 'Catppuccin Mocha'
 config.font = wezterm.font('IBM Plex Mono', { weight = 'Medium', italic = false })
 -- config.font.font_antialias = "Subpixel"
 
-config.font_size = 10.7
+config.font_size = 10.8
 config.cell_width = 0.8
 
 config.inactive_pane_hsb = {
@@ -33,7 +33,7 @@ config.inactive_pane_hsb = {
 config.window_background_opacity = 1.0
 config.window_decorations = "RESIZE"
 config.initial_rows = 24
-config.initial_cols = 96
+config.initial_cols = 108
 config.enable_tab_bar = false
 config.tab_bar_at_bottom = true
 config.scrollback_lines = 10000

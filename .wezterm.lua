@@ -115,10 +115,10 @@ config.keys = {
 
 function scheme_for_appearance(appearance)
   if appearance:find "Dark" then
-    return "Gruvbox Material (Gogh)"
+    return "Catppuccin Mocha"
   else
     --return "Catppuccin Latte"
-    return "Gruvbox Material (Gogh)"
+    return "Catppuccin Mocha"
   end
 end
 

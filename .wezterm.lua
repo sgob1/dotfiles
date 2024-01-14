@@ -18,11 +18,11 @@ config.enable_wayland = true;
 -- For example, changing the color scheme:
 config.color_scheme = 'Gruvbox Material'
 
-config.font = wezterm.font('Iosevka', { weight = 'Medium', italic = false })
+config.font = wezterm.font('IBM Plex Mono', { weight = 'Medium', italic = false })
 -- config.font.font_antialias = "Subpixel"
 
-config.font_size = 11.8
-config.cell_width = 1.0
+config.font_size = 10.8
+config.cell_width = 0.8
 
 config.inactive_pane_hsb = {
   saturation = 0.90,
@@ -52,7 +52,7 @@ config.window_frame = {
 config.window_background_opacity = 1.0
 config.window_decorations = "RESIZE"
 config.initial_rows = 24
-config.initial_cols = 108
+config.initial_cols = 96
 config.enable_tab_bar = false
 config.tab_bar_at_bottom = true
 config.scrollback_lines = 10000

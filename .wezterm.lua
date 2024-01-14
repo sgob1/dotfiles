@@ -58,6 +58,7 @@ config.tab_bar_at_bottom = true
 config.scrollback_lines = 10000
 config.enable_scroll_bar = false
 config.check_for_updates = false
+config.bold_brightens_ansi_colors = false
 
 config.keys = {
   {
@@ -115,10 +116,10 @@ config.keys = {
 
 function scheme_for_appearance(appearance)
   if appearance:find "Dark" then
-    return "Catppuccin Mocha"
+    return "Gruvbox Material (Gogh)"
   else
     --return "Catppuccin Latte"
-    return "Catppuccin Mocha"
+    return "Gruvbox Material (Gogh)"
   end
 end
 

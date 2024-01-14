@@ -19,6 +19,7 @@ return {
         lspconfig.tsserver.setup {}
         lspconfig.clangd.setup {}
         lspconfig.lua_ls.setup {}
+        lspconfig.texlab.setup{}
         lspconfig.java_language_server.setup {}
         lspconfig.rust_analyzer.setup {
             -- Server-specific settings. See `:help lspconfig-setup`

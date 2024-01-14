@@ -14,7 +14,7 @@ idle-timeout = 50
 # completion-trigger-len = 1
 
 [editor.cursor-shape]
-insert = "bar"
+insert = "block"
 normal = "block"
 select = "underline"
 

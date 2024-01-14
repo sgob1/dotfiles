@@ -21,8 +21,8 @@ config.color_scheme = 'Gruvbox Material'
 config.font = wezterm.font('Iosevka', { weight = 'Medium', italic = false })
 -- config.font.font_antialias = "Subpixel"
 
-config.font_size = 11.5
-config.cell_width = 0.8
+config.font_size = 11.8
+config.cell_width = 1.0
 
 config.inactive_pane_hsb = {
   saturation = 0.90,

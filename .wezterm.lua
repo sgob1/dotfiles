@@ -16,13 +16,13 @@ config.enable_wayland = true;
 -- This is where you actually apply your config choices
 
 -- For example, changing the color scheme:
-config.color_scheme = 'Catppuccin Mocha'
+config.color_scheme = 'Gruvbox Material'
 
 config.font = wezterm.font('Iosevka', { weight = 'Medium', italic = false })
 -- config.font.font_antialias = "Subpixel"
 
-config.font_size = 11.8
-config.cell_width = 1.0
+config.font_size = 11.5
+config.cell_width = 0.8
 
 config.inactive_pane_hsb = {
   saturation = 0.90,
@@ -35,6 +35,18 @@ config.window_padding = {
   top = 2,
   bottom = 2,
 }
+
+config.window_frame = {
+  border_left_width = '1px',
+  border_right_width = '1px',
+  border_bottom_height = '1px',
+  border_top_height = '1px',
+  border_left_color = '#1d2021',
+  border_right_color = '#1d2021',
+  border_bottom_color = '#1d2021',
+  border_top_color = '#1d2021',
+}
+
 
 
 config.window_background_opacity = 1.0
@@ -103,10 +115,10 @@ config.keys = {
 
 function scheme_for_appearance(appearance)
   if appearance:find "Dark" then
-    return "Catppuccin Mocha"
+    return "Everforest Dark (Gogh)"
   else
     --return "Catppuccin Latte"
-    return "Catppuccin Mocha"
+    return "Everforest Dark (Gogh)"
   end
 end
 

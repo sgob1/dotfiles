@@ -14,7 +14,7 @@ set $j4_accent              "#d8a657ff"
 set $dmenu_font             "IBM Plex Mono Bold 9"
 set $dmenu_font_pango       "IBM Plex Mono:weight=medium:size=13"
 set $dmenu_font_launcher    "IBM Plex Mono Bold 9"
-set $wallpaper_day          /home/sirduke/walls/various-wallpapers/Gruv/gruv-temple.png
-set $wallpaper_night        /home/sirduke/walls/various-wallpapers/Gruv/gruv-temple.png
+set $wallpaper_day          /home/sirduke/walls/gruv-walls-again/gruvbox/cottage.jpg
+set $wallpaper_night        /home/sirduke/walls/gruv-walls-again/gruvbox/waterfall2.jpg
 set $wallpaper_dir          "/home/sirduke/walls/swaywm-shuffle/"
 set $wallpaper_mode         "fill"

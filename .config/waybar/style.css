@@ -1,4 +1,4 @@
-@import url("./style-adwaita.css");
+@import url("./style-gruv.css");
 
 * {
     /* `otf-font-awesome` is required to be installed for icons */
@@ -238,12 +238,12 @@ label:focus {
 }
 
 #temperature {
-    background-color: @temperature;
+    background-color: @_temperature;
     color: @background_bar;
 }
 
 #temperature.critical {
-    background-color: @temperature_crit;
+    background-color: @_temperature_crit;
 }
 
 #tray {

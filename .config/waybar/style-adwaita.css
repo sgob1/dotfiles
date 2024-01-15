@@ -61,8 +61,8 @@
 @define-color pulseaudio_mut_bg	@yellow;
 @define-color wireplumber	@mantle;
 @define-color wireplumber_mut	@lavender;
-@define-color temperature	@pink;
-@define-color temperature_crit	@red;
+@define-color _temperature	@pink;
+@define-color _temperature_crit	@red;
 @define-color tray		@surface1;
 @define-color tray_attent	@red;
 @define-color idle_inhibitor	@surface1;

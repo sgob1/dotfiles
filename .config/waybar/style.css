@@ -12,8 +12,8 @@
 }
 
 window#waybar {
-    background-color: @base;
-    border-bottom: 3px solid @base;
+    background-color: @background_bar;
+    border-bottom: 3px solid @background_bar;
     color: @text;
     transition-property: background-color;
     transition-duration: .5s;
@@ -24,7 +24,7 @@ window#waybar.hidden {
 }
 
 tooltip {
-    background-color: @base;
+    background-color: @background_bar;
 }
 
 tooltip label {
@@ -32,23 +32,6 @@ tooltip label {
     color: @text;
 }
 
-/*
-window#waybar.empty {
-    background-color: transparent;
-}
-window#waybar.solo {
-    background-color: @pure_white;
-}
-*/
-
-/*window#waybar.termite {
-    background-color: #3F3F3F;
-}*/
-
-/*window#waybar.chromium {
-    background-color: @mantle;
-    border: none;
-}*/
 
 button {
     /* Use box-shadow instead of border so the text isn't offset */
@@ -66,36 +49,36 @@ button:hover {
 
 #workspaces button {
     padding: 0 3px;
-    background-color: @base;
-    color: @text;
+    background-color: @background_bar;
+    color: @button_main;
 }
 
 #workspaces button:hover {
-    background: @flamingo;
-    color: @base;
-    box-shadow: inset 0 -3px @rosewater;
+    background: @button_hover;
+    color: @background_bar;
+    box-shadow: inset 0 -3px @button_hover_bg;
 }
 
 #workspaces button.focused {
-    background-color: @blue;
-    color: @base;
-    box-shadow: inset 0 -3px @text;
+    background-color: @button_focus;
+    color: @background_bar;
+    box-shadow: inset 0 -3px @button_focus_bg;
 }
 
 #workspaces button.active {
-    background-color: @peach;
-    color: @base;
-    box-shadow: inset 0 -3px @yellow;
+    background-color: @button_active;
+    color: @background_bar;
+    box-shadow: inset 0 -3px @button_active_bg;
 }
 
 #workspaces button.urgent {
-    background-color: @red;
-    color: @base;
+    background-color: @button_urgent;
+    color: @background_bar;
 }
 
 #mode {
-    background-color: @overlay0;
-    border-bottom: 3px solid @text;
+    background-color: @mode_bg;
+    border-bottom: 3px solid @mode_border;
 }
 
 #clock,
@@ -142,6 +125,7 @@ button:hover {
 
 #window {
     font-style: italic;
+    color: @window_title
 }
 
 /* If workspaces is the leftmost module, omit left margin */
@@ -155,34 +139,34 @@ button:hover {
 }
 
 #clock {
-    background-color: @green;
-    color: @base;
+    background-color: @clock;
+    color: @background_bar;
 }
 
 #battery {
-    background-color: @teal;
-    color: @base;
+    background-color: @battery;
+    color: @background_bar;
 }
 
 #battery.charging, #battery.plugged {
-    background-color: @teal;
+    background-color: @battery_plug;
 }
 
 @keyframes blink {
     to {
         background-color: @text_bright;
-        color: @mantle;
+        color: @keyframes_blink;
     }
 }
 
 #battery.warning:not(.charging) {
-    background-color: @red;
-    color: @text_bright;
+    background-color: @battery_wrn_nc_bg;
+    color: @battery_wrn_nc;
 }
 
 #battery.critical:not(.charging) {
-    background-color: @red;
-    color: @text_bright;
+    background-color: @battery_crit_bg;
+    color: @battery_crit;
     animation-name: blink;
     animation-duration: 0.5s;
     animation-timing-function: linear;
@@ -191,79 +175,79 @@ button:hover {
 }
 
 label:focus {
-    background-color: @base;
-    color: @text;
+    background-color: @background_bar;
+    color: @label_focus;
 }
 
 #cpu {
-    background-color: @blue;
-    color: @base;
+    background-color: @_cpu;
+    color: @background_bar;
 }
 
 #memory {
-    background-color: @yellow;
-    color: @base;
+    background-color: @_memory;
+    color: @background_bar;
 }
 
 #disk {
-    background-color: @maroon;
-    color: @base;
+    background-color: @_disk;
+    color: @background_bar;
 }
 
 #backlight {
-    background-color: @mauve;
-    color: @base;
+    background-color: @backlight;
+    color: @background_bar;
 }
 
 #network {
-    background-color: @peach;
-    color: @base;
+    background-color: @network;
+    color: @background_bar;
 }
 
 #network.disconnected {
-    background-color: @maroon;
+    background-color: @network_disc;
 }
 
 #pulseaudio {
-    background-color: @yellow;
-    color: @mantle;
+    background-color: @pulseaudio_bg;
+    color: @pulseaudio;
 }
 
 #pulseaudio.muted {
-    background-color: @yellow;
-    color: @mantle;
+    background-color: @pulseaudio_mut;
+    color: @pulseaudio_mut_bg;
 }
 
 #wireplumber {
     background-color: @text;
-    color: @mantle;
+    color: @wireplumber;
 }
 
 #wireplumber.muted {
-    background-color: @lavender;
+    background-color: @wireplumber_mut;
 }
 
 #custom-media,
 #mpris {
-    background-color: @base;
+    background-color: @mpris_bg;
     font-style: italic;
-    color: @text;
+    color: @mpris;
     min-width: 0px;
     padding: 0px 0px;
     margin-left: 7px;
 }
 
 #temperature {
-    background-color: @pink;
-    color: @base;
+    background-color: @temperature;
+    color: @background_bar;
 }
 
 #temperature.critical {
-    background-color: @red;
+    background-color: @temperature_crit;
 }
 
 #tray {
-    background-color: @surface1;
+    background-color: @tray;
 }
 
 #tray > .passive {
@@ -272,61 +256,20 @@ label:focus {
 
 #tray > .needs-attention {
     -gtk-icon-effect: highlight;
-    background-color: @red;
+    background-color: @tray_attent;
 }
 
 #idle_inhibitor {
-    background-color: @surface1;
+    background-color: @idle_inhibitor;
 }
 
 #idle_inhibitor.activated {
-    background-color: @subtext0;
-    color: @overlay0;
+    background-color: @idle_inhibit_abg;
+    color: @idle_inhibit_a;
 }
-
-/*#mpd {
-    background-color: #66cc99;
-    color: #2a5c45;
-}
-
-#mpd.disconnected {
-    background-color: @red_bright;
-}
-
-#mpd.stopped {
-    background-color: #90b1b1;
-}
-
-#mpd.paused {
-    background-color: #51a37a;
-}
-
-#language {
-    background: #00b093;
-    color: #740864;
-    padding: 0 3px;
-    margin: 0 5px;
-    min-width: 16px;
-}
-
-#keyboard-state {
-    background: #97e1ad;
-    color: @mantle;
-    padding: 0 0px;
-    margin: 0 5px;
-    min-width: 16px;
-}
-
-#keyboard-state > label {
-    padding: 0 3px;
-}
-
-#keyboard-state > label.locked {
-    background: rgba(0, 0, 0, 0.2);
-}*/
 
 #scratchpad {
-    background: @base;
+    background: @background_bar;
 }
 
 #scratchpad.empty {
@@ -334,31 +277,31 @@ label:focus {
 }
 
 #custom-arrow1 {
-    color: @yellow;
-    background-color: @base;
+    color: @pulseaudio_bg;
+    background-color: @background_bar;
 }
 
 #custom-arrow2 {
-    color: @peach;
-    background-color: @yellow;
+    color: @network;
+    background-color: @pulseaudio_bg;
 }
 
 #custom-arrow3 {
-    color: @mauve;
-    background-color: @peach;
+    color: @backlight;
+    background-color: @network;
 }
 
 #custom-arrow4 {
-    color: @teal;
-    background-color: @mauve;
+    color: @battery;
+    background-color: @backlight;
 }
 
 #custom-arrow5 {
-    color: @green;
-    background-color: @teal;
+    color: @clock;
+    background-color: @battery;
 }
 
 #custom-arrow6 {
-    color: @surface1;
-    background-color: @green;
+    color: @tray;
+    background-color: @clock;
 }

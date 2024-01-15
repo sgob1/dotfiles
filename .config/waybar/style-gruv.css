@@ -37,7 +37,7 @@
 @define-color mode_border	@white;
 @define-color mode_bg		@black_bright;
 @define-color window_title	@white;
-@define-color clock		@green_bright;
+@define-color clock		@green;
 @define-color battery		@aqua;
 @define-color battery_plug	@aqua;
 @define-color keyframes_blink	@black;

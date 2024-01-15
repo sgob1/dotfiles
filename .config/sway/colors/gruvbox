@@ -11,9 +11,9 @@ set $dmenu_accent           "#fb4934ff"
 set $fuzzel_accent          "#fabd2fff"
 set $sysclip_accent         "#dc8addff"
 set $j4_accent              "#d8a657ff"
-set $dmenu_font             "Iosevka Bold 11"
-set $dmenu_font_pango       "Iosevka Medium:size=14"
-set $dmenu_font_launcher    "Iosevka Bold 11"
+set $dmenu_font             "IBM Plex Mono Bold 9"
+set $dmenu_font_pango       "IBM Plex Mono:weight=medium:size=13"
+set $dmenu_font_launcher    "IBM Plex Mono Bold 9"
 set $wallpaper_day          /home/sirduke/walls/various-wallpapers/Gruv/gruv-temple.png
 set $wallpaper_night        /home/sirduke/walls/various-wallpapers/Gruv/gruv-temple.png
 set $wallpaper_dir          "/home/sirduke/walls/swaywm-shuffle/"

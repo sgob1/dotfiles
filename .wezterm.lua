@@ -16,7 +16,7 @@ config.enable_wayland = true;
 -- This is where you actually apply your config choices
 
 -- For example, changing the color scheme:
-config.color_scheme = 'Gruvbox Material'
+config.color_scheme = 'Gruvbox Material (Gogh)'
 
 config.font = wezterm.font('IBM Plex Mono', { weight = 'Medium', italic = false })
 -- config.font.font_antialias = "Subpixel"
@@ -116,10 +116,10 @@ config.keys = {
 
 function scheme_for_appearance(appearance)
   if appearance:find "Dark" then
-    return "Gruvbox Material (Gogh)"
+    return "Catppuccin Mocha"
   else
     --return "Catppuccin Latte"
-    return "Gruvbox Material (Gogh)"
+    return "Catppuccin Mocha"
   end
 end
 

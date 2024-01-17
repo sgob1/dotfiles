@@ -47,7 +47,7 @@ set swapfile
 set dir=~/.vim-swap
 set background=dark
 
-set termguicolors
+"set termguicolors
 
 nnoremap Y y$
 nnoremap \\ :noh<cr>
@@ -108,4 +108,4 @@ let base16colorspace=256  " Access colors present in 256 colorspace
 let g:gruvbox_contrast_light='hard'
 let g:gruvbox_contrast_dark='medium'
 let g:gruvbox_italic=1
-colorscheme catppuccin_mocha
+"colorscheme catppuccin_mocha

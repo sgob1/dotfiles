@@ -120,6 +120,7 @@ function scheme_for_appearance(appearance)
   else
     --return "Catppuccin Latte"
     return "Catppuccin Mocha"
+    -- return "Gruvbox Dark (Gogh)"
   end
 end
 

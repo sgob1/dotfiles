@@ -36,7 +36,7 @@
 @define-color button_focus_bg	@white;
 @define-color button_active	@peach;
 @define-color button_active_bg	@yellow;
-@define-color button_urgent	@yellow;
+@define-color button_urgent	@red;
 @define-color mode_border	@white;
 @define-color mode_bg		@overlay0;
 @define-color window_title	@lavender;

@@ -26,7 +26,18 @@ https://samwho.dev/rss.xml
 https://justine.lol/rss.xml
 https://phaazon.net/blog/feed
 " "
-"---Tech---"
+"---Tech and Programming---"
+https://blog.rust-lang.org/feed.xml
+https://eli.thegreenplace.net/feeds/all.atom.xml
+https://ericsink.com/rss.xml
+https://fgiesen.wordpress.com/feed/
+https://blog.regehr.org/feed
+https://www.snellman.net/blog/rss-index.xml
+https://tratt.net/laurie/news.rss
+https://brooker.co.za/blog/rss.xml
+https://kate.io/feed.xml
+https://preshing.com/feed
+https://www.scattered-thoughts.net/atom.xml
 https://ciechanow.ski/atom.xml
 https://solar.lowtechmagazine.com/posts/index.xml
 https://www.righto.com/feeds/posts/default
@@ -57,6 +68,7 @@ https://github.com/latex-lsp/texlab/releases.atom
 https://github.com/Koihik/LuaFormatter/releases.atom
 https://github.com/typescript-language-server/typescript-language-server/releases.atom
 https://github.com/JohnnyMorganz/StyLua/releases.atom
+https://github.com/typst/typst/releases/
 " "
 "---Evaluating---"
 https://www.windytan.com/feeds/posts/default

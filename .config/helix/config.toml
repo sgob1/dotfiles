@@ -57,7 +57,7 @@ tabpad = "·" # Tabs will look like "→···" (depending on tab width)
 # K = "extend_line_up"
 
 # F = "extend_prev_char"
-# X = "extend_line_above"
+X = "extend_line_above"
 # B = "extend_prev_word_start"
 # W = "extend_next_word_start"
 # E = "extend_next_word_end"

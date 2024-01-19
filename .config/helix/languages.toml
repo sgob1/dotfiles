@@ -11,3 +11,8 @@ name = "markdown"
 indent = { tab-width = 4, unit = "    " }
 file-types = ["md", "rmd"]
 formatter = { command = "dprint", args = ["fmt", "--stdin", "md"]}
+
+[[language]]
+name = "todotxt"
+scope = "text.todotxt"
+file-types = [{ suffix = "todo.txt"}, "todotxt"]

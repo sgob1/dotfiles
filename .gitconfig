@@ -5,6 +5,7 @@
 [core]
     #pager = delta --line-numbers --syntax-theme base16
     excludesfile = ~/.gitignore_global
+	autocrlf = input
 
 [interactive]
     diffFilter = delta --color-only --features=interactive

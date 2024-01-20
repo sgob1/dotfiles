@@ -41,11 +41,13 @@ https://preshing.com/feed
 https://www.scattered-thoughts.net/atom.xml
 https://ciechanow.ski/atom.xml
 https://waitbutwhy.com/feed
+https://idlewords.com/index.xml
 https://solar.lowtechmagazine.com/posts/index.xml
 https://www.righto.com/feeds/posts/default
 https://bartoli-alberto.blogspot.com/feeds/posts/default
 https://guerredirete.substack.com/feed
 https://www.hackerfactor.com/blog/index.php?/feeds/index.rss2
+https://www.windytan.com/feeds/posts/default
 https://musicforprogramming.net/rss.xml
 " "
 "---Life---"
@@ -70,9 +72,6 @@ https://github.com/latex-lsp/texlab/releases.atom
 https://github.com/Koihik/LuaFormatter/releases.atom
 https://github.com/typescript-language-server/typescript-language-server/releases.atom
 https://github.com/JohnnyMorganz/StyLua/releases.atom
-https://github.com/typst/typst/releases/
+https://github.com/typst/typst/releases.atom
 " "
 "---Evaluating---"
-https://www.windytan.com/feeds/posts/default
-https://idlewords.com/index.xml
-https://meaningness.com/rss.xml

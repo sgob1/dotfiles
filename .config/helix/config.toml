@@ -129,3 +129,6 @@ A-f = "flip_selections"
 
 [keys.normal."+"]
 o = ":pipe-to xargs xdg-open"
+
+[keys.select."+"]
+o = ":pipe-to xargs xdg-open"

@@ -30,6 +30,7 @@ https://phaazon.net/blog/feed
 https://blog.rust-lang.org/feed.xml
 https://eli.thegreenplace.net/feeds/all.atom.xml
 https://ericsink.com/rss.xml
+https://jvns.ca/atom.xml
 https://fgiesen.wordpress.com/feed/
 https://blog.regehr.org/feed
 https://www.snellman.net/blog/rss-index.xml
@@ -39,6 +40,7 @@ https://kate.io/feed.xml
 https://preshing.com/feed
 https://www.scattered-thoughts.net/atom.xml
 https://ciechanow.ski/atom.xml
+https://waitbutwhy.com/feed
 https://solar.lowtechmagazine.com/posts/index.xml
 https://www.righto.com/feeds/posts/default
 https://bartoli-alberto.blogspot.com/feeds/posts/default
@@ -74,6 +76,3 @@ https://github.com/typst/typst/releases/
 https://www.windytan.com/feeds/posts/default
 https://idlewords.com/index.xml
 https://meaningness.com/rss.xml
-https://www.sevarg.net/feed.xml
-https://waitbutwhy.com/feed
-https://jvns.ca/atom.xml

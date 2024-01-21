@@ -17,6 +17,12 @@ config.enable_wayland = true;
 
 -- For example, changing the color scheme:
 config.color_scheme = 'Gruvbox Material (Gogh)'
+--     -- return "Catppuccin Latte"
+--     -- return "Catppuccin Mocha"
+    -- return "Gruvbox dark, hard (base16)"
+--     -- return "Ayu Mirage"
+--     -- return "Gigavolt (base16)"
+--     -- return "Tomorrow Night (Gogh)"
 
 -- config.font = wezterm.font('IBM Plex Mono', { weight = 'Medium', italic = false })
 config.font = wezterm.font('Iosevka SS16', { weight = 'Medium', italic = false })
@@ -116,19 +122,21 @@ config.keys = {
   },
 }
 
-function scheme_for_appearance(appearance)
-  if appearance:find "Dark" then
-    return "Catppuccin Mocha"
-    -- return "Ayu Dark"
-    -- return "Gruvbox dark, hard (base16)"
-  else
-    -- return "Catppuccin Latte"
-    return "Catppuccin Mocha"
-    -- return "Gruvbox dark, hard (base16)"
-    -- return "Ayu Mirage"
-    -- return "Tomorrow Night (Gogh)"
-  end
-end
+-- function scheme_for_appearance(appearance)
+--   if appearance:find "Dark" then
+--     -- return "Catppuccin Mocha"
+--     -- return "Gigavolt (base16)"
+--     -- return "Ayu Dark"
+--     return "Gruvbox dark, hard (base16)"
+--   else
+--     -- return "Catppuccin Latte"
+--     -- return "Catppuccin Mocha"
+--     return "Gruvbox dark, hard (base16)"
+--     -- return "Ayu Mirage"
+--     -- return "Gigavolt (base16)"
+--     -- return "Tomorrow Night (Gogh)"
+--   end
+-- end
 
 config.color_scheme = scheme_for_appearance(wezterm.gui.get_appearance())
 

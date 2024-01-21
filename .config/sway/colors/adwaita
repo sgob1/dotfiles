@@ -12,9 +12,9 @@ set $fuzzel_accent          "#a6e3a1ff"
 set $fuzzel_match           "#eba0acff"
 set $sysclip_accent         "#dc8addff"
 set $j4_accent              "#fab387ff"
-set $dmenu_font             "IBM Plex Mono Bold 9"
-set $dmenu_font_pango       "IBM Plex Mono:weight=medium:size=13"
-set $dmenu_font_launcher    "IBM Plex Mono Bold 9"
+set $dmenu_font             "Iosevka SS16 Bold 11"
+set $dmenu_font_pango       "Iosevka SS16:weight=medium:size=13"
+set $dmenu_font_launcher    "Iosevka SS16 Bold 11"
 set $wallpaper_day          /home/sirduke/walls/kde/landscape-l.jpeg
 set $wallpaper_night        /home/sirduke/walls/kde/landscape-d.jpeg
 set $wallpaper_dir          "$HOME/walls/google-earth/"

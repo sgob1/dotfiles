@@ -1,4 +1,4 @@
-font="Iosevka SS16 Bold 11"
+font="IBM Plex Mono Bold 10"
 background="#1e1e2eff"
 window_borders="#1e1e2eff"
 inside_title_unfocus="#45475aff"

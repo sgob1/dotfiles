@@ -118,14 +118,14 @@ config.keys = {
 
 function scheme_for_appearance(appearance)
   if appearance:find "Dark" then
-    -- return "Catppuccin Mocha"
-    return "Ayu Dark"
+    return "Catppuccin Mocha"
+    -- return "Ayu Dark"
     -- return "Gruvbox dark, hard (base16)"
   else
     -- return "Catppuccin Latte"
-    -- return "Catppuccin Mocha"
+    return "Catppuccin Mocha"
     -- return "Gruvbox dark, hard (base16)"
-    return "Ayu Mirage"
+    -- return "Ayu Mirage"
     -- return "Tomorrow Night (Gogh)"
   end
 end

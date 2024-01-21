@@ -16,7 +16,8 @@ config.enable_wayland = true;
 -- This is where you actually apply your config choices
 
 -- For example, changing the color scheme:
-config.color_scheme = 'Gruvbox Material (Gogh)'
+-- config.color_scheme = 'Gruvbox Material (Gogh)'
+config.color_scheme = 'Catppuccin Mocha'
 --     -- return "Catppuccin Latte"
 --     -- return "Catppuccin Mocha"
     -- return "Gruvbox dark, hard (base16)"
@@ -138,7 +139,7 @@ config.keys = {
 --   end
 -- end
 
-config.color_scheme = scheme_for_appearance(wezterm.gui.get_appearance())
+-- config.color_scheme = scheme_for_appearance(wezterm.gui.get_appearance())
 
 
 -- and finally, return the configuration to wezterm

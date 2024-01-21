@@ -101,6 +101,9 @@ C-y = "scroll_up"
 
 A-f = "flip_selections"
 
+F2 = ":theme catppuccin_mocha"
+F3 = ":theme catppuccin_latte"
+
 [keys.select]
 g.s = "goto_file_start"
 # c = "extend_char_left"

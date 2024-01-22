@@ -17,11 +17,11 @@ config.enable_wayland = true;
 
 -- For example, changing the color scheme:
 -- config.color_scheme = 'Gruvbox Material (Gogh)'
--- config.color_scheme = 'Catppuccin Mocha'
+config.color_scheme = 'Catppuccin Mocha'
 -- config.color_scheme = 'Gigavolt (base16)'
 -- config.color_scheme = "Tomorrow Night"
 -- config.color_scheme = 'Gruvbox dark, hard (base16)'
-config.color_scheme = 'Kanagawa (Gogh)'
+-- config.color_scheme = 'Kanagawa (Gogh)'
 --     -- return "Catppuccin Latte"
 --     -- return "Catppuccin Mocha"
     -- return "Gruvbox dark, hard (base16)"
@@ -60,7 +60,7 @@ config.window_frame = {
   border_top_color = '#1d2021',
 }
 
-config.default_cursor_style = 'SteadyBar'
+config.default_cursor_style = 'SteadyBlock'
 
 
 config.window_background_opacity = 1.0

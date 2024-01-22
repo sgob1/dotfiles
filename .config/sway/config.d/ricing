@@ -43,5 +43,5 @@ gaps right $gaps_size
 		#separator $text
 	#}
 #}
-# output * bg $wallpaper_day $wallpaper_mode
-output * bg #949cbb solid_color
+output * bg $wallpaper_day $wallpaper_mode
+# output * bg #949cbb solid_color

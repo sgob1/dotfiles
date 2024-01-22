@@ -35,7 +35,6 @@ config.font = wezterm.font('Iosevka', { weight = 'Medium', italic = false })
 
 config.font_size = 11.8
 -- config.cell_width = 0.8
--- config.font.appearance.dpi = 144
 
 config.inactive_pane_hsb = {
   saturation = 0.90,

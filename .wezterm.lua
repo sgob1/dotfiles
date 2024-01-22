@@ -21,7 +21,7 @@ config.enable_wayland = true;
 -- config.color_scheme = 'Gigavolt (base16)'
 -- config.color_scheme = "Tomorrow Night"
 -- config.color_scheme = 'Gruvbox dark, hard (base16)'
-config.color_scheme = 'Ayu Mirage'
+config.color_scheme = 'Kanagawa (Gogh)'
 --     -- return "Catppuccin Latte"
 --     -- return "Catppuccin Mocha"
     -- return "Gruvbox dark, hard (base16)"
@@ -60,6 +60,7 @@ config.window_frame = {
   border_top_color = '#1d2021',
 }
 
+config.default_cursor_style = 'SteadyBar'
 
 
 config.window_background_opacity = 1.0
@@ -127,23 +128,26 @@ config.keys = {
   },
 }
 
-function scheme_for_appearance(appearance)
-  if appearance:find "Dark" then
-    -- return "Catppuccin Mocha"
-    -- return "Gigavolt (base16)"
-    return "ayu"
-    -- return "Gruvbox dark, hard (base16)"
-  else
-    -- return "Catppuccin Latte"
-    -- return "Catppuccin Mocha"
-    -- return "Gruvbox dark, hard (base16)"
-    return "Ayu Mirage"
-    -- return "Gigavolt (base16)"
-    -- return "Tomorrow Night (Gogh)"
-  end
-end
+-- function scheme_for_appearance(appearance)
+--   if appearance:find "Dark" then
+--     -- return "Catppuccin Mocha"
+--     -- return "Gigavolt (base16)"
+--     -- return "ayu"
+--     -- return "kanagawabones"
+--     return "Kanagawa (Gogh)"
+--     -- return "Gruvbox dark, hard (base16)"
+--   else
+--     -- return "Catppuccin Latte"
+--     -- return "Catppuccin Mocha"
+--     -- return "Gruvbox dark, hard (base16)"
+--     -- return "Ayu Mirage"
+--     return "Kanagawa (Gogh)"
+--     -- return "Gigavolt (base16)"
+--     -- return "Tomorrow Night (Gogh)"
+--   end
+-- end
 
-config.color_scheme = scheme_for_appearance(wezterm.gui.get_appearance())
+-- config.color_scheme = scheme_for_appearance(wezterm.gui.get_appearance())
 
 
 -- and finally, return the configuration to wezterm

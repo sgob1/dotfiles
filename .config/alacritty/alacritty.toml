@@ -1,1 +1,1 @@
-import = ["/home/sirduke/.config/alacritty/config.d/general.toml", "/home/sirduke/.config/alacritty/colors/rose-pine-dawn.toml"]
+import = ["/home/sirduke/.config/alacritty/config.d/general.toml", "/home/sirduke/.config/alacritty/colors/catppuccin-mocha.toml"]

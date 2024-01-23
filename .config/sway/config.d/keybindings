@@ -18,7 +18,7 @@ bindsym $mod+x exec PATH=$HOME/.local/bin:$PATH bemenu-run -i --nb $background -
 bindsym $mod+d exec j4-dmenu-desktop --dmenu='bemenu -i --nb $background --nf $text --hb $j4_accent --hf $background --fb $background --ff $text --tb $j4_accent --tf $background --fn $dmenu_font_launcher -p "Application " --line-height 21' | xargs swaymsg exec --
 #bindsym $mod+d exec 'fuzzel --dpi-aware=no --border-color=$fuzzel_accent --border-radius=5 --border-width=2 --background=$background --selection-color=$fuzzel_accent --selection-text-color=$background --match-color=$fuzzel_match --selection-match-color=$fuzzel_match --text-color=$text --font $dmenu_font_pango --fields=filename,name,generic,exec --lines=15 --width=80'
 bindsym $mod+Tab exec swayr switch-window
-bindsym Alt+Tab exec swayr switch-window
+bindsym $mod+Space exec swayr switch-window
 bindsym $mod+m exec grep -v '^#' ~/org/bookmarks | grep . | bemenu -i -l 15 --nb $background --nf $text --hb $dmenu_accent --hf $background --fb $background --ff $text --tb $dmenu_accent --tf $background --fn $dmenu_font --line-height 21 -p "Bookmarks" | cut -d ' ' -f1 | wl-copy
 bindsym $mod+Shift+d exec ~/.local/bin/today.sh "$term --title='diary'"
 bindsym $mod+Shift+m exec sh ~/.local/bin/add-bookmark.sh
@@ -78,7 +78,7 @@ bindsym $mod+w layout tabbed
 bindsym $mod+e layout toggle split
 bindsym $mod+f fullscreen
 bindsym $mod+Shift+space floating toggle
-bindsym $mod+space focus mode_toggle
+bindsym Alt+Tab focus mode_toggle
 bindsym $mod+a focus parent
 bindsym $mod+Shift+minus move scratchpad
 bindsym $mod+minus scratchpad show

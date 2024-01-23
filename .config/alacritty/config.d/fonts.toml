@@ -1,0 +1,23 @@
+custom_cursor_colors = true
+
+[colors]
+draw_bold_text_with_bright_colors = true
+
+[font]
+size = 12.5
+
+[font.bold]
+family = "Iosevka Term SS16"
+
+[font.bold_italic]
+family = "Iosevka Term SS16"
+
+[font.italic]
+family = "Iosevka Term SS16"
+
+[font.normal]
+family = "Iosevka Term SS16"
+style = "Medium"
+
+[shell]
+program = "/bin/zsh"

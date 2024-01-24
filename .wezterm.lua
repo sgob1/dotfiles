@@ -13,11 +13,15 @@ end
 config.default_prog = {'/usr/bin/zsh'}
 config.enable_wayland = true;
 
--- This is where you actually apply your config choices
+config.font = wezterm.font('Iosevka', { weight = 'Medium', italic = false })
+config.font_size = 11.8
+-- config.cell_width = 0.8
+-- config.font.font_antialias = "Subpixel"
+-- config.font = wezterm.font('IBM Plex Mono', { weight = 'Medium', italic = false })
 
--- For example, changing the color scheme:
--- config.color_scheme = 'Gruvbox Material (Gogh)'
 config.color_scheme = 'Catppuccin Mocha'
+
+-- config.color_scheme = 'Gruvbox Material (Gogh)'
 -- config.color_scheme = 'Gigavolt (base16)'
 -- config.color_scheme = "Tomorrow Night"
 -- config.color_scheme = 'Gruvbox dark, hard (base16)'
@@ -29,12 +33,7 @@ config.color_scheme = 'Catppuccin Mocha'
 --     -- return "Gigavolt (base16)"
 --     -- return "Tomorrow Night (Gogh)"
 
--- config.font = wezterm.font('IBM Plex Mono', { weight = 'Medium', italic = false })
-config.font = wezterm.font('Iosevka', { weight = 'Medium', italic = false })
--- config.font.font_antialias = "Subpixel"
 
-config.font_size = 11.8
--- config.cell_width = 0.8
 
 config.inactive_pane_hsb = {
   saturation = 0.90,
@@ -127,26 +126,27 @@ config.keys = {
   },
 }
 
--- function scheme_for_appearance(appearance)
---   if appearance:find "Dark" then
---     -- return "Catppuccin Mocha"
---     -- return "Gigavolt (base16)"
---     -- return "ayu"
---     -- return "kanagawabones"
---     return "Kanagawa (Gogh)"
---     -- return "Gruvbox dark, hard (base16)"
---   else
---     -- return "Catppuccin Latte"
---     -- return "Catppuccin Mocha"
---     -- return "Gruvbox dark, hard (base16)"
---     -- return "Ayu Mirage"
---     return "Kanagawa (Gogh)"
---     -- return "Gigavolt (base16)"
---     -- return "Tomorrow Night (Gogh)"
---   end
--- end
+function scheme_for_appearance(appearance)
+  if appearance:find "Dark" then
+    -- return "Catppuccin Mocha"
+    -- return "Gigavolt (base16)"
+    return "ayu"
+    -- return "kanagawabones"
+    -- return "Kanagawa (Gogh)"
+    -- return "Gruvbox dark, hard (base16)"
+  else
+    -- return "Catppuccin Latte"
+    -- return "Catppuccin Mocha"
+    -- return "Gruvbox dark, hard (base16)"
+    -- return "Ayu Mirage"
+    -- return "Kanagawa (Gogh)"
+    -- return "Gigavolt (base16)"
+    return "Material Darker (base16)"
+    -- return "Tomorrow Night (Gogh)"
+  end
+end
 
--- config.color_scheme = scheme_for_appearance(wezterm.gui.get_appearance())
+config.color_scheme = scheme_for_appearance(wezterm.gui.get_appearance())
 
 
 -- and finally, return the configuration to wezterm
